@@ -1,0 +1,48 @@
+[
+    {
+        "new": null,
+        "triple_id": "62accad08d43359c45839854",
+        "head_id": "625276bef405379c0ed6467a",
+        "head_linked_entity": "????",
+        "headSpan": [
+            237,
+            248
+        ],
+        "head_entity": "Star Parker",
+        "relation": "employer",
+        "tail_entity": "Newcombe",
+        "evidences": [
+            {
+                "up": null,
+                "down": null,
+                "text": "Newcombe also has syndicated Bill O'Reilly, Molly Ivins, Larry Kudlow, John Stossel, Hunter S. Thompson, Arianna Huffington, Tony Kornheiser, Patrick Buchanan, Thomas Sowell, Walter E. Williams, Michelle Malkin, Mona Charen, Ben Carson, Star Parker, Mark Shields and Susan Estrich.",
+                "extractor": "GLM-2B/P-tuning",
+                "confidence": 0.8769395320791992,
+                "filtered": true,
+                "headSpan": [
+                    237,
+                    248
+                ],
+                "evidenceID": "625fcbddc20df149acf6d557",
+                "tripleID": "62accad08d43359c45839854",
+                "inPageId": "625fcbddc20df149acf6d576"
+            },
+            {
+                "up": null,
+                "down": null,
+                "text": "Newcombe also has syndicated Bill O'Reilly, Molly Ivins, Larry Kudlow, John Stossel, Hunter S. Thompson, Arianna Huffington, Tony Kornheiser, Patrick Buchanan, Thomas Sowell, Walter E. Williams, Michelle Malkin, Mona Charen, Ben Carson, Star Parker, Mark Shields and Susan Estrich.",
+                "extractor": "GLM-2B/P-tuning",
+                "confidence": 0.3620030236883408,
+                "filtered": true,
+                "headSpan": [
+                    237,
+                    248
+                ],
+                "evidenceID": "625fcbddc20df149acf6d557",
+                "tripleID": "62bab393e4b741b7500c2191",
+                "inPageId": "625fcbddc20df149acf6d576"
+            }
+        ],
+        "head_unified": "Star_Parker"
+    }
+]

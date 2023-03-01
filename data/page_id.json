@@ -1,0 +1,1238 @@
+{
+    "625fcbddc20df149acf6d576": [
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d529",
+                "evidences": [
+                    {
+                        "text": "Richard S. Newcombe\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": 0,
+                "triple_id": "62acc76e8d43359c458397d0",
+                "head_id": "6252941ef405379c0e27c8c9",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    73,
+                    91
+                ],
+                "head_entity": "Creators Syndicate",
+                "relation": "founded by",
+                "tail_entity": "Richard S. Newcombe",
+                "evidences": [
+                    {
+                        "up": 0,
+                        "down": 0,
+                        "text": "Richard S. Newcombe (born August 8, 1950) is the founder and chairman of Creators Syndicate, which currently represents more than 200 writers and artists.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.7186552761573098,
+                        "filtered": true,
+                        "headSpan": [
+                            73,
+                            91
+                        ],
+                        "evidenceID": "625fcbdcc20df149acf6d52b",
+                        "tripleID": "62acc76e8d43359c458397d0",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": 0,
+                "triple_id": "62bab069e4b741b7500c210d",
+                "head_id": "6252941ef405379c0e27c8c9",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    73,
+                    91
+                ],
+                "head_entity": "Creators Syndicate",
+                "relation": "founded by",
+                "tail_entity": "Richard S. Newcombe",
+                "evidences": [
+                    {
+                        "up": 0,
+                        "down": 0,
+                        "text": "Richard S. Newcombe (born August 8, 1950) is the founder and chairman of Creators Syndicate, which currently represents more than 200 writers and artists.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.2386711211580751,
+                        "filtered": true,
+                        "headSpan": [
+                            73,
+                            91
+                        ],
+                        "evidenceID": "625fcbdcc20df149acf6d52b",
+                        "tripleID": "62bab069e4b741b7500c210d",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": null,
+                "triple_id": "62acc76e8d43359c458397d1",
+                "head_id": "6252941ef405379c0e27c8c9",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    73,
+                    91
+                ],
+                "head_entity": "Creators Syndicate",
+                "relation": "owned by",
+                "tail_entity": "Richard S. Newcombe",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "Richard S. Newcombe (born August 8, 1950) is the founder and chairman of Creators Syndicate, which currently represents more than 200 writers and artists.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.8100741260454191,
+                        "filtered": true,
+                        "headSpan": [
+                            73,
+                            91
+                        ],
+                        "evidenceID": "625fcbdcc20df149acf6d52b",
+                        "tripleID": "62acc76e8d43359c458397d1",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": null,
+                "triple_id": "62bab069e4b741b7500c210e",
+                "head_id": "6252941ef405379c0e27c8c9",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    73,
+                    91
+                ],
+                "head_entity": "Creators Syndicate",
+                "relation": "owned by",
+                "tail_entity": "Richard S. Newcombe",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "Richard S. Newcombe (born August 8, 1950) is the founder and chairman of Creators Syndicate, which currently represents more than 200 writers and artists.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.6702360335180396,
+                        "filtered": true,
+                        "headSpan": [
+                            73,
+                            91
+                        ],
+                        "evidenceID": "625fcbdcc20df149acf6d52b",
+                        "tripleID": "62bab069e4b741b7500c210e",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d52c",
+                "evidences": [
+                    {
+                        "text": "Since the company's founding in 1987, the roster of talent has included Ann Landers, Hillary Clinton, Bill O'Reilly, Hunter S. Thompson, Herblock and the comic strips \"B.C.\", \"The Wizard of Id\", \"Archie\" and \"Mickey Mouse\"."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d52d",
+                "evidences": [
+                    {
+                        "text": "Creators Syndicate is located in Hermosa Beach, California, and distributes its content to 2,400 newspapers, magazines, websites and other digital outlets around the world.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": null,
+                "triple_id": "631b618df5a766ae398bec56",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    -574,
+                    -555
+                ],
+                "head_entity": "Richard S. Newcombe",
+                "relation": "place of birth",
+                "tail_entity": "Chicago, Illinois",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "Richard S. Newcombe was born on August 8, 1950, in Chicago, Illinois.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.5703085786642098,
+                        "filtered": true,
+                        "headSpan": [
+                            -574,
+                            -555
+                        ],
+                        "evidenceID": "625fcbdcc20df149acf6d52f",
+                        "tripleID": "631b618df5a766ae398bec56",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": null,
+                "triple_id": "631b619bf5a766ae398bec57",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    -644,
+                    -625
+                ],
+                "head_entity": "Richard S. Newcombe",
+                "relation": "father",
+                "tail_entity": "Leo Newcombe",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "His father, Leo Newcombe, served as senior vice president for the newspaper division of Field Enterprises and as general manager of the \"Chicago Daily News\" and the \"Chicago Sun-Times\".",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.8982575277520684,
+                        "filtered": true,
+                        "headSpan": [
+                            -644,
+                            -625
+                        ],
+                        "evidenceID": "625fcbdcc20df149acf6d530",
+                        "tripleID": "631b619bf5a766ae398bec57",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d531",
+                "evidences": [
+                    {
+                        "text": "Leo and Ann Newcombe had eight children, and they lived in Winnetka, Illinois."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": null,
+                "triple_id": "631b61b6f5a766ae398bec59",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    -909,
+                    -890
+                ],
+                "head_entity": "Richard S. Newcombe",
+                "relation": "educated at",
+                "tail_entity": "La Lumiere School",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "In 1969, Rick Newcombe was one of the first graduates of La Lumiere School, a high school with boarding and day students that was founded in 1963 in La Porte, Indiana.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.759605583449339,
+                        "filtered": true,
+                        "headSpan": [
+                            -909,
+                            -890
+                        ],
+                        "evidenceID": "625fcbdcc20df149acf6d532",
+                        "tripleID": "631b61b6f5a766ae398bec59",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d533",
+                "evidences": [
+                    {
+                        "text": "U.S. Supreme Court Chief Justice John Roberts was also an early graduate of La Lumiere, which has had fewer than 2,000 graduates since its founding and has also become a national basketball powerhouse."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": null,
+                "triple_id": "631b61d3f5a766ae398bec5a",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    -1279,
+                    -1260
+                ],
+                "head_entity": "Richard S. Newcombe",
+                "relation": "educated at",
+                "tail_entity": "Georgetown University",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "Newcombe then attended Georgetown University, where he was one of the founding editors of \"The Georgetown Voice\", was a member of Phi Beta Kappa, and graduated \"magna cum laude\".\n",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.13114751527549173,
+                        "filtered": true,
+                        "headSpan": [
+                            -1279,
+                            -1260
+                        ],
+                        "evidenceID": "625fcbdcc20df149acf6d534",
+                        "tripleID": "631b61d3f5a766ae398bec5a",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d536",
+                "evidences": [
+                    {
+                        "text": "After graduating from Georgetown University in 1972, Newcombe worked as an advertising copywriter at Leo Burnett Worldwide and then as a sales manager in Chicago with Success Motivation Institute, based in Waco, Texas."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d537",
+                "evidences": [
+                    {
+                        "text": "He studied at night for an MBA degree at the graduate business school at the University of Chicago."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d538",
+                "evidences": [
+                    {
+                        "text": "He also worked in sales at David H. Sandler & Associates in Baltimore."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d539",
+                "evidences": [
+                    {
+                        "text": "From 1974 to 1978, Newcombe worked as a reporter and editor at United Press International.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbdcc20df149acf6d53b",
+                "evidences": [
+                    {
+                        "text": "In 1978, Newcombe became vice president and general manager of the Los Angeles Times Syndicate, and in 1984, he was named president of News America Syndicate, which then was the third-largest syndicate in the world and owned by Rupert Murdoch.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d53d",
+                "evidences": [
+                    {
+                        "text": "Three years later, Newcombe left News America Syndicate to form Creators Syndicate, an American independent distributor of comic strips and syndicated columns to daily newspapers and websites."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d53e",
+                "evidences": [
+                    {
+                        "text": "Creators Syndicate was founded in Los Angeles on February 13, 1987, and moved to Hermosa Beach, California, in 2012.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": 0,
+                "triple_id": "62acc8428d43359c45839802",
+                "head_id": "6252941ef405379c0e27c8c9",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    0,
+                    18
+                ],
+                "head_entity": "Creators Syndicate",
+                "relation": "industry",
+                "tail_entity": "syndication",
+                "evidences": [
+                    {
+                        "up": 0,
+                        "down": 0,
+                        "text": "Creators Syndicate revolutionized the syndication industry by being the first to offer cartoonists ownership rights to their work.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.21821011630284481,
+                        "filtered": true,
+                        "headSpan": [
+                            0,
+                            18
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d540",
+                        "tripleID": "62acc8428d43359c45839802",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": 0,
+                "triple_id": "62bab138e4b741b7500c213f",
+                "head_id": "6252941ef405379c0e27c8c9",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    0,
+                    18
+                ],
+                "head_entity": "Creators Syndicate",
+                "relation": "industry",
+                "tail_entity": "syndication",
+                "evidences": [
+                    {
+                        "up": 0,
+                        "down": 0,
+                        "text": "Creators Syndicate revolutionized the syndication industry by being the first to offer cartoonists ownership rights to their work.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.14857941894259907,
+                        "filtered": true,
+                        "headSpan": [
+                            0,
+                            18
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d540",
+                        "tripleID": "62bab138e4b741b7500c213f",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d541",
+                "evidences": [
+                    {
+                        "text": "The industry standard before Creators\u2019 founding was for the company to own the rights to their cartoonists\u2019 creations \u2014 the name, characters and likenesses."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": null,
+                "triple_id": "62acc84d8d43359c45839807",
+                "head_id": "6252802ff405379c0ef0861c",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    0,
+                    13
+                ],
+                "head_entity": "Rudolph Dirks",
+                "relation": "notable work",
+                "tail_entity": "\"The Katzenjammer Kids",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "Rudolph Dirks created the hugely successful comic strip, \"The Katzenjammer Kids\", which first appeared in print in 1897.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.5594004225877042,
+                        "filtered": true,
+                        "headSpan": [
+                            0,
+                            13
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d542",
+                        "tripleID": "62acc84d8d43359c45839807",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": null,
+                "triple_id": "62bab143e4b741b7500c2144",
+                "head_id": "6252802ff405379c0ef0861c",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    0,
+                    13
+                ],
+                "head_entity": "Rudolph Dirks",
+                "relation": "notable work",
+                "tail_entity": "\"The Katzenjammer Kids",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "Rudolph Dirks created the hugely successful comic strip, \"The Katzenjammer Kids\", which first appeared in print in 1897.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.489667150683029,
+                        "filtered": true,
+                        "headSpan": [
+                            0,
+                            13
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d542",
+                        "tripleID": "62bab143e4b741b7500c2144",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d543",
+                "evidences": [
+                    {
+                        "text": "In 1912, Dirks challenged William Randolph Hearst for ownership rights to his comic strip, and ultimately Hearst prevailed, which set the tone for the industry until Creators Syndicate\u2019s founding.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d545",
+                "evidences": [
+                    {
+                        "text": "Milton Caniff was another of several important cartoonists who had tried unsuccessfully to secure rights to their creations."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d546",
+                "evidences": [
+                    {
+                        "text": "In 1946, he walked away from the enormously popular \"Terry and the Pirates\" comic strip because his syndicate insisted that they own his creation."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": null,
+                "triple_id": "62acc8768d43359c4583980c",
+                "head_id": "62529290f405379c0e23e684",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    76,
+                    87
+                ],
+                "head_entity": "Chicago Sun",
+                "relation": "owned by",
+                "tail_entity": "Marshall Field III",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "In 1947 he created \"Steve Canyon\" because Marshall Field III, who owned the Chicago Sun and its syndicate, allowed him to own the rights to his comic strip.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.21570949332777334,
+                        "filtered": true,
+                        "headSpan": [
+                            76,
+                            87
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d547",
+                        "tripleID": "62acc8768d43359c4583980c",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": null,
+                "triple_id": "62bab16be4b741b7500c2149",
+                "head_id": "62529290f405379c0e23e684",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    76,
+                    87
+                ],
+                "head_entity": "Chicago Sun",
+                "relation": "owned by",
+                "tail_entity": "Marshall Field III",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "In 1947 he created \"Steve Canyon\" because Marshall Field III, who owned the Chicago Sun and its syndicate, allowed him to own the rights to his comic strip.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.12106499227899092,
+                        "filtered": true,
+                        "headSpan": [
+                            76,
+                            87
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d547",
+                        "tripleID": "62bab16be4b741b7500c2149",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d548",
+                "evidences": [
+                    {
+                        "text": "This was one of the very few exceptions at that time."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d549",
+                "evidences": [
+                    {
+                        "text": "After Creators Syndicate was founded, Caniff sent Newcombe a postcard saying, \u201cTo put it on the record: Hooray!!!\"\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d54b",
+                "evidences": [
+                    {
+                        "text": "Pulitzer Prize-winning cartoonist Mike Peters told \"Editor & Publisher\" magazine, \"It's long overdue that syndicates realize a new day is here."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d54c",
+                "evidences": [
+                    {
+                        "text": "Indentured servitude went out in the 1500s.\""
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": 0,
+                "triple_id": "62acc8988d43359c45839812",
+                "head_id": "62527469f405379c0ed06a48",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    0,
+                    11
+                ],
+                "head_entity": "Johnny Hart",
+                "relation": "notable work",
+                "tail_entity": "\"B.C.\"",
+                "evidences": [
+                    {
+                        "up": 0,
+                        "down": 0,
+                        "text": "Johnny Hart, creator of \"B.C.\" and \"The Wizard of Id\", called Creators \u201ca history-making venture in syndication.\u201d",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.5202868306489759,
+                        "filtered": true,
+                        "headSpan": [
+                            0,
+                            11
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d54d",
+                        "tripleID": "62acc8988d43359c45839812",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": 0,
+                "triple_id": "62bab18de4b741b7500c214f",
+                "head_id": "62527469f405379c0ed06a48",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    0,
+                    11
+                ],
+                "head_entity": "Johnny Hart",
+                "relation": "notable work",
+                "tail_entity": "\"B.C.\"",
+                "evidences": [
+                    {
+                        "up": 0,
+                        "down": 0,
+                        "text": "Johnny Hart, creator of \"B.C.\" and \"The Wizard of Id\", called Creators \u201ca history-making venture in syndication.\u201d",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.19558647460743228,
+                        "filtered": true,
+                        "headSpan": [
+                            0,
+                            11
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d54d",
+                        "tripleID": "62bab18de4b741b7500c214f",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d54e",
+                "evidences": [
+                    {
+                        "text": "Bil Keane, creator of \"The Family Circus\", described Creators Syndicate as \u201cthe first breath of fresh air the syndicates have had in 100 years of existence.\u201d"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d54f",
+                "evidences": [
+                    {
+                        "text": "\"The New York Times\" ran a story about Newcombe with the headline, \u201cA Superhero for Cartoonists?\u201d"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d550",
+                "evidences": [
+                    {
+                        "text": "Today, largely as a result of Creators Syndicate, all syndicates grant cartoonists ownership rights to their work.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": 0,
+                "triple_id": "62acc8c58d43359c45839817",
+                "head_id": "62527469f405379c0ed06a48",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    198,
+                    209
+                ],
+                "head_entity": "Johnny Hart",
+                "relation": "notable work",
+                "tail_entity": "\"B.C.\"",
+                "evidences": [
+                    {
+                        "up": 0,
+                        "down": 0,
+                        "text": "Within a few months of forming his media company, Newcombe had acquired the syndication rights to Ann Landers, then the world's most widely syndicated newspaper columnist, the comic strip \"B.C.\" by Johnny Hart, and the political cartoons of Herblock, \"The Washington Post\"\u2019s legendary editorial cartoonist.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.5929406322086015,
+                        "filtered": true,
+                        "headSpan": [
+                            198,
+                            209
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d552",
+                        "tripleID": "62acc8c58d43359c45839817",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": 0,
+                "triple_id": "62bab1b8e4b741b7500c2154",
+                "head_id": "62527469f405379c0ed06a48",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    198,
+                    209
+                ],
+                "head_entity": "Johnny Hart",
+                "relation": "notable work",
+                "tail_entity": "\"B.C.\"",
+                "evidences": [
+                    {
+                        "up": 0,
+                        "down": 0,
+                        "text": "Within a few months of forming his media company, Newcombe had acquired the syndication rights to Ann Landers, then the world's most widely syndicated newspaper columnist, the comic strip \"B.C.\" by Johnny Hart, and the political cartoons of Herblock, \"The Washington Post\"\u2019s legendary editorial cartoonist.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.6684240516632924,
+                        "filtered": true,
+                        "headSpan": [
+                            198,
+                            209
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d552",
+                        "tripleID": "62bab1b8e4b741b7500c2154",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d553",
+                "evidences": [
+                    {
+                        "text": "In addition to Herblock, Newcombe has also worked with Pulitzer Prize-winning cartoonists Bill Mauldin, Michael Ramirez, Paul Conrad, Mike Luckovich, Paul Szep, Doug Marlette and Steve Breen."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d554",
+                "evidences": [
+                    {
+                        "text": "Other award-winning political cartoonists include Chip Bok, Steve Kelley, Chuck Asay, Bob Gorrell, John Deering, Steve Benson and Gary Varvel.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d556",
+                "evidences": [
+                    {
+                        "text": "Over the years, Newcombe and Creators has syndicated some of the most important figures of our time, including Pope John Paul II, Richard Nixon, Hillary Clinton, Jimmy Carter, Nancy Reagan, Henry Kissinger, Erma Bombeck, Art Buchwald, Joyce Jillson, Jeane Dixon, Sydney Omarr, Carl Rowan, Robert Novak, Dan Quayle and Oliver North."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": null,
+                "triple_id": "62accad08d43359c45839854",
+                "head_id": "625276bef405379c0ed6467a",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    237,
+                    248
+                ],
+                "head_entity": "Star Parker",
+                "relation": "employer",
+                "tail_entity": "Newcombe",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "Newcombe also has syndicated Bill O'Reilly, Molly Ivins, Larry Kudlow, John Stossel, Hunter S. Thompson, Arianna Huffington, Tony Kornheiser, Patrick Buchanan, Thomas Sowell, Walter E. Williams, Michelle Malkin, Mona Charen, Ben Carson, Star Parker, Mark Shields and Susan Estrich.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.39338523829875616,
+                        "filtered": true,
+                        "headSpan": [
+                            237,
+                            248
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d557",
+                        "tripleID": "62accad08d43359c45839854",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": null,
+                "triple_id": "62bab393e4b741b7500c2191",
+                "head_id": "625276bef405379c0ed6467a",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    237,
+                    248
+                ],
+                "head_entity": "Star Parker",
+                "relation": "employer",
+                "tail_entity": "Newcombe",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "Newcombe also has syndicated Bill O'Reilly, Molly Ivins, Larry Kudlow, John Stossel, Hunter S. Thompson, Arianna Huffington, Tony Kornheiser, Patrick Buchanan, Thomas Sowell, Walter E. Williams, Michelle Malkin, Mona Charen, Ben Carson, Star Parker, Mark Shields and Susan Estrich.",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.43712082780016537,
+                        "filtered": true,
+                        "headSpan": [
+                            237,
+                            248
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d557",
+                        "tripleID": "62bab393e4b741b7500c2191",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d558",
+                "evidences": [
+                    {
+                        "text": "Other columnists include Alexander Cockburn, Robert Scheer, David Nyhan, Brent Bozell, Tony Snow, Tony Blankley, Eric Breindel, Chandra Bozelko and Benazir Bhutto.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "new": null,
+                "triple_id": "62accb458d43359c4583985d",
+                "head_id": "62527e54f405379c0eeb2064",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    91,
+                    101
+                ],
+                "head_entity": "Speed Bump",
+                "relation": "author",
+                "tail_entity": "Creators",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "In addition to \"B.C.\", Creators comic strips include \"The Wizard of Id\", \"One Big Happy\", \"Speed Bump\", \"Chuckle Brothers\", \"Agnes\", \"Ballard Street\", \"Liberty Meadows\", \"Rubes\", \"The Other Coast\", \"Archie\", \"Long Story Short\", \"Batman\", \"Zorro\", \"Teenage Mutant Ninja Turtles\", \"Mickey Mouse\" and \"Donald Duck\".",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.40897888343697897,
+                        "filtered": true,
+                        "headSpan": [
+                            91,
+                            101
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d55a",
+                        "tripleID": "62accb458d43359c4583985d",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": null,
+                "triple_id": "62accb458d43359c4583985e",
+                "head_id": "62527e54f405379c0eeb2064",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    91,
+                    101
+                ],
+                "head_entity": "Speed Bump",
+                "relation": "publisher",
+                "tail_entity": "Creators",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "In addition to \"B.C.\", Creators comic strips include \"The Wizard of Id\", \"One Big Happy\", \"Speed Bump\", \"Chuckle Brothers\", \"Agnes\", \"Ballard Street\", \"Liberty Meadows\", \"Rubes\", \"The Other Coast\", \"Archie\", \"Long Story Short\", \"Batman\", \"Zorro\", \"Teenage Mutant Ninja Turtles\", \"Mickey Mouse\" and \"Donald Duck\".",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.39751424824751014,
+                        "filtered": true,
+                        "headSpan": [
+                            91,
+                            101
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d55a",
+                        "tripleID": "62accb458d43359c4583985e",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": null,
+                "triple_id": "62bab408e4b741b7500c219b",
+                "head_id": "62527e54f405379c0eeb2064",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    91,
+                    101
+                ],
+                "head_entity": "Speed Bump",
+                "relation": "author",
+                "tail_entity": "Creators",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "In addition to \"B.C.\", Creators comic strips include \"The Wizard of Id\", \"One Big Happy\", \"Speed Bump\", \"Chuckle Brothers\", \"Agnes\", \"Ballard Street\", \"Liberty Meadows\", \"Rubes\", \"The Other Coast\", \"Archie\", \"Long Story Short\", \"Batman\", \"Zorro\", \"Teenage Mutant Ninja Turtles\", \"Mickey Mouse\" and \"Donald Duck\".",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.3235214513223078,
+                        "filtered": true,
+                        "headSpan": [
+                            91,
+                            101
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d55a",
+                        "tripleID": "62bab408e4b741b7500c219b",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            },
+            {
+                "new": null,
+                "triple_id": "62bab408e4b741b7500c219c",
+                "head_id": "62527e54f405379c0eeb2064",
+                "head_linked_entity": "????",
+                "headSpan": [
+                    91,
+                    101
+                ],
+                "head_entity": "Speed Bump",
+                "relation": "publisher",
+                "tail_entity": "Creators",
+                "evidences": [
+                    {
+                        "up": null,
+                        "down": null,
+                        "text": "In addition to \"B.C.\", Creators comic strips include \"The Wizard of Id\", \"One Big Happy\", \"Speed Bump\", \"Chuckle Brothers\", \"Agnes\", \"Ballard Street\", \"Liberty Meadows\", \"Rubes\", \"The Other Coast\", \"Archie\", \"Long Story Short\", \"Batman\", \"Zorro\", \"Teenage Mutant Ninja Turtles\", \"Mickey Mouse\" and \"Donald Duck\".",
+                        "extractor": "GLM-2B/P-tuning",
+                        "confidence": 0.8755244724174784,
+                        "filtered": true,
+                        "headSpan": [
+                            91,
+                            101
+                        ],
+                        "evidenceID": "625fcbddc20df149acf6d55a",
+                        "tripleID": "62bab408e4b741b7500c219c",
+                        "timestamp": "",
+                        "inPageId": "625fcbddc20df149acf6d576"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d55b",
+                "evidences": [
+                    {
+                        "text": "He also syndicated \"The Far Side\" internationally.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d55d",
+                "evidences": [
+                    {
+                        "text": "In 2008 Creators Syndicate acquired the Copley News Service, a wire service that distributed news, political cartoons, and opinion columns."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d55e",
+                "evidences": [
+                    {
+                        "text": "In 1991 Creators Syndicate took over Heritage Features Syndicate, which was part of the conservative Heritage Foundation based in Washington, D.C.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d560",
+                "evidences": [
+                    {
+                        "text": "In 2011 Jack Newcombe became President of Creators Syndicate, and together with Rick Newcombe started Creators Publishing and Sumner Books, which have published more than 150 titles."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d561",
+                "evidences": [
+                    {
+                        "text": "One of their best sellers is \"What I Believe\" by Ben Carson, which includes an introduction by Rick Newcombe."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d562",
+                "evidences": [
+                    {
+                        "text": "One of Sumner Books most successful projects is the \"Stories of Success\" series by best-selling author Horatio Alger, which have particular appeal to homeschooling parents.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d564",
+                "evidences": [
+                    {
+                        "text": "After 25 years of operating in the city of Los Angeles, Creators Syndicate moved to nearby Hermosa Beach because of a tax dispute with the city."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d565",
+                "evidences": [
+                    {
+                        "text": "In 1992 Creators and the city had a series of hearings to determine the category of tax classification for the company."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d566",
+                "evidences": [
+                    {
+                        "text": "Once that was determined, Creators stayed in Los Angeles."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d567",
+                "evidences": [
+                    {
+                        "text": "But in 2007, the city said it changed its mind and wanted Creators moved to a much higher tax classification retroactively for five years with interest and penalties.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d569",
+                "evidences": [
+                    {
+                        "text": "Newcombe gave Arianna Huffington her start as a syndicated columnist in 1996 but they parted ways in 1998 after Sheila Lawrence, widow of U.S. Ambassador to Switzerland Larry Lawrence, filed a $25 million lawsuit against the columnist, the syndicate and some of their clients.\n"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d56b",
+                "evidences": [
+                    {
+                        "text": "Newcombe is also an avid weightlifter, pipe collector, and writer."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d56c",
+                "evidences": [
+                    {
+                        "text": "He contributed to the 1983 book \"The Businessman's Minutes-A-Day Guide to Shaping Up\", by former champion bodybuilder and Italian actor Dr. Franco Columbu."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d56d",
+                "evidences": [
+                    {
+                        "text": "He has been lifting weights for most of his life and entered one bodybuilding contest in 1986, placing third in the AAU Mr. Los Angeles Contest."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d56e",
+                "evidences": [
+                    {
+                        "text": "He has been featured in Muscle & Fitness magazine."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d56f",
+                "evidences": [
+                    {
+                        "text": "He wrote the book \"In Search of Pipe Dreams\" (2003), which was translated into Mandarin and German, titled \"Der Traum vom Pfeifenrauchen\" in German (translation: The Dream of Pipe Smoking) (2007)."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d570",
+                "evidences": [
+                    {
+                        "text": "He also wrote \"Still Searching for Pipe Dreams\" in 2010."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d571",
+                "evidences": [
+                    {
+                        "text": "In 2012, Newcombe contributed to the books \"Scandinavian Pipemakers\", by Jan Andersson, and \"Shoulder Pain?"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d572",
+                "evidences": [
+                    {
+                        "text": "the Solution and Prevention\", by Dr. John Kirsch."
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "_id": "625fcbddc20df149acf6d573",
+                "evidences": [
+                    {
+                        "text": "He also contributed to the Chinese book, \"An Ivarsson Product: Three Generations of Ivarsson\" by Xu Hai, which was published in 2015.\n"
+                    }
+                ]
+            }
+        ]
+    ]
+}
