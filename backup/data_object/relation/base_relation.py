@@ -3,13 +3,13 @@ from mongoengine import *
 
 class BaseRelation(Document):
     """
-    data object for relations in KGs; only refers to wikidata properties now.
+    train_auto_glm_data object for relations in KGs; only refers to wikidata properties now.
     """
     # values
     text = StringField(required=True)
     description = StringField()
     alias = ListField(StringField())
-
+    examples = ListField(StringField())
     # source
     source = StringField(required=True)
     sourceId = StringField()
