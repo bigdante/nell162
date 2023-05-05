@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="xll@166.111.5.162:23333 password" deleteMissingItems="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="162" deleteMissingItems="true">
     <serverData>
-      <paths name="xll@166.111.5.162:23333 password">
+      <paths name="162">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/xll/nell" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/xll/nell162" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

@@ -98,7 +98,7 @@ def show_entity():
         if TripleFact.objects(headWikidataEntity=ObjectId(entity.id)):
             entity_list.append({"id":str(entity.id),"text":entity.text})
     result ={
-        "data":entity_list,
+        "train_auto_glm_data":entity_list,
         "pages":pages,
         "total":total
     }
@@ -153,7 +153,7 @@ def show_entity_table():
         if TripleFact.objects(headWikidataEntity=ObjectId(entity.id)):
             entity_list.append({"id":str(entity.id),"text":entity.text})
     result ={
-        "data":entity_list,
+        "train_auto_glm_data":entity_list,
         "pages":pages,
         "total":total
     }
