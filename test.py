@@ -1,0 +1,3 @@
+a = '{"name in original language": {\n    "name in original language": "Given the sentence: \'{s[sentence]}\', identify the name of {s[head]} in its original language.",\n    "name in official language": "Given the sentence: \'{s[sentence]}\', determine the official name of {s[head]} in its original language.",\n    "label in original language": "Given the sentence: \'{s[sentence]}\', identify the label of {s[head]} in its original language.",\n    "label in official language": "Given the sentence: \'{s[sentence]}\', determine the official label of {s[head]} in its original language.",\n    "title in original language": "Given the sentence: \'{s[sentence]}\', identify the title of {s[head]} in its original language."}}'
+print(eval(a))
+print(type(eval(a)))

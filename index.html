@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto KG</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 50px;
+        }
+
+        #startButton {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 80%;
+            max-width: 650px;
+        }
+
+        #output {
+            width: 80%;
+            max-width: 650px;
+            min-height: 100px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            resize: none;
+            white-space: pre-wrap; /* Preserve newlines in output */
+        }
+    </style>
+</head>
+<body>
+<button id="startButton">[Thought] To be a fact extractor, I need to start by retrieving sentences from Wikipedia</button>
+<pre id="output"></pre>
+<script>
+    const startButton = document.getElementById("startButton");
+    const output = document.getElementById("output");
+
+    let source = null;
+
+    function requestData() {
+        if (source) {
+            source.close();
+        }
+        output.textContent = '';
+
+        source = new EventSource("https://models.aminer.cn/neptune/api/re");
+
+        source.onmessage = (event) => {
+            output.textContent += event.data + "\n";
+        };
+
+        source.onerror = (error) => {
+            console.error("Error occurred:", error);
+            source.close();
+        };
+    }
+
+    startButton.addEventListener("click", () => {
+        requestData();
+    });
+</script>
+</body>
+</html>
+
+
+
+
