@@ -1,0 +1,2431 @@
+{
+    "['MISC']_start time": {
+        "['Miss World 2012 event']_10": [
+            "['August 2012']_12",
+            "['2012']_4"
+        ]
+    },
+    "['MISC']_end time": {
+        "['2002 Winter Olympics']_11": [
+            "['2002']_6"
+        ]
+    },
+    "['MISC']_location": {
+        "['World War II', 'World War II']_1": [
+            "['Latin America']_6",
+            "['Atlantic']_7",
+            "['Western Hemisphere']_9",
+            "['Pacific Oceans']_8",
+            "['American Theater']_12"
+        ]
+    },
+    "['PER']_participant of": {
+        "['Franck Piccard', 'Piccard', 'Piccard', 'Piccard']_0": [
+            "['Albertville']_14",
+            "['FIS Alpine Skiing World Championships 1991']_15",
+            "['FIS Alpine Skiing World Championships']_16",
+            "['Alpine skiing World Cup']_6",
+            "['Super - G', 'Super - G']_9"
+        ]
+    },
+    "['PER']_country of citizenship": {
+        "['Zhou Enlai', 'Zhou']_8": [
+            "['China', \"People's Republic of China\", 'PRC', 'China', 'China', 'China']_3",
+            "[\"People 's Republic\"]_11",
+            "['Chinese']_12"
+        ],
+        "['Y. T. Wu']_9": [
+            "['China', \"People's Republic of China\", 'PRC', 'China', 'China', 'China']_3"
+        ]
+    },
+    "['LOC']_country": {
+        "['Panama Canal']_4": [
+            "['Panama', 'Panama', 'Panama']_0",
+            "['Panamanian']_14",
+            "['American']_3",
+            "['the United States', 'the United States']_11"
+        ],
+
+
+        "['Canal Zone']_10": [
+            "['the United States', 'the United States']_11",
+            "['American']_3",
+            "['Panama', 'Panama', 'Panama']_0"
+        ],
+        "['American Theater']_12": [
+            "['the United States', 'the United States']_11",
+            "['American']_3"
+        ],
+        "['Panamanian']_14": [
+            "['Panama', 'Panama', 'Panama']_0"
+        ]
+    },
+    "['LOC']_located in the administrative territorial entity": {
+        "['Linosa']_6": [
+            "['Agrigento', 'Agrigento']_5",
+            "['Italian Pelagie Islands']_1",
+            "['Sicily', 'Sicily', 'Sicilian', 'Sicilian']_4",
+            "['Lampedusa e Linosa']_3",
+            "['Italy', 'Italy']_8",
+            "['Italian']_18"
+        ],
+        "['Sicily', 'Sicily', 'Sicilian', 'Sicilian']_4": [
+            "['Italy', 'Italy']_8",
+            "['Italian']_18"
+        ],
+        "['Lampedusa Airport']_13": [
+            "['Lampedusa', 'Lampedusa']_0",
+            "['Lampedusa e Linosa']_3",
+            "['Italy', 'Italy']_8",
+            "['Italian']_18",
+            "['Agrigento', 'Agrigento']_5",
+            "['Italian Pelagie Islands']_1",
+            "['Sicily', 'Sicily', 'Sicilian', 'Sicilian']_4"
+        ],
+        "['Lampedusa e Linosa']_3": [
+            "['Agrigento', 'Agrigento']_5",
+            "['Sicily', 'Sicily', 'Sicilian', 'Sicilian']_4",
+            "['Italian Pelagie Islands']_1",
+            "['Italy', 'Italy']_8",
+            "['Italian']_18"
+        ],
+        "['Agrigento', 'Agrigento']_5": [
+            "['Italian Pelagie Islands']_1",
+            "['Sicily', 'Sicily', 'Sicilian', 'Sicilian']_4",
+            "['Italy', 'Italy']_8",
+            "['Italian']_18"
+        ],
+        "['Lampedusa', 'Lampedusa']_0": [
+            "['Italian Pelagie Islands']_1",
+            "['Agrigento', 'Agrigento']_5",
+            "['Sicily', 'Sicily', 'Sicilian', 'Sicilian']_4",
+            "['Italy', 'Italy']_8",
+            "['Italian']_18"
+        ],
+        "['Lampione']_7": [
+            "['Sicily', 'Sicily', 'Sicilian', 'Sicilian']_4",
+            "['Agrigento', 'Agrigento']_5",
+            "['Italy', 'Italy']_8",
+            "['Italian']_18",
+            "['Italian Pelagie Islands']_1"
+        ],
+        "['Catania']_15": [
+            "['Italy', 'Italy']_8",
+            "['Sicily', 'Sicily', 'Sicilian', 'Sicilian']_4",
+            "['Italian']_18"
+        ],
+        "['Italian Pelagie Islands']_1": [
+            "['Sicily', 'Sicily', 'Sicilian', 'Sicilian']_4",
+            "['Italian']_18",
+            "['Italy', 'Italy']_8"
+        ],
+        "['Porto Empedocle']_12": [
+            "['Italian']_18",
+            "['Italy', 'Italy']_8"
+        ],
+        "['Palermo']_14": [
+            "['Italian']_18",
+            "['Italy', 'Italy']_8"
+        ],
+        "['Milan']_17": [
+            "['Italian']_18",
+            "['Italy', 'Italy']_8"
+        ],
+        "['Rabbit Beach']_23": [
+            "['Italian']_18",
+            "['Italy', 'Italy']_8"
+        ],
+        "['Rome']_16": [
+            "['Italy', 'Italy']_8",
+            "['Italian']_18"
+        ],
+        "['Spiaggia dei Conigli']_24": [
+            "['Italy', 'Italy']_8",
+            "['Italian']_18"
+        ]
+    },
+    "['LOC']_contains administrative territorial entity": {
+        "['Japan', 'Japan', 'Japan']_2": [
+            "['Shizuoka', 'Shizuoka']_8",
+            "['Kansai']_1",
+            "['Aichi', 'Aichi']_9",
+            "['Mie', 'Mie']_11",
+            "['T\u014dkai', 'T\u014dkai', 'T\u014dkai']_6",
+            "['Ch\u016bbu']_0",
+            "['T\u014dkaid\u014d']_4",
+            "['Ch\u016bky\u014d']_14",
+            "['Gifu', 'Gifu']_10",
+            "['Nagoya', 'Nagoya', 'Nagoya']_12"
+        ],
+        "['Aichi', 'Aichi']_9": [
+            "['Nagoya', 'Nagoya', 'Nagoya']_12"
+        ],
+        "['Japanese']_7": [
+            "['Shizuoka', 'Shizuoka']_8",
+            "['Aichi', 'Aichi']_9",
+            "['Mie', 'Mie']_11",
+            "['Gifu', 'Gifu']_10",
+            "['Kansai']_1",
+            "['Ch\u016bbu']_0"
+        ],
+        "['T\u014dkai', 'T\u014dkai', 'T\u014dkai']_6": [
+            "['Nagoya', 'Nagoya', 'Nagoya']_12"
+        ]
+    },
+    "['PER']_date of birth": {
+        "['Tivadar Pusk\u00e1s', 'Tivadar Pusk\u00e1s']_14": [
+            "['1952-']_17",
+            "['1844']_15"
+        ],
+        "['Imre Pusk\u00e1s']_21": [
+            "['1966-']_22"
+        ],
+        "['Ferenc Pusk\u00e1s', 'Ferenc Pusk\u00e1s', 'Ferenc Pusk\u00e1s']_2": [
+            "['1903\u20131952']_18",
+            "['1927']_3"
+        ],
+        "['Zolt\u00e1n Pusk\u00e1s']_23": [
+            "['1993-']_24"
+        ],
+        "['Lajos Pusk\u00e1s']_19": [
+            "['1944-']_20"
+        ]
+    },
+    "['PER']_place of birth": {
+        "['Ross Patterson Alger', 'Alger', 'Alger']_0": [
+            "['Prelate']_8",
+            "['Saskatchewan']_9"
+        ]
+    },
+    "['MISC']_followed by": {
+        "['I Got a Woman']_5": [
+            "['This Little Girl of Mine', 'This Little Girl of Mine']_0",
+            "['Hallelujah I Love Her So']_6"
+        ],
+        "['This Little Light of Mine']_4": [
+            "['I Got a Woman']_5"
+        ]
+    },
+    "['MISC']_country": {
+        "['TMF', 'TMF', 'TMF', 'TMF', 'TMF', 'TMF', 'TMF', 'TMF', 'TMF', 'TMF : Music', 'The Music Factory', 'The Music Factory']_0": [
+            "['Dutch', 'Dutch']_4",
+            "['United Kingdom', 'UK', 'British']_1",
+            "['Belgian']_24"
+        ],
+        "['MTV']_11": [
+            "['United Kingdom', 'UK', 'British']_1"
+        ],
+        "['Freeview', 'Freeview']_9": [
+            "['United Kingdom', 'UK', 'British']_1"
+        ],
+        "['Hits channel', '4Music']_8": [
+            "['United Kingdom', 'UK', 'British']_1"
+        ],
+        "['Nick Jr.']_13": [
+            "['United Kingdom', 'UK', 'British']_1"
+        ]
+    },
+    "['MISC']_located in the administrative territorial entity": {
+        "['Blacks Hill']_17": [
+            "['Romney', 'Romney', 'Romney']_8",
+            "['West Virginia', 'West Virginia']_4",
+            "['Hampshire County']_3",
+            "['United States']_5",
+            "['American']_16"
+        ]
+    },
+    "['MISC']_follows": {
+        "['Mad World']_9": [
+            "['Pale Shelter']_11"
+        ],
+        "['Change']_10": [
+            "['Mad World']_9"
+        ],
+        "['Pale Shelter']_11": [
+            "['Mad World']_9",
+            "['Change']_10"
+        ]
+    },
+    "['MISC']_participant": {
+        "['War of the Spanish Succession']_2": [
+            "['England']_20",
+            "['Duchy of Milan']_6",
+            "['Austrians']_17",
+            "['Spanish']_5",
+            "['Dutch Republic']_21",
+            "['Imperialists']_14",
+            "['Franco \u2013 Spanish \u2013 Savoyard']_12",
+            "['Catinat', 'Catinat']_8",
+            "['Villeroi', 'Villeroi', 'Villeroi']_11",
+            "['Eugene', 'Eugene', 'Eugene']_3",
+            "['Louis XIV']_13",
+            "['Leopold I']_22"
+        ],
+        "['Battle of Carpi']_9": [
+            "['Catinat', 'Catinat']_8"
+        ]
+    },
+    "['PER']_educated at": {
+        "['Jonathan Joss', 'Joss', 'Joss', 'Joss']_0": [
+            "['Texas State University\u2013San Marcos', 'Southwest Texas State University']_13",
+            "['San Antonio College']_14",
+            "['Our Lady of the Lake University']_15",
+            "['McCollum High School']_12"
+        ]
+    },
+    "['PER']_sibling": {
+        "['John D. Rockefeller III']_5": [
+            "['Nelson']_6",
+            "['David']_9",
+            "['David Rockefeller']_17",
+            "['Laurance']_7",
+            "['Winthrop']_8",
+            "['Rockefeller', 'Rockefeller', 'Rockefellers']_1"
+        ],
+        "['Nelson']_6": [
+            "['John D. Rockefeller III']_5",
+            "['David']_9",
+            "['David Rockefeller']_17",
+            "['Laurance']_7",
+            "['Winthrop']_8"
+        ],
+        "['David']_9": [
+            "['John D. Rockefeller III']_5",
+            "['Nelson']_6",
+            "['Laurance']_7",
+            "['Winthrop']_8"
+        ],
+        "['David Rockefeller']_17": [
+            "['John D. Rockefeller III']_5",
+            "['Nelson']_6",
+            "['Laurance']_7",
+            "['Winthrop']_8",
+            "['Rockefeller', 'Rockefeller', 'Rockefellers']_1"
+        ],
+        "['Laurance']_7": [
+            "['John D. Rockefeller III']_5",
+            "['Nelson']_6",
+            "['David']_9",
+            "['David Rockefeller']_17",
+            "['Winthrop']_8",
+            "['Rockefeller', 'Rockefeller', 'Rockefellers']_1"
+        ],
+        "['Winthrop']_8": [
+            "['John D. Rockefeller III']_5",
+            "['Nelson']_6",
+            "['David']_9",
+            "['David Rockefeller']_17",
+            "['Laurance']_7",
+            "['Rockefeller', 'Rockefeller', 'Rockefellers']_1"
+        ],
+        "['Rockefeller', 'Rockefeller', 'Rockefellers']_1": [
+            "['John D. Rockefeller III']_5",
+            "['David Rockefeller']_17",
+            "['Laurance']_7",
+            "['Winthrop']_8"
+        ]
+    },
+    "['PER']_date of death": {
+        "['Guillermo David Endara Galimany', 'Endara', 'Endara', 'Endara', 'Endara', 'Endara', 'Endara', 'Endara', 'Endara']_0": [
+            "['September 28, 2009']_23",
+            "['September 28 , 2009']_2",
+            "['2009']_19"
+        ],
+        "['Arnulfo Arias', 'Arias', 'Arias', 'Arias']_7": [
+            "['1988']_11"
+        ]
+    },
+    "['LOC']_legislative body": {
+        "['the United States']_2": [
+            "['the United States Congress']_10"
+        ],
+        "['Philippines', 'Philippines']_3": [
+            "['Philippine Legislature', 'Legislature']_12",
+            "['Philippine Assembly']_14",
+            "['the United States Congress']_10",
+            "['Philippine Senate']_17"
+        ]
+    },
+    "['ORG']_conflict": {
+        "['British Army', 'British Army']_3": [
+            "['French Revolutionary Wars']_8",
+            "['War of 1812']_20",
+            "['Napoleonic Wars']_9"
+        ]
+    },
+    "['ORG']_country": {
+        "['Communist Party of China', 'CPC']_4": [
+            "['China', \"People's Republic of China\", 'PRC', 'China', 'China', 'China']_3",
+            "[\"People 's Republic\"]_11",
+            "['Chinese']_12"
+        ],
+        "['Three-Self Patriotic Movement', 'TSPM', 'TSPM']_6": [
+            "['China', \"People's Republic of China\", 'PRC', 'China', 'China', 'China']_3"
+        ],
+        "['Chinese Christians']_17": [
+            "['China', \"People's Republic of China\", 'PRC', 'China', 'China', 'China']_3"
+        ]
+    },
+    "['ORG']_applies to jurisdiction": {
+        "['Fish and Wildlife Service']_27": [
+            "['United States', 'US', 'US', 'United States']_6",
+            "['American', 'American']_21",
+            "['California']_5"
+        ]
+    },
+    "['LOC']_participant of": {
+        "['Britain']_21": [
+            "['French Revolutionary Wars']_8",
+            "['War of 1812']_20",
+            "['Napoleonic Wars']_9"
+        ],
+        "['the United States']_22": [
+            "['War of 1812']_20"
+        ],
+        "['British North America']_18": [
+            "['War of 1812']_20"
+        ]
+    },
+    "['PER']_located in the administrative territorial entity": {
+        "['Ctrain']_21": [
+            "['Alberta', 'Alberta']_4",
+            "['Canadian']_3"
+        ]
+    },
+    "['ORG']_located in the administrative territorial entity": {
+        "['Toulouse Business School', 'TBS', 'TBS']_3": [
+            "['Casablanca']_12",
+            "['Barcelona']_9",
+            "['Toulouse Business School(TBS )', 'School', 'Toulouse', 'Toulouse']_0",
+            "['France', 'France']_4",
+            "['French']_5",
+            "['Spain']_10",
+            "['Morocco']_13"
+        ],
+        "['Toulouse Chamber of Commerce and Industry']_2": [
+            "['France', 'France']_4",
+            "['French']_5"
+        ],
+        "['Grandes \u00c9coles de Management']_23": [
+            "['France', 'France']_4",
+            "['French']_5"
+        ],
+        "['Grandes Ecoles']_6": [
+            "['France', 'France']_4",
+            "['French']_5"
+        ]
+    },
+    "['PER']_country": {
+        "['Stewart Kings']_9": [
+            "['Scotland', 'Scotland']_10",
+            "['Scottish']_3"
+        ]
+    },
+    "['PER']_military branch": {
+        "['Arthur Ernest Percival', 'Percival', 'Percival']_0": [
+            "['British Army']_3",
+            "['British']_10",
+            "['British Commonwealth', 'Commonwealth']_6"
+        ]
+    },
+    "['PER']_conflict": {
+        "['Vicente Genaro de Quesada']_0": [
+            "['Peninsular War']_9",
+            "['First Carlist War']_14",
+            "['Battle of Alsasua']_17",
+            "['Battle of Burgos']_7"
+        ],
+        "['Lasalle']_12": [
+            "['Peninsular War']_9"
+        ]
+    },
+    "['LOC']_head of government": {
+        "['Madhya Pradesh', 'Madhya Pradesh', 'Madhya Pradesh', 'Madhya Pradesh']_0": [
+            "['Uma Bharti']_17",
+            "['Shivraj Singh Chouhan']_19",
+            "['Digvijaya Singh']_14",
+            "['Ravishankar Shukla']_9",
+            "['Govind Narayan Singh']_10"
+        ]
+    },
+    "['MISC']_instance of": {
+        "['Berlin Olympics']_11": [
+            "['Olympic', 'Olympic']_15",
+            "['Olympics']_18"
+        ],
+        "['1956 Olympics']_20": [
+            "['Olympics']_18",
+            "['Olympic', 'Olympic']_15"
+        ]
+    },
+    "['PER']_applies to jurisdiction": {
+        "['John Quincy Adams']_15": [
+            "['the United States', 'the United States', 'U.S.', 'the United States']_4",
+            "['American', 'American']_6",
+            "['Americans', 'Americans']_16"
+        ]
+    },
+    "['ORG']_participant of": {
+        "['British Army', 'British Army']_3": [
+            "['French Revolutionary Wars']_8",
+            "['War of 1812']_20",
+            "['Napoleonic Wars']_9"
+        ]
+    },
+    "['MISC']_publication date": {
+        "['SURREAL', 'Surreal', 'Surreal', 'Surreal', 'Surreal', 'Surreal', 'Surreal', 'Surreal', 'Surreal']_0": [
+            "['December 2000']_13",
+            "['27 September 2000']_6",
+            "['2000']_4"
+        ],
+        "['Duty', 'Duty']_3": [
+            "['2000']_4",
+            "['27 September 2000']_6"
+        ]
+    },
+    "['MISC']_performer": {
+        "['Year of tha Boomerang', 'Year of tha Boomerang']_13": [
+            "['Rage Against the Machine']_0",
+            "['Rage Against the Machine']_10",
+            "['Zack de la Rocha', 'de la Rocha']_5"
+        ],
+        "['Evil Empire']_16": [
+            "['Rage Against the Machine']_0",
+            "['Rage Against the Machine']_10",
+            "['Zack de la Rocha', 'de la Rocha']_5",
+            "['Tom Morello']_6",
+            "['Brad Wilk']_8",
+            "['Tim Commerford']_7"
+        ],
+        "['No Shelter']_21": [
+            "['Rage Against the Machine']_0",
+            "['Rage Against the Machine']_10",
+            "['Zack de la Rocha', 'de la Rocha']_5"
+        ],
+        "['The Ghost of Tom Joad']_20": [
+            "['Bruce Springsteen']_19",
+            "['Rage Against the Machine']_0",
+            "['Rage Against the Machine']_10"
+        ],
+        "['The Battle of Los Angeles']_24": [
+            "['Rage Against the Machine']_10",
+            "['Rage Against the Machine']_0",
+            "['Tom Morello']_6",
+            "['Brad Wilk']_8",
+            "['Tim Commerford']_7",
+            "['Zack de la Rocha', 'de la Rocha']_5"
+        ],
+        "['Rage Against the Machine']_10": [
+            "['Rage Against the Machine']_0",
+            "['Zack de la Rocha', 'de la Rocha']_5",
+            "['Tim Commerford']_7",
+            "['Tom Morello']_6"
+        ],
+        "['Renegades']_26": [
+            "['Rage Against the Machine']_0",
+            "['Zack de la Rocha', 'de la Rocha']_5"
+        ],
+        "['Higher Learning soundtrack']_14": [
+            "['Rage Against the Machine']_0"
+        ]
+    },
+    "['MISC']_lyrics by": {
+        "['Your Disco Needs You', 'Your Disco Needs You']_0": [
+            "['Guy Chambers', 'Chambers']_5",
+            "['Robbie Williams']_6",
+            "['Kylie Minogue', 'Minogue', 'Minogue']_2"
+        ]
+    },
+    "['PER']_notable work": {
+        "['Michael Giacchino', 'Giacchino']_0": [
+            "['Super 8']_12",
+            "['Star Trek Into Darkness']_13",
+            "['Star Trek Beyond']_18",
+            "['Incredibles 2']_23",
+            "['Lost']_3",
+            "['Fringe']_5",
+            "['Alias']_4",
+            "['The Incredibles']_8",
+            "['Ratatouille']_9",
+            "['Star Trek']_10",
+            "['Zootopia']_17",
+            "['Doctor Strange']_19",
+            "['Rogue One']_20",
+            "['Up', 'Up']_11",
+            "['Inside Out']_16",
+            "['Coco']_22",
+            "['War for the Planet of the Apes']_21",
+            "['Dawn of the Planet of the Apes']_14",
+            "['Jurassic World']_15",
+            "['Call of Duty']_7",
+            "['Medal of Honor']_6"
+        ]
+    },
+    "['MISC']_country of origin": {
+        "['Big Easy Express']_16": [
+            "['U.S.']_9",
+            "['American']_8"
+        ],
+        "['Railroad Revival Tour', 'Railroad Revival Tour']_0": [
+            "['U.S.']_9"
+        ],
+        "['This Train']_24": [
+            "['U.S.']_9",
+            "['American']_8"
+        ],
+        "[\"Mumford & Sons '\"]_10": [
+            "['U.S.']_9"
+        ]
+    },
+    "['ORG']_headquarters location": {
+        "['Fyllingen', 'Fyllingen', 'Fyllingen Fotball', 'Fyllingen Fotball', 'Fyllingen IL', 'Fyllingen IL', 'Fyllingen IL']_0": [
+            "['Fyllingsdalen']_2",
+            "['Bergen']_3"
+        ]
+    },
+    "['MISC']_composer": {
+        "['The Old Chaperone']_16": [
+            "['Ramey Idriss', 'Ramez Idriss', 'Ramey', 'Idriss', 'Idriss', 'Idriss']_0"
+        ],
+        "['Take a Letter Miss Smith']_17": [
+            "['Ramey Idriss', 'Ramez Idriss', 'Ramey', 'Idriss', 'Idriss', 'Idriss']_0"
+        ],
+        "['The Woody Woodpecker Song', 'Woody Woodpecker Song']_12": [
+            "['Ramey Idriss', 'Ramez Idriss', 'Ramey', 'Idriss', 'Idriss', 'Idriss']_0",
+            "['George Tibbles', 'Tibbles']_21"
+        ],
+        "['Leave It to Joan']_19": [
+            "['Ramey Idriss', 'Ramez Idriss', 'Ramey', 'Idriss', 'Idriss', 'Idriss']_0"
+        ],
+        "['Worry Worry Worry']_15": [
+            "['Ramey Idriss', 'Ramez Idriss', 'Ramey', 'Idriss', 'Idriss', 'Idriss']_0"
+        ],
+        "['Wet Blanket Policy']_13": [
+            "['Ramey Idriss', 'Ramez Idriss', 'Ramey', 'Idriss', 'Idriss', 'Idriss']_0"
+        ],
+        "[\"I 'll Wait\"]_18": [
+            "['Ramey Idriss', 'Ramez Idriss', 'Ramey', 'Idriss', 'Idriss', 'Idriss']_0"
+        ],
+        "['Something Old Something New']_20": [
+            "['Ramey Idriss', 'Ramez Idriss', 'Ramey', 'Idriss', 'Idriss', 'Idriss']_0"
+        ]
+    },
+    "['MISC']_creator": {
+        "['Silvan', 'Wood - elves', 'Silvan', 'Silvan Elves', 'Silvan Elves']_0": [
+            "['J.R.R.']_2",
+            "['Tolkien']_3"
+        ]
+    },
+    "['PER']_member of": {
+        "['Martin Ulrich', 'Ulrich', 'Ulrich', 'Ulrich', 'Ulrich']_0": [
+            "['Graz EC']_6",
+            "['EK Zell am See']_20",
+            "['DEG Metro Stars']_15",
+            "['Austrian national ice hockey team']_3",
+            "['Adler Mannheim']_11",
+            "['Berlin Capitals']_14",
+            "['Red Bull Salzburg']_18"
+        ]
+    },
+    "['ORG']_inception": {
+        "['Fyllingen', 'Fyllingen', 'Fyllingen Fotball', 'Fyllingen Fotball', 'Fyllingen IL', 'Fyllingen IL', 'Fyllingen IL']_0": [
+            "['1 January 1994']_5",
+            "['6 June 1946']_6",
+            "['1994']_16"
+        ]
+    },
+    "['LOC']_official language": {
+        "['Spain']_25": [
+            "['Spanish - language']_24",
+            "['Spanish']_21"
+        ]
+    },
+    "['LOC']_part of": {
+        "['South Sudan', 'South Sudan', 'Southern Sudan', 'South Sudan', 'South Sudan']_0": [
+            "['Africa']_1",
+            "['United Nations', 'United Nations']_2",
+            "['Eastern Africa']_3"
+        ],
+        "['Sudan']_4": [
+            "['Africa']_1",
+            "['Eastern Africa']_3"
+        ]
+    },
+    "['LOC']_has part": {
+        "['Mascarene Archipelago']_4": [
+            "['R\u00e9union', 'R\u00e9union', 'R\u00e9union', 'R\u00e9union']_2",
+            "['Rodrigues']_17",
+            "['Mauritius']_16",
+            "['Piton de la Fournaise']_12",
+            "['Piton des Neiges', 'Piton des Neiges', 'Piton des Neiges', 'Piton des Neiges', 'Snow Peak']_0"
+        ],
+        "['R\u00e9union', 'R\u00e9union', 'R\u00e9union', 'R\u00e9union']_2": [
+            "['Piton des Neiges', 'Piton des Neiges', 'Piton des Neiges', 'Piton des Neiges', 'Snow Peak']_0",
+            "['Piton de la Fournaise']_12"
+        ]
+    },
+    "['LOC']_continent": {
+        "['Central Africa']_17": [
+            "['African']_7"
+        ],
+        "['Logone-Birni', 'Cameroon']_16": [
+            "['African']_7",
+            "['Central Africa']_17"
+        ]
+    },
+    "['MISC']_cast member": {
+        "['Mar\u00eda la del Barrio', 'Maria of the Slums', 'Humble Maria', 'Mar\u00eda la del barrio']_0": [
+            "['Osvaldo Benavides']_12",
+            "['Ariel L\u00f3pez Padilla']_16",
+            "['Mauricio Aspe']_17",
+            "['Ricardo Blume']_19",
+            "['Ir\u00e1n Eory']_20",
+            "['Carmen Salinas']_21",
+            "['Yuliana Peniche']_18",
+            "['Ren\u00e9 Mu\u00f1oz']_23",
+            "['Fernando Colunga']_10",
+            "['Sebasti\u00e1n Ligarde']_15",
+            "['Meche Barba']_22",
+            "['Manuel Saval']_25",
+            "['Aurora Molina']_24",
+            "['Ludwika Paleta']_11",
+            "['Ana Patricia Rojo']_14"
+        ]
+    },
+    "['MISC']_director": {
+        "['The Princess and the Frog']_2": [
+            "['Ron Clements']_4",
+            "['John Musker']_5"
+        ]
+    },
+    "['LOC']_head of state": {
+        "['Romania', 'Romania', 'Romania', 'Romania', 'Romanian']_3": [
+            "['Carol II', 'Carol', 'Carol', 'Carol']_0",
+            "['Ion Antonescu']_26",
+            "['Carol I']_7",
+            "['Ferdinand I']_6",
+            "['Ferdinand']_21",
+            "['Michael I. Carol', 'Michael']_24"
+        ],
+        "['Greece', 'Greece']_15": [
+            "['Constantine I']_17"
+        ]
+    },
+    "['PER']_performer": {
+        "['Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana']_0": [
+            "['Elizabeth M. Dampier']_8",
+            "['Anika Noni Rose']_7"
+        ]
+    },
+    "['MISC']_production company": {
+        "['The Interview', 'The Interview']_8": [
+            "['Sony Pictures', 'Sony Pictures']_12",
+            "['Sony']_13"
+        ]
+    },
+    "['MISC']_owned by": {
+        "['Buick']_5": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Chevrolet', 'Chevrolet']_6": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Oakland']_7": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Oldsmobile']_8": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Cadillac']_9": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Holden', 'Holden']_21": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Vauxhall']_18": [
+            "['General Motors', 'General Motors']_3"
+        ],
+        "['British Vauxhalls']_12": [
+            "['General Motors', 'General Motors']_3"
+        ],
+        "['Vauxhalls', 'Vauxhalls']_15": [
+            "['General Motors', 'General Motors']_3"
+        ],
+        "['Holdens']_22": [
+            "['General Motors', 'General Motors']_3"
+        ],
+        "['Chevrolets']_16": [
+            "['General Motors', 'General Motors']_3"
+        ],
+        "['Pontiac']_19": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ]
+    },
+    "['MISC']_manufacturer": {
+        "['Holdens']_22": [
+            "['Holden', 'Holden']_21",
+            "['General Motors', 'General Motors']_3"
+        ],
+        "['Chevrolet', 'Chevrolet']_6": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2",
+            "['General Motors New Zealand Limited', 'Holden New Zealand Limited']_0"
+        ],
+        "['Oakland']_7": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['British Vauxhalls']_12": [
+            "['General Motors New Zealand Limited', 'Holden New Zealand Limited']_0",
+            "['General Motors', 'General Motors']_3"
+        ],
+        "['Buick']_5": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Pontiac']_19": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Oldsmobile']_8": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Chevrolets']_16": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ],
+        "['Vauxhalls', 'Vauxhalls']_15": [
+            "['General Motors', 'General Motors']_3"
+        ],
+        "['Vauxhall']_18": [
+            "['General Motors', 'General Motors']_3"
+        ],
+        "['Cadillac']_9": [
+            "['General Motors', 'General Motors']_3",
+            "['General Motors of Detroit']_2"
+        ]
+    },
+    "['MISC']_developer": {
+        "['Microsoft Open Specification Promise']_19": [
+            "['Microsoft', 'Microsoft', 'Microsoft', 'Microsoft', 'Microsoft']_8"
+        ],
+        "['Mono', 'Mono', 'Mono', 'Mono', 'Mono', 'Mono', 'Mono']_0": [
+            "['Microsoft', 'Microsoft', 'Microsoft', 'Microsoft', 'Microsoft']_8",
+            "['Xamarin', 'Xamarin']_7",
+            "['Ximian']_5",
+            "['.NET Foundation', '.NET', '.NET']_9",
+            "['Novell']_6"
+        ],
+        "['C #']_3": [
+            "['Microsoft', 'Microsoft', 'Microsoft', 'Microsoft', 'Microsoft']_8"
+        ],
+        "['.NET Framework', '.NET Framework', '.NET Framework']_2": [
+            "['Microsoft', 'Microsoft', 'Microsoft', 'Microsoft', 'Microsoft']_8"
+        ],
+        "['Solaris']_15": [
+            "['Microsoft', 'Microsoft', 'Microsoft', 'Microsoft', 'Microsoft']_8"
+        ],
+        "['Windows']_14": [
+            "['Microsoft', 'Microsoft', 'Microsoft', 'Microsoft', 'Microsoft']_8"
+        ],
+        "['Xbox 360']_18": [
+            "['Microsoft', 'Microsoft', 'Microsoft', 'Microsoft', 'Microsoft']_8"
+        ]
+    },
+    "['ORG']_founded by": {
+        "['Rockefeller Brothers Fund', 'RBF', 'RBF', 'RBF', 'RBF', 'Fund']_0": [
+            "['John D. Rockefeller III']_5",
+            "['Rockefeller', 'Rockefeller', 'Rockefellers']_1",
+            "['David Rockefeller']_17"
+        ]
+    },
+    "['MISC']_capital of": {
+        "['The Sacramento Bee', 'Sacramento', 'The Bee', 'The Bee']_0": [
+            "['California', 'California', 'California']_2"
+        ]
+    },
+    "['MISC']_inception": {
+        "['The Sacramento Bee', 'Sacramento', 'The Bee', 'The Bee']_0": [
+            "['1857']_4"
+        ],
+        "['Scoopy Bee']_12": [
+            "['1943']_14"
+        ]
+    },
+    "['MISC']_publisher": {
+        "['Kingdom Hearts', 'Kingdom Hearts']_7": [
+            "['Enix', 'Enix']_4",
+            "['Square Enix', 'Square Enix', 'Square Enix', 'Square Enix', 'Square Enix']_0"
+        ],
+        "['Dragon Quest', 'Dragon Quest']_6": [
+            "['Square Enix', 'Square Enix', 'Square Enix', 'Square Enix', 'Square Enix']_0",
+            "['Enix', 'Enix']_4"
+        ],
+        "['Final Fantasy', 'Final Fantasy']_5": [
+            "['Square Enix', 'Square Enix', 'Square Enix', 'Square Enix', 'Square Enix']_0",
+            "['Enix', 'Enix']_4"
+        ]
+    },
+    "['MISC']_parent organization": {
+        "['BBC Two']_5": [
+            "['BBC Television']_1",
+            "['BBC']_4"
+        ]
+    },
+    "['LOC']_capital": {
+        "['Japan', 'Japan']_0": [
+            "['Edo']_4",
+            "['Tokyo']_11",
+            "['Heian - ky\u014d']_9"
+        ]
+    },
+    "['ORG']_subsidiary": {
+        "['BBC', 'BBC', 'BBC', 'BBC', 'BBC']_2": [
+            "['CBBC', 'CBBC', 'CBBC', 'CBBC', 'CBBC', \"Children 's BBC\"]_0",
+            "['BBC One']_9",
+            "['BBC Two']_10",
+            "['BBC HD', 'BBC HD']_14",
+            "['CBeebies']_6",
+            "['CBBC HD']_16",
+            "['BBC Alba']_20"
+        ]
+    },
+    "['LOC']_capital of": {
+        "['Samarkand']_11": [
+            "['Samarqand Region']_1",
+            "['Region']_12"
+        ],
+        "['Urgut', 'Urgut', 'Urgut', 'Urgut']_0": [
+            "['Urgut District']_3"
+        ],
+        "['Urguti']_10": [
+            "['Urgut District']_3"
+        ]
+    },
+    "['LOC']_inception": {
+        "['Cambodia \u2013 Vietnam Friendship Monument']_0": [
+            "['1970s', '1970s']_4"
+        ]
+    },
+    "['PER']_father": {
+        "['Carol II', 'Carol', 'Carol', 'Carol']_0": [
+            "['Ferdinand I']_6",
+            "['Ferdinand']_21"
+        ],
+        "['Michael I. Carol', 'Michael']_24": [
+            "['Carol II', 'Carol', 'Carol', 'Carol']_0"
+        ]
+    },
+    "['PER']_religion": {
+        "['Jesus', 'Jesus', 'Jesus', 'Jesus', 'Jesus', 'Jesus Christ']_4": [
+            "['Catholic', 'Catholicism', 'Catholic Church']_2",
+            "['Orthodox']_6",
+            "['Protestant', 'Protestant']_7",
+            "['Christianity']_3"
+        ],
+        "['Joseph']_8": [
+            "['Catholic', 'Catholicism', 'Catholic Church']_2",
+            "['Protestant', 'Protestant']_7",
+            "['Christianity']_3"
+        ],
+        "['Martin Luther']_19": [
+            "['Protestant', 'Protestant']_7",
+            "['Christianity']_3",
+            "['Lutheran']_24"
+        ],
+        "['Hugh Latimer']_21": [
+            "['Anglicanism', 'Anglican']_20",
+            "['Christianity']_3",
+            "['Protestant', 'Protestant']_7"
+        ],
+        "['Thomas Cranmer']_22": [
+            "['Anglicanism', 'Anglican']_20",
+            "['Christianity']_3",
+            "['Protestant', 'Protestant']_7"
+        ],
+        "['John Wesley']_25": [
+            "['Christianity']_3",
+            "['Protestant', 'Protestant']_7",
+            "['Methodism']_26"
+        ],
+        "['Mary', 'Mary', 'Mary', 'Mary', 'Mary', 'Mary', 'Mary', 'Mary']_0": [
+            "['Christianity']_3",
+            "['Catholic', 'Catholicism', 'Catholic Church']_2"
+        ]
+    },
+    "['PER']_spouse": {
+        "['Arjuna', 'Arjuna', 'Arjuna', '\u0905\u0930\u094d\u091c\u0941\u0928']_0": [
+            "['Draupadi']_14",
+            "['Ulupi']_15",
+            "['Chitr\u0101ngad\u0101']_16",
+            "['Subhadra']_17"
+        ],
+        "['Draupadi']_14": [
+            "['Arjuna', 'Arjuna', 'Arjuna', '\u0905\u0930\u094d\u091c\u0941\u0928']_0"
+        ],
+        "['Ulupi']_15": [
+            "['Arjuna', 'Arjuna', 'Arjuna', '\u0905\u0930\u094d\u091c\u0941\u0928']_0"
+        ],
+        "['Chitr\u0101ngad\u0101']_16": [
+            "['Arjuna', 'Arjuna', 'Arjuna', '\u0905\u0930\u094d\u091c\u0941\u0928']_0"
+        ],
+        "['Subhadra']_17": [
+            "['Arjuna', 'Arjuna', 'Arjuna', '\u0905\u0930\u094d\u091c\u0941\u0928']_0"
+        ],
+        "['Pandu']_8": [
+            "['Kunti']_7"
+        ],
+        "['Kunti']_7": [
+            "['Pandu']_8"
+        ]
+    },
+    "['PER']_child": {
+        "['Paul Desmarais Sr']_4": [
+            "['Paul Desmarais Jr.', 'Paul Desmarais']_0"
+        ],
+        "['Jacqueline ( Maranger ) Desmarais', 'Desmarais']_5": [
+            "['Paul Desmarais Jr.', 'Paul Desmarais']_0"
+        ],
+        "['H\u00e9l\u00e8ne Desmarais']_18": [
+            "['Alexandre']_23",
+            "['Paul']_22",
+            "['Charles-\u00c9douard']_25",
+            "['Nicolas']_24"
+        ],
+        "['Paul Desmarais Jr.', 'Paul Desmarais']_0": [
+            "['Charles-\u00c9douard']_25",
+            "['Alexandre']_23",
+            "['Nicolas']_24",
+            "['Paul']_22"
+        ]
+    },
+    "['PER']_mother": {
+        "['Alexandre']_23": [
+            "['H\u00e9l\u00e8ne Desmarais']_18"
+        ],
+        "['Paul']_22": [
+            "['H\u00e9l\u00e8ne Desmarais']_18"
+        ],
+        "['Charles-\u00c9douard']_25": [
+            "['H\u00e9l\u00e8ne Desmarais']_18"
+        ],
+        "['Nicolas']_24": [
+            "['H\u00e9l\u00e8ne Desmarais']_18"
+        ]
+    },
+    "['LOC']_located in or next to body of water": {
+        "['Minnehaha Falls', 'Minnehaha Falls']_9": [
+            "['Minnehaha Creek', 'Minnehaha Creek']_8"
+        ],
+        "['Minneapolis']_2": [
+            "['Rice Lake', 'Lake Hiawatha', 'Lake Hiawatha', 'Lake Hiawatha']_0",
+            "['Mississippi River']_10",
+            "['Lake Nokomis', 'Lake Nokomis']_1"
+        ],
+        "['Minnesota']_3": [
+            "['Lake Nokomis', 'Lake Nokomis']_1"
+        ]
+    },
+    "['LOC']_basin country": {
+        "['Baltic Sea', 'Baltic Sea']_1": [
+            "['Denmark']_10",
+            "['Germany']_11",
+            "['Sweden']_12",
+            "['Danish', 'Danish', 'Danish']_6",
+            "['German']_14"
+        ]
+    },
+    "['LOC']_located on terrain feature": {
+        "['Mascarene Archipelago']_4": [
+            "['Indian Ocean', 'Indian Ocean']_5"
+        ],
+        "['Rodrigues']_17": [
+            "['Mascarene Archipelago']_4",
+            "['Indian Ocean', 'Indian Ocean']_5"
+        ],
+        "['Piton des Neiges', 'Piton des Neiges', 'Piton des Neiges', 'Piton des Neiges', 'Snow Peak']_0": [
+            "['Mascarene Archipelago']_4",
+            "['R\u00e9union', 'R\u00e9union', 'R\u00e9union', 'R\u00e9union']_2",
+            "['Indian Ocean', 'Indian Ocean']_5"
+        ],
+        "['R\u00e9union', 'R\u00e9union', 'R\u00e9union', 'R\u00e9union']_2": [
+            "['Mascarene Archipelago']_4",
+            "['Indian Ocean', 'Indian Ocean']_5"
+        ],
+        "['Piton de la Fournaise']_12": [
+            "['Mascarene Archipelago']_4",
+            "['R\u00e9union', 'R\u00e9union', 'R\u00e9union', 'R\u00e9union']_2"
+        ],
+        "['Mauritius']_16": [
+            "['Mascarene Archipelago']_4"
+        ]
+    },
+    "['LOC']_instance of": {
+        "['Westmere', 'Westmere', 'Westmere', 'Westmere']_0": [
+            "['CDP']_5"
+        ]
+    },
+    "['PER']_residence": {
+        "['Muhammaed Yasir Ahmed Taher', 'Yasir al-Simli']_17": [
+            "['Guantanamo']_18"
+        ],
+        "['Salah Ahmed al-Salami', 'Ali Abdullah Ahmed', 'Ali Abdullah Ahmed']_0": [
+            "['Guantanamo Bay detainment camps']_7",
+            "['Guantanamo']_18"
+        ]
+    },
+    "['PER']_member of political party": {
+        "['Carl G\u00f6sta Bj\u00f6rn Joachim von der Esch', 'Esch', 'Esch', 'Esch']_0": [
+            "['Moderate Party', 'Moderate Party']_11",
+            "['Christian Democrats']_10"
+        ],
+        "['Per Westerberg']_14": [
+            "['Moderate Party', 'Moderate Party']_11"
+        ]
+    },
+    "['ORG']_has part": {
+        "['Holy Family']_9": [
+            "['Mary', 'Mary', 'Mary', 'Mary', 'Mary', 'Mary', 'Mary', 'Mary']_0",
+            "['Jesus', 'Jesus', 'Jesus', 'Jesus', 'Jesus', 'Jesus Christ']_4",
+            "['Joseph']_8"
+        ],
+        "['Christianity']_3": [
+            "['Anglicanism', 'Anglican']_20",
+            "['Protestant', 'Protestant']_7",
+            "['Anglo - Catholics']_13",
+            "['Orthodox']_6",
+            "['Oriental Orthodoxy']_15",
+            "['Catholic', 'Catholicism', 'Catholic Church']_2",
+            "['Church Fathers']_11"
+        ]
+    },
+    "['ORG']_part of": {
+        "['Democratic National Committee']_18": [
+            "['Democrat', 'Democratic Digest']_21"
+        ],
+        "['Democratic National Conventions']_22": [
+            "['Democrat', 'Democratic Digest']_21",
+            "['Democratic National Committee']_18"
+        ]
+    },
+    "['LOC']_applies to jurisdiction": {
+        "['Catalonia']_1": [
+            "['Spain']_3"
+        ]
+    },
+    "['LOC']_mouth of the watercourse": {
+        "['Link River', 'Link River', 'Yulalona']_0": [
+            "['Klamath Lake', 'Klamath Lake']_6",
+            "['Klamath River']_8",
+            "['Pacific Ocean']_9",
+            "['Lake Ewauna', 'Lake Ewauna', 'Lake Ewauna']_2"
+        ],
+        "['Klamath River']_8": [
+            "['Pacific Ocean']_9"
+        ],
+        "['Klamath Lake', 'Klamath Lake']_6": [
+            "['Pacific Ocean']_9"
+        ],
+        "['Link River Dam']_7": [
+            "['Pacific Ocean']_9"
+        ],
+        "['Lake Ewauna', 'Lake Ewauna', 'Lake Ewauna']_2": [
+            "['Pacific Ocean']_9"
+        ]
+    },
+    "['MISC']_part of": {
+        "['New Testament']_1": [
+            "['Scripture']_2",
+            "['Christian', 'Christian', 'Christianity', 'Christianity']_0"
+        ],
+        "['Psalter']_3": [
+            "['Scripture']_2"
+        ]
+    },
+    "['PER']_place of death": {
+        "['John Richardson Thurman', 'Thurman', 'Thurman', 'Thurman']_0": [
+            "['Friends Lake']_18",
+            "['Chestertown', 'Chestertown']_7"
+        ]
+    },
+    "['LOC']_conflict": {
+        "['France']_24": [
+            "['World War I.']_25"
+        ]
+    },
+    "['ORG']_military branch": {
+        "['S\u00f8nderm\u00f8r Infantry Regiment']_18": [
+            "['Norwegian Army']_16"
+        ]
+    },
+    "['LOC']_member of": {
+        "['South Sudan', 'South Sudan', 'Southern Sudan', 'South Sudan', 'South Sudan']_0": [
+            "['African Union']_9",
+            "['United Nations', 'United Nations']_2",
+            "['Intergovernmental Authority on Development']_10"
+        ],
+        "['Sudan']_4": [
+            "['African Union']_9",
+            "['United Nations', 'United Nations']_2"
+        ]
+    },
+    "['MISC']_has part": {
+        "['Greatest Hits']_0": [
+            "['Mamma Mia']_2",
+            "['Halfway Around the World']_4",
+            "['Floorfiller']_5",
+            "['I Promised Myself']_23",
+            "['With or Without You']_11",
+            "['Upside Down']_3"
+        ]
+    },
+    "['ORG']_parent organization": {
+        "['Screentime Partners', 'Screentime Partners', 'Outright Distribution', 'Outright Distribution', 'Outright', 'Outright Distribution', 'Outright Distribution', 'Outright Distribution', 'Outright Distribution']_0": [
+            "['Warner Bros. Television', 'Warner Bros.', 'Warner']_11",
+            "['Warner Bros. Television Productions UK', 'Shed Media Group']_2",
+            "['Shed Media', 'Shed Media', 'Shed Media', 'Shed Media']_3"
+        ],
+        "['Shed Media', 'Shed Media', 'Shed Media', 'Shed Media']_3": [
+            "['Warner Bros. Television', 'Warner Bros.', 'Warner']_11",
+            "['Warner Bros. Television Productions UK', 'Shed Media Group']_2"
+        ],
+        "['Warner Bros. Television Productions UK', 'Shed Media Group']_2": [
+            "['Warner Bros. Television', 'Warner Bros.', 'Warner']_11"
+        ]
+    },
+    "['PER']_work location": {
+        "['Leonardo da Vinci', 'Leonardo']_1": [
+            "['Milanese']_11",
+            "['Florence']_14",
+            "['Milan']_15"
+        ]
+    },
+    "['MISC']_award received": {
+        "['Big Easy Express']_16": [
+            "['Grammy Award']_20"
+        ]
+    },
+    "['PER']_award received": {
+        "['Tigran Vartanovich Petrosian', 'Petrosian', 'Petrosian']_0": [
+            "['World Chess Champion']_5",
+            "['World Champion']_23",
+            "['World Championship', 'World Championship']_9",
+            "['Soviet Championship']_27"
+        ],
+        "['Spassky']_22": [
+            "['World Champion']_23"
+        ],
+        "['Mikhail Botvinnik']_19": [
+            "['World Championship', 'World Championship']_9"
+        ],
+        "['Boris Spassky']_21": [
+            "['World Champion']_23",
+            "['World Championship', 'World Championship']_9"
+        ]
+    },
+    "['MISC']_notable work": {
+        "['Rage Against the Machine']_10": [
+            "['Year of tha Boomerang', 'Year of tha Boomerang']_13",
+            "['Evil Empire']_16",
+            "['No Shelter']_21",
+            "['The Battle of Los Angeles']_24",
+            "['The Ghost of Tom Joad']_20"
+        ]
+    },
+    "['ORG']_notable work": {
+        "['ABBA', 'ABBA', 'ABBA', 'ABBA', 'ABBA', 'ABBA']_2": [
+            "['Does Your Mother Know']_20",
+            "['I Am an A']_13",
+            "['Get on the Carousel']_14",
+            "[\"I 'm Still Alive\"]_15",
+            "['The Girl with the Golden Hair']_16",
+            "['Thank You for the Music']_17",
+            "['I Wonder ( Departure )']_18",
+            "[\"I 'm a Marionette\"]_19",
+            "['ABBA Live', 'ABBA Live', 'ABBA Live']_0",
+            "['Dick Cavett Meets ABBA']_12",
+            "['Hole in Your Soul']_22"
+        ]
+    },
+    "['ORG']_legislative body": {
+        "['Australian Government']_18": [
+            "['Australian Parliament']_19"
+        ]
+    },
+    "['MISC']_point in time": {
+        "['Battle of Midway', 'Battle of Midway']_6": [
+            "['4\u20135 June 1942']_7",
+            "['4 June 1942']_16",
+            "['5 June 1942']_2"
+        ]
+    },
+    "['ORG']_religion": {
+        "['Catholic Church']_1": [
+            "['Catholics']_18",
+            "['Catholic']_11"
+        ],
+        "['Muslims']_16": [
+            "['Islamic']_17"
+        ],
+        "['Holy See', 'Holy See']_8": [
+            "['Catholic']_11"
+        ],
+        "['Catholic Church in the Maldives']_0": [
+            "['Catholic']_11"
+        ]
+    },
+    "['LOC']_religion": {
+        "['Roman Catholic Diocese of Pittsburgh', 'Diocese of Pittsburgh']_2": [
+            "['Catholic', 'Catholic', 'Catholic', 'Catholic', 'Catholic', 'Catholic']_1",
+            "['Catholics']_7"
+        ]
+    },
+    "['ORG']_member of": {
+        "['Pittsburgh Catholic', 'Pittsburgh Catholic', 'Pittsburgh Catholic', 'Pittsburgh Catholic']_0": [
+            "['Catholic Press Association']_12"
+        ]
+    },
+    "['PER']_employer": {
+        "['Eidenm\u00fcller', 'Eidenm\u00fcller', 'Eidenm\u00fcller', 'Eidenm\u00fcller', 'Horst Eidenm\u00fcller']_0": [
+            "['University of Oxford', 'Oxford', 'Oxford']_4",
+            "['Munich', 'Munich']_6",
+            "['NYU']_22",
+            "['Harvard']_19",
+            "['Tulane']_21",
+            "['Stanford']_24",
+            "['M\u00fcnster']_12"
+        ]
+    },
+    "['PER']_member of sports team": {
+        "['Pavol Sedl\u00e1k']_0": [
+            "['SK Schwadorf']_4",
+            "['1', 'FC Brno', 'FC Brno']_12",
+            "['\u0160K Slovan Bratislava', '\u0160K Slovan Bratislava']_5",
+            "['M\u0160K Rimavsk\u00e1 Sobota']_6",
+            "['FK DAC 1904 Dunajsk\u00e1 Streda']_7",
+            "['Gaziantepspor']_10",
+            "['\u00c7aykur Rizespor']_11",
+            "['Dukla Bansk\u00e1 Bystrica']_13",
+            "['FC Rimavsk\u00e1 Sobota']_14",
+            "['Slovan Bratislava']_15"
+        ]
+    },
+    "['ORG']_league": {
+        "['Fyllingen', 'Fyllingen', 'Fyllingen Fotball', 'Fyllingen Fotball', 'Fyllingen IL', 'Fyllingen IL', 'Fyllingen IL']_0": [
+            "['First Division']_15",
+            "['Second Division']_18",
+            "['Third Division']_22",
+            "['Norwegian Premier League']_7"
+        ],
+        "['Rosenborg']_12": [
+            "['Norwegian Cup']_11"
+        ]
+    },
+    "['MISC']_operator": {
+        "['BBC Two']_5": [
+            "['BBC Television']_1",
+            "['BBC']_4"
+        ]
+    },
+    "['ORG']_product or material produced": {
+        "['Google', 'Google']_1": [
+            "['Google Play']_18",
+            "['Google Play Music']_6",
+            "['Nexus   Q', 'Nexus \\xa0 Q', 'Nexus Q', 'Nexus Q', 'Nexus Q', 'Nexus   Q', 'Nexus   Q', 'Nexus   Q', 'Nexus   Q']_0"
+        ]
+    },
+    "['MISC']_dissolved, abolished or demolished": {
+        "['Nexus   Q', 'Nexus \\xa0 Q', 'Nexus Q', 'Nexus Q', 'Nexus Q', 'Nexus   Q', 'Nexus   Q', 'Nexus   Q', 'Nexus   Q']_0": [
+            "['January 2013']_17"
+        ]
+    },
+    "['MISC']_author": {
+        "['South of No North']_3": [
+            "['Charles Bukowski', 'Bukowski', 'Bukowski', 'Bukowski', 'Bukowski', 'Bukowski']_1",
+            "['Bukowksi']_8"
+        ],
+        "['The Killers', 'The Killers', 'The Killers', 'The Killers', 'Killers']_0": [
+            "['Charles Bukowski', 'Bukowski', 'Bukowski', 'Bukowski', 'Bukowski', 'Bukowski']_1",
+            "['Ernest Hemingway', 'Hemingway', 'Hemingway', 'Hemingway', 'Hemingway']_6",
+            "['Bukowksi']_8"
+        ]
+    },
+    "['NUM']_author": {
+        "['17-volume']_14": [
+            "['Constantine', 'K.C.']_2"
+        ]
+    },
+    "['MISC']_characters": {
+        "['Mahabharata']_3": [
+            "['Vishnu']_12",
+            "['Arjuna', 'Arjuna', 'Arjuna', '\u0905\u0930\u094d\u091c\u0941\u0928']_0",
+            "['Kunti']_7",
+            "['Narayana']_11",
+            "['Draupadi']_14",
+            "['Ulupi']_15",
+            "['Subhadra']_17",
+            "['Krishna', 'Krishna', 'Krishna']_5",
+            "['Balarama']_18",
+            "['Pandu']_8",
+            "['Nara']_10",
+            "['Indra']_6",
+            "['Chitr\u0101ngad\u0101']_16"
+        ],
+        "['Bhagavad Gita']_4": [
+            "['Krishna', 'Krishna', 'Krishna']_5",
+            "['Arjuna', 'Arjuna', 'Arjuna', '\u0905\u0930\u094d\u091c\u0941\u0928']_0"
+        ]
+    },
+    "['PER']_creator": {
+        "['Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana']_0": [
+            "['John Musker']_5",
+            "['Ron Clements']_4",
+            "['Disney']_15"
+        ],
+        "['Naveen']_18": [
+            "['Ron Clements']_4"
+        ],
+        "['Emma']_10": [
+            "['E. D. Baker', 'Baker']_11"
+        ]
+    },
+    "['PER']_present in work": {
+        "['Zulaikha']_16": [
+            "['Old Testament']_18",
+            "[\"Qur'an\", 'Quran', 'Qur\u02be\u0101n']_2"
+        ],
+        "['Jacob', 'Jacob', 'Jacob', 'Jacob', 'Jacob', 'Ya\u02bfq\u016bb']_4": [
+            "['Christian Bible']_7",
+            "['Biblical']_11",
+            "['Tanakh']_5",
+            "[\"Qur'an\", 'Quran', 'Qur\u02be\u0101n']_2"
+        ],
+        "['Potiphar']_17": [
+            "['Christian Bible']_7",
+            "['Old Testament']_18",
+            "[\"Qur'an\", 'Quran', 'Qur\u02be\u0101n']_2",
+            "['Biblical']_11"
+        ]
+    },
+    "['ORG']_subclass of": {
+        "['Presbyterians']_8": [
+            "['Calvinist']_10",
+            "['Protestant']_1",
+            "['Christians', 'Christians']_7"
+        ],
+        "['Congregationalists']_9": [
+            "['Calvinist']_10",
+            "['Protestant']_1",
+            "['Christians', 'Christians']_7"
+        ],
+        "['Calvinist']_10": [
+            "['Protestant']_1",
+            "['Christians', 'Christians']_7"
+        ],
+        "['Baptists']_11": [
+            "['Protestant']_1"
+        ],
+        "['Methodists']_12": [
+            "['Protestant']_1"
+        ],
+        "['Puritans']_14": [
+            "['Protestant']_1"
+        ],
+        "['Protestant']_1": [
+            "['Christians', 'Christians']_7"
+        ]
+    },
+    "['ORG']_head of government": {
+        "[\"People 's Republic\"]_11": [
+            "['Zhou Enlai', 'Zhou']_8"
+        ]
+    },
+    "['LOC']_ethnic group": {
+        "['Turkey', 'Turkey', 'Turkey']_4": [
+            "['Turkish']_6",
+            "['Kurd of Turkey', 'Kurdish']_7",
+            "['Kurdish', 'Kurdish']_5"
+        ]
+    },
+    "['LOC']_territory claimed by": {
+        "['Chinese']_12": [
+            "[\"People 's Republic\"]_11"
+        ]
+    },
+    "['MISC', 'PER']_religion": {
+        "['Yusuf', 'Y\u016bsuf ibn Ya\u02bfq\u016bb ibn Is - \u1e25\u0101q ibn Ibr\u0101h\u012bm', 'Yusuf', 'Yusuf', 'Yusuf', 'Joseph', 'Joseph', 'Joseph', 'Joseph', 'Joseph']_0": [
+            "['Muslim', 'Muslim', 'Islam']_3",
+            "['Jewish', 'Jewish']_6"
+        ]
+    },
+    "['MISC', 'PER']_present in work": {
+        "['Yusuf', 'Y\u016bsuf ibn Ya\u02bfq\u016bb ibn Is - \u1e25\u0101q ibn Ibr\u0101h\u012bm', 'Yusuf', 'Yusuf', 'Yusuf', 'Joseph', 'Joseph', 'Joseph', 'Joseph', 'Joseph']_0": [
+            "['Old Testament']_18",
+            "['Christian Bible']_7",
+            "['Tanakh']_5",
+            "['Biblical']_11",
+            "[\"Qur'an\", 'Quran', 'Qur\u02be\u0101n']_2"
+        ]
+    },
+    "['MISC', 'PER']_father": {
+        "['Yusuf', 'Y\u016bsuf ibn Ya\u02bfq\u016bb ibn Is - \u1e25\u0101q ibn Ibr\u0101h\u012bm', 'Yusuf', 'Yusuf', 'Yusuf', 'Joseph', 'Joseph', 'Joseph', 'Joseph', 'Joseph']_0": [
+            "['Jacob', 'Jacob', 'Jacob', 'Jacob', 'Jacob', 'Ya\u02bfq\u016bb']_4"
+        ]
+    },
+    "['MISC', 'PER']_position held": {
+        "['Yusuf', 'Y\u016bsuf ibn Ya\u02bfq\u016bb ibn Is - \u1e25\u0101q ibn Ibr\u0101h\u012bm', 'Yusuf', 'Yusuf', 'Yusuf', 'Joseph', 'Joseph', 'Joseph', 'Joseph', 'Joseph']_0": [
+            "['Nabi']_1"
+        ]
+    },
+    "['LOC']_dissolved, abolished or demolished": {
+        "['Kingdom of Prussia', 'Prussia', 'Prussia', 'Prussia', 'Prussia', 'Free State of Prussia', 'Prussia']_0": [
+            "['1918']_20",
+            "['1947']_24"
+        ],
+        "['German Empire']_21": [
+            "['1918']_20"
+        ]
+    },
+    "['ORG']_dissolved, abolished or demolished": {
+        "['BBC HD', 'BBC HD']_14": [
+            "['26 March 2013']_15",
+            "['2013']_12"
+        ]
+    },
+    "['ORG']_chairperson": {
+        "['Independent Democratic Action', 'Independent Democratic Action']_0": [
+            "['Patrice Trovoada']_17",
+            "['Trovoada', 'Miguel Trovoada']_4",
+            "['Menezes', 'Menezes', 'Fradique de Menezes', 'Fradique de Menezes', 'Menezes']_6"
+        ]
+    },
+    "['TIME']_country": {
+        "['Heian Period']_10": [
+            "['Japan', 'Japan']_0"
+        ]
+    },
+    "['PER']_languages spoken, written or signed": {
+        "['Nikos Aliagas', 'N\u00edkos Ali\u00e1gas', '\u039d\u03b9\u03ba\u03cc\u03bb\u03b1\u03bf\u03c2 \u0391\u03bb\u03b9\u03ac\u03b3\u03b1\u03c2', 'Nik\u00f3laos Ali\u00e1gas']_0": [
+            "['English']_23",
+            "['French', 'French', 'French']_4"
+        ]
+    },
+    "['ORG']_contains administrative territorial entity": {
+        "['European Union', 'EU']_15": [
+            "['Sweden']_18",
+            "['Swedish', 'Swedish']_3"
+        ]
+    },
+    "['ORG']_location of formation": {
+        "['0.\\nThe Swingles', 'The New Swingle Singers', 'The Swingles', 'The Swingles', 'The Swingle Singers', 'Swingle II']_0": [
+            "['Paris']_2",
+            "['London']_16"
+        ]
+    },
+    "['ORG']_follows": {
+        "['Square Enix', 'Square Enix', 'Square Enix', 'Square Enix', 'Square Enix']_0": [
+            "['Square']_3",
+            "['Enix', 'Enix']_4"
+        ]
+    },
+    "['ORG']_followed by": {
+        "['Norwegian State Railways', 'Norwegian State Railways']_10": [
+            "['Norwegian National Rail Administration']_13",
+            "['Norges Statsbaner', 'Norges Statsbaner', 'NSB', 'NSB']_3"
+        ]
+    },
+    "['ORG']_operator": {
+        "['Naval Advanced Base Bremerhaven']_22": [
+            "['United States Navy']_1",
+            "['United States Naval Forces Germany', 'NAVFORGER', 'NAVFORGER']_0"
+        ],
+        "['Naval Service Unit']_12": [
+            "['United States Navy']_1"
+        ]
+    },
+    "['ORG']_instance of": {
+        "['United States Naval Forces Germany', 'NAVFORGER', 'NAVFORGER']_0": [
+            "['Naval Service Unit']_12"
+        ]
+    },
+    "['PER']_genre": {
+        "['Charles']_8": [
+            "['R&B']_9"
+        ],
+        "['Ray Charles']_1": [
+            "['R&B']_9",
+            "['doo - wop']_7"
+        ]
+    },
+    "['PER']_part of": {
+        "['Ricardo Iorio', 'Ricardo Iorio', 'Iorio']_7": [
+            "['Almafuerte', 'Almafuerte']_9",
+            "['Herm\u00e9tica', 'Herm\u00e9tica', 'Herm\u00e9tica']_13",
+            "['V8', 'V8']_6"
+        ],
+        "['Walter Giardino']_8": [
+            "['Rata Blanca', 'Rata Blanca', 'Rata Blanca', 'Rata Blanca']_10",
+            "['V8', 'V8']_6"
+        ],
+        "['Pappo']_3": [
+            "['Riff']_4"
+        ]
+    },
+    "['PER']_record label": {
+        "['John Gorka', 'Gorkas', 'Gorka', 'Gorka', 'Gorka', 'Gorka', 'Gorka', 'Gorka']_1": [
+            "['High Street Records']_5",
+            "['Windham Hill']_4",
+            "['Red House']_6"
+        ]
+    },
+    "['MISC']_producer": {
+        "['Rock n Roll', 'Rock n Roll', 'Rock n Roll']_0": [
+            "['David Hodges']_5",
+            "['Chad Kroeger']_6",
+            "['Peter Svensson', 'Peter Svensson']_9"
+        ]
+    },
+    "['MISC']_record label": {
+        "['SURREAL', 'Surreal', 'Surreal', 'Surreal', 'Surreal', 'Surreal', 'Surreal', 'Surreal', 'Surreal']_0": [
+            "['Avex Trax']_7",
+            "['Avex Taiwan']_8"
+        ],
+        "['Duty', 'Duty']_3": [
+            "['Avex Trax']_7",
+            "['Avex Taiwan']_8"
+        ]
+    },
+    "['ORG']_residence": {
+        "['Prince']_16": [
+            "['Minneapolis']_15"
+        ]
+    },
+    "['ORG']_owned by": {
+        "['Pegaso']_4": [
+            "['ENASA', 'Enasa', 'Enasa', 'Enasa', 'Empresa Nacional de Autocamiones S.A.']_0"
+        ],
+        "['Seddon Atkinson']_8": [
+            "['Iveco']_13",
+            "['ENASA', 'Enasa', 'Enasa', 'Enasa', 'Empresa Nacional de Autocamiones S.A.']_0",
+            "['International Harvester', 'International Harvester']_9"
+        ],
+        "['ENASA', 'Enasa', 'Enasa', 'Enasa', 'Empresa Nacional de Autocamiones S.A.']_0": [
+            "['INI']_6",
+            "['Iveco']_13"
+        ]
+    },
+    "['ORG']_replaced by": {
+        "['Joseon Dynasty']_18": [
+            "['Korea', 'Republic of Korea', 'Korea']_13",
+            "['Korean', 'Korean', 'Korean']_4"
+        ]
+    },
+    "['ORG']_replaces": {
+        "['Square Enix Europe', 'Square Enix Europe', 'Square Enix Europe']_16": [
+            "['Eidos Interactive']_13"
+        ]
+    },
+    "['ORG']_record label": {
+        "['ABBA', 'ABBA', 'ABBA', 'ABBA', 'ABBA', 'ABBA']_2": [
+            "['Polar Music']_3",
+            "['Polydor / Polar']_26"
+        ]
+    },
+    "['ORG']_manufacturer": {
+        "['Pegaso']_4": [
+            "['ENASA', 'Enasa', 'Enasa', 'Enasa', 'Empresa Nacional de Autocamiones S.A.']_0"
+        ]
+    },
+    "['MISC']_religion": {
+        "['perpetual virginity']_23": [
+            "['Christianity']_3",
+            "['Protestant', 'Protestant']_7"
+        ]
+    },
+    "['LOC']_sister city": {
+        "['Gonesse']_21": [
+            "['Leonessa', 'Leonessa', 'Leonessa']_0"
+        ],
+        "['Leonessa', 'Leonessa', 'Leonessa']_0": [
+            "['Gonesse']_21"
+        ]
+    },
+    "['LOC']_subsidiary": {
+        "['German']_12": [
+            "['Wehrmacht']_14"
+        ]
+    },
+    "['MISC']_applies to jurisdiction": {
+        "['Norwegian constitution', 'Norwegian constitution']_6": [
+            "['Norway']_3",
+            "['Norwegian', 'Norwegian', 'Norwegian']_12"
+        ],
+        "['1815 Act of Union']_1": [
+            "['Sweden', 'Sweden']_2"
+        ],
+        "['Riksakten', 'Riksakten', 'Riksakten']_0": [
+            "['Sweden', 'Sweden']_2"
+        ],
+        "['Act of Union', 'Act of Union']_19": [
+            "['Sweden', 'Sweden']_2"
+        ]
+    },
+    "['LOC']_replaced by": {
+        "['Sikh Empire']_9": [
+            "['Pakistan', 'Pakistan', 'Pakistan', 'Pakistan', 'Pakistan']_3"
+        ]
+    },
+    "['LOC']_founded by": {
+        "['Sikh Empire']_9": [
+            "['Maharaja Ranjit Singh']_10"
+        ]
+    },
+    "['LOC']_replaces": {
+        "['Pakistan', 'Pakistan', 'Pakistan', 'Pakistan', 'Pakistan']_3": [
+            "['Sikh Empire']_9"
+        ]
+    },
+    "['LOC']_original language of work": {
+        "['France']_11": [
+            "['French', 'French', 'French']_4"
+        ]
+    },
+    "['MISC']_original language of work": {
+        "['Njangalude Veettile Athidhikal', 'The Guests in Our Home']_0": [
+            "['Malaysia']_19",
+            "['Malayalam']_2"
+        ]
+    },
+    "['MISC']_original network": {
+        "['Property Brothers', 'Property Brothers']_0": [
+            "['W Network', 'W Network']_3",
+            "['HGTV Canada', 'HGTV Canada']_4",
+            "['HGTV', 'HGTV']_6"
+        ]
+    },
+    "['LOC']_separated from": {
+        "['Russia', 'Russia']_3": [
+            "['Soviet Union']_6"
+        ],
+        "['Russian']_2": [
+            "['Soviet Union']_6"
+        ]
+    },
+    "['PER']_league": {
+        "['Washington Santana da Silva']_15": [
+            "['Serbian League Belgrade', 'Serbian League Belgrade']_14"
+        ]
+    },
+    "['MISC']_league": {
+        "['FK Partizan Belgrade']_12": [
+            "['Serbian League Belgrade', 'Serbian League Belgrade']_14",
+            "['Serbian First League']_22"
+        ]
+    },
+    "['LOC']_follows": {
+        "['Kingdom of Prussia', 'Prussia', 'Prussia', 'Prussia', 'Prussia', 'Free State of Prussia', 'Prussia']_0": [
+            "['Duchy of Prussia', 'Duchy of Prussia']_2",
+            "['Brandenburg-Prussia']_15",
+            "['Elector Frederick III']_16",
+            "['Holy Roman Empire']_4",
+            "['Margraviate of Brandenburg', 'Margraviate of Brandenburg']_1"
+        ],
+        "['Brandenburg-Prussia']_15": [
+            "['Duchy of Prussia', 'Duchy of Prussia']_2"
+        ],
+        "['German Empire']_21": [
+            "['Holy Roman Empire']_4"
+        ]
+    },
+    "['MISC']_screenwriter": {
+        "[\"They Shoot Horses , Do n't They\"]_0": [
+            "['James Poe']_6",
+            "['Robert E. Thompson']_7",
+            "['Horace McCoy']_3"
+        ]
+    },
+    "['ORG']_continent": {
+        "['African Union']_9": [
+            "['Africa']_1"
+        ]
+    },
+    "['MISC']_platform": {
+        "['X - Men Legends II : Rise of Apocalypse']_0": [
+            "['Windows']_8",
+            "['PlayStation 2', 'PlayStation 2']_10",
+            "['PlayStation Portable']_11",
+            "['GameCube']_6",
+            "['N-Gage']_9",
+            "['Xbox']_12",
+            "['Microsoft']_7"
+        ],
+        "['Greatest Hits']_17": [
+            "['PlayStation 2', 'PlayStation 2']_10"
+        ],
+        "['X - Men Legends', 'X - Men Legends']_4": [
+            "['Xbox']_12",
+            "['GameCube']_6",
+            "['N-Gage']_9",
+            "['PlayStation 2', 'PlayStation 2']_10",
+            "['Microsoft']_7"
+        ]
+    },
+    "['MISC']_series": {
+        "['Extraordinary Merry Christmas', 'Extraordinary Merry Christmas']_0": [
+            "['New Directions']_8",
+            "['Glee', 'Glee']_2"
+        ],
+        "['Hold On to Sixteen']_22": [
+            "['Glee', 'Glee']_2"
+        ]
+    },
+    "['PER']_ethnic group": {
+        "['Galadriel', 'Galadriel']_19": [
+            "['High Elves', 'Noldor', 'Noldor', 'High Elf']_13",
+            "['House of Finarfin']_21"
+        ]
+    },
+    "['MISC']_subclass of": {
+        "['World Champion']_23": [
+            "['World Championship', 'World Championship']_9"
+        ]
+    },
+    "['MISC']_genre": {
+        "['Load', 'Load', 'Load', 'Load']_0": [
+            "['alternative rock']_10",
+            "['Southern rock']_7",
+            "['country rock']_9"
+        ]
+    },
+    "['PER']_production company": {
+        "['Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana']_0": [
+            "['Walt Disney Pictures']_1"
+        ]
+    },
+    "['PER']_publication date": {
+        "['Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana', 'Tiana']_0": [
+            "['2009']_3"
+        ]
+    },
+    "['MISC']_parent taxon": {
+        "['mock verbena', 'mock vervain', 'mock vervains', 'Glandularia', 'Glandularia', 'Glandularia', 'Glandularia']_0": [
+            "['Verbenaceae']_1"
+        ],
+        "['V. \\xa0 orcuttiana']_8": [
+            "['Verbenaceae']_1"
+        ],
+        "['V. \\xa0 hastata', 'swamp verbena']_9": [
+            "['Verbenaceae']_1",
+            "['vervains']_3",
+            "['Verbena', 'Verbena', 'Verbena']_4"
+        ],
+        "['vervains']_3": [
+            "['Verbenaceae']_1"
+        ],
+        "['G.   bipinnatifida', 'G. \\xa0 bipinnatifida']_10": [
+            "['Verbenaceae']_1"
+        ],
+        "['garden vervain']_11": [
+            "['Verbenaceae']_1"
+        ],
+        "['Verbena', 'Verbena', 'Verbena']_4": [
+            "['Verbenaceae']_1"
+        ]
+    },
+    "['ORG']_creator": {
+        "['Grey Elves', 'Sindar', 'Sindar', 'Sindar', 'Sindarin', 'Sindarin', 'Sindarin Elves']_12": [
+            "['Tolkien']_3",
+            "['J.R.R.']_2"
+        ],
+        "['Laiquendi']_9": [
+            "['Tolkien']_3",
+            "['J.R.R.']_2"
+        ],
+        "['Avari', 'Avari']_11": [
+            "['J.R.R.']_2",
+            "['Tolkien']_3"
+        ],
+        "['Nandor']_10": [
+            "['J.R.R.']_2",
+            "['Tolkien']_3"
+        ],
+        "['High Elves', 'Noldor', 'Noldor', 'High Elf']_13": [
+            "['J.R.R.']_2",
+            "['Tolkien']_3"
+        ],
+        "['Elves', 'Elves', 'Elves']_1": [
+            "['Tolkien']_3",
+            "['J.R.R.']_2"
+        ],
+        "['Telerin', 'Teleri']_23": [
+            "['Tolkien']_3"
+        ],
+        "['Eldar']_24": [
+            "['J.R.R.']_2",
+            "['Tolkien']_3"
+        ]
+    },
+    "['ORG']_ethnic group": {
+        "['House of Finarfin']_21": [
+            "['High Elves', 'Noldor', 'Noldor', 'High Elf']_13"
+        ]
+    },
+    "['LOC']_creator": {
+        "['Lothl\u00f3rien']_6": [
+            "['Tolkien']_3",
+            "['J.R.R.']_2"
+        ],
+        "['L\u00f3rien', 'Lorien']_18": [
+            "['J.R.R.']_2",
+            "['Tolkien']_3"
+        ],
+        "['Middle-earth']_4": [
+            "['Tolkien']_3",
+            "['J.R.R.']_2"
+        ],
+        "['Mirkwood', 'Mirkwood']_5": [
+            "['J.R.R.']_2",
+            "['Tolkien']_3"
+        ],
+        "['Ossiriand']_8": [
+            "['J.R.R.']_2",
+            "['Tolkien']_3"
+        ]
+    },
+    "['LOC']_characters": {
+        "['Middle-earth']_4": [
+            "['Silvan', 'Wood - elves', 'Silvan', 'Silvan Elves', 'Silvan Elves']_0"
+        ]
+    },
+    "['MISC']_present in work": {
+        "['Silvan', 'Wood - elves', 'Silvan', 'Silvan Elves', 'Silvan Elves']_0": [
+            "['Middle-earth']_4"
+        ]
+    },
+    "['LOC']_country of citizenship": {
+        "['Hidalgo', 'Hidalgo']_24": [
+            "['Mexico', 'Mexico']_12",
+            "['Mexican', 'Mexican']_3"
+        ]
+    },
+    "['PER']_position held": {
+        "['Cl\u00e9ment Bonnand', 'Cl\u00e9ment Bonnand']_5": [
+            "['Vicar Apostolic of Pondicherry']_6"
+        ]
+    },
+    "['MISC']_conflict": {
+        "['Reichsmarine', 'Type 23', 'Kriegsmarine']_2": [
+            "['World War II']_7",
+            "['Spanish Civil War']_5"
+        ],
+        "['Kondor', 'Kondor', 'Kondor']_0": [
+            "['World War II']_7",
+            "['Spanish Civil War']_5"
+        ]
+    },
+    "['MISC']_participant of": {
+        "['Reichsmarine', 'Type 23', 'Kriegsmarine']_2": [
+            "['World War II']_7",
+            "['Spanish Civil War']_5"
+        ],
+        "['Kondor', 'Kondor', 'Kondor']_0": [
+            "['World War II']_7",
+            "['Spanish Civil War']_5"
+        ]
+    },
+    "['MISC']_narrative location": {
+        "['Ocean Waves', 'Ocean Waves', 'Ocean Waves', 'Ocean Waves']_0": [
+            "['Tokyo']_12",
+            "['K\u014dchi']_10"
+        ]
+    },
+    "['PER']_author": {
+        "['Macquarts']_18": [
+            "['Zola', 'Zola', '\u00c9mile Zola']_2"
+        ]
+    },
+    "['MISC']_country of citizenship": {
+        "['Franca Raimondi']_12": [
+            "['Italy']_11"
+        ]
+    },
+    "['PER']_has part": {
+        "['Black Ivory']_8": [
+            "['Leroy Burgess']_7"
+        ]
+    },
+    "['LOC']_operator": {
+        "['New York City Subway', 'New York City Subway']_2": [
+            "['Metropolitan Transportation Authority', 'MTA', 'MTA', 'MTA']_1",
+            "['BMT', 'Brooklyn\u2013Manhattan Transit Corporation']_8",
+            "['IRT', 'Interborough Rapid Transit Company']_11"
+        ]
+    },
+    "['TIME']_point in time": {
+        "['2006 season']_7": [
+            "['2006']_19"
+        ]
+    },
+    "['ORG']_performer": {
+        "['New Order']_7": [
+            "['Joy Division', 'Joy Division', 'Joy Division', 'Joy Division']_1"
+        ]
+    },
+    "['LOC']_participant": {
+        "['Albertville']_14": [
+            "['Franck Piccard', 'Piccard', 'Piccard', 'Piccard']_0"
+        ]
+    },
+    "['MISC']_contains administrative territorial entity": {
+        "['German']_1": [
+            "['Berlin', 'Berlin']_3"
+        ]
+    },
+    "['ORG']_original network": {
+        "['Greengrass Television']_12": [
+            "['Disney - ABC Television Group']_11"
+        ]
+    },
+    "['LOC']_languages spoken, written or signed": {
+        "['Paris']_2": [
+            "['France', 'French', 'French']_3"
+        ]
+    },
+    "['MISC']_continent": {
+        "['AUSPOS']_27": [
+            "['Antarctica']_6"
+        ]
+    },
+    "['TIME']_part of": {
+        "['Thanetian']_7": [
+            "['Paleocene']_8"
+        ],
+        "['Selandian', 'Selandian', 'Selandian']_6": [
+            "['Paleocene']_8"
+        ],
+        "['Torrejonian North American Stage', 'Torrejonian', 'Torrejonian', 'Torrejonian', 'Torrejonian']_0": [
+            "['Paleocene']_8",
+            "['Danian']_11"
+        ]
+    },
+    "['TIME']_has part": {
+        "['Paleocene']_8": [
+            "['Thanetian']_7",
+            "['Selandian', 'Selandian', 'Selandian']_6",
+            "['Torrejonian North American Stage', 'Torrejonian', 'Torrejonian', 'Torrejonian', 'Torrejonian']_0"
+        ],
+        "['Danian']_11": [
+            "['Torrejonian North American Stage', 'Torrejonian', 'Torrejonian', 'Torrejonian', 'Torrejonian']_0"
+        ]
+    },
+    "['TIME']_follows": {
+        "['Torrejonian North American Stage', 'Torrejonian', 'Torrejonian', 'Torrejonian', 'Torrejonian']_0": [
+            "['Puercan']_9"
+        ],
+        "['Thanetian']_7": [
+            "['Selandian', 'Selandian', 'Selandian']_6"
+        ],
+        "['Tiffanian NALMA']_10": [
+            "['Torrejonian North American Stage', 'Torrejonian', 'Torrejonian', 'Torrejonian', 'Torrejonian']_0"
+        ]
+    },
+    "['TIME']_followed by": {
+        "['Puercan']_9": [
+            "['Torrejonian North American Stage', 'Torrejonian', 'Torrejonian', 'Torrejonian', 'Torrejonian']_0"
+        ],
+        "['Selandian', 'Selandian', 'Selandian']_6": [
+            "['Thanetian']_7"
+        ],
+        "['Torrejonian North American Stage', 'Torrejonian', 'Torrejonian', 'Torrejonian', 'Torrejonian']_0": [
+            "['Tiffanian NALMA']_10"
+        ]
+    },
+    "['MISC']_location of formation": {
+        "['Rage Against the Machine']_10": [
+            "['Los Angeles']_2"
+        ]
+    },
+    "['MISC']_located on terrain feature": {
+        "['GSACUS', 'Great South Australian Coastal Upwelling System', 'Great South Australian Coastal Upwelling System', 'Great Southern Australian Coastal Upwelling System']_0": [
+            "['Great Australian Bight', 'Great Australian Bight']_1"
+        ]
+    },
+    "['MISC']_product or material produced": {
+        "['Google']_2": [
+            "['Gmail']_3",
+            "['Springboard', 'Google Springboard']_0",
+            "['Google Drive']_5",
+            "['Google Docs', 'Google Docs']_4"
+        ]
+    },
+    "['ORG']_publisher": {
+        "['Project BG&E']_10": [
+            "['Ubisoft Pictures']_12",
+            "['Ubisoft']_2"
+        ]
+    },
+    "['LOC']_parent taxon": {
+        "['chachalacas']_12": [
+            "['Ortalis']_1"
+        ]
+    },
+    "['LOC']_headquarters location": {
+        "['Lorraine', 'Lorraine', 'Lorraine']_5": [
+            "['Lun\u00e9ville', 'Lun\u00e9ville']_2"
+        ]
+    },
+    "['ORG']_member of political party": {
+        "['Hideki T\u014dj\u014d']_28": [
+            "['Imperial Rule Assistance Association']_27"
+        ]
+    },
+    "['MISC']_located in or next to body of water": {
+        "['Constitution']_11": [
+            "['Mediterranean']_12"
+        ]
+    },
+    "['ORG']_end time": {
+        "['Lewis and Clark Expedition']_19": [
+            "['1806']_20"
+        ]
+    },
+    "['LOC']_present in work": {
+        "['Kuru Kingdom']_9": [
+            "['Mahabharata']_3"
+        ]
+    },
+    "['LOC']_point in time": {
+        "['Battle Creek']_15": [
+            "['May 26, 1939']_14"
+        ]
+    },
+    "['MISC', 'ORG']_applies to jurisdiction": {
+        "['Congress', 'Sixty - seventh Congress']_13": [
+            "['U.S.']_3"
+        ]
+    },
+    "['MISC', 'ORG']_country": {
+        "['\u0130spen\u00e7e', '\u0130spen\u00e7e', '\u0130spen\u00e7e', '\u0130spen\u00e7e']_0": [
+            "['Ottoman Empire', 'Ottoman Empire', 'Ottoman Empire']_2",
+            "['Ottoman', 'Ottoman']_6"
+        ]
+    },
+    "['MISC', 'ORG']_instance of": {
+        "['Congress', 'Sixty - seventh Congress']_13": [
+            "['Congresses']_17"
+        ]
+    },
+    "['MISC']_mouth of the watercourse": {
+        "['B\u00e9loye m\u00f3re']_1": [
+            "['Barents Sea']_2"
+        ]
+    },
+    "['LOC']_manufacturer": {
+        "['Avalon']_25": [
+            "['Toyota', 'Toyota', 'Toyota', 'Toyota']_1"
+        ]
+    },
+    "['LOC']_owned by": {
+        "['Northeast Corridor']_9": [
+            "['Amtrak', 'Amtrak', 'Amtrak', 'Amtrak']_8"
+        ],
+        "['Union Station']_2": [
+            "['Maryland Transit Administration', 'MTA']_10"
+        ],
+        "['Penn Station']_7": [
+            "['Maryland Transit Administration', 'MTA']_10",
+            "['Pennsylvania Railroad', 'PRR', 'PRR']_11",
+            "['Amtrak', 'Amtrak', 'Amtrak', 'Amtrak']_8"
+        ],
+        "['Penn Line', 'Penn Line', 'Penn Line']_0": [
+            "['Maryland Transit Administration', 'MTA']_10",
+            "['Amtrak', 'Amtrak', 'Amtrak', 'Amtrak']_8"
+        ]
+    },
+    "['ORG']_official language": {
+        "['Estado Novo']_10": [
+            "['Portuguese', 'Portuguese', 'Portuguese', 'Portuguese', 'Portuguese', 'Portugal']_3",
+            "['Portuguese', 'Portuguese']_1"
+        ]
+    },
+    "['ORG']_present in work": {
+        "['Alcoholics Anonymous']_7": [
+            "['Family Guy']_1"
+        ]
+    },
+    "['ORG']_participant": {
+        "['Grand Alliance']_23": [
+            "['England']_20"
+        ]
+    },
+    "['LOC']_child": {
+        "['Beauvoir']_4": [
+            "['Lewis of Luxembourg', 'Louis II de Luxembourg', 'Lewis', 'Luxembourg', 'John of Luxembourg']_0"
+        ]
+    },
+    "['LOC']_spouse": {
+        "['Beauvoir']_4": [
+            "['Marguerite of Enghien']_5"
+        ]
+    },
+    "['LOC', 'ORG']_country": {
+        "['Royal Swedish Opera', 'Royal Swedish Opera']_8": [
+            "['Sweden', 'Sweden']_4",
+            "['Swedish']_2"
+        ]
+    },
+    "['LOC', 'ORG']_continent": {
+        "['Toulouse Business School(TBS )', 'School', 'Toulouse', 'Toulouse']_0": [
+            "['European']_7"
+        ]
+    },
+    "['LOC', 'ORG']_inception": {
+        "['Toulouse Business School(TBS )', 'School', 'Toulouse', 'Toulouse']_0": [
+            "['1903']_1"
+        ]
+    },
+    "['LOC', 'ORG']_located in the administrative territorial entity": {
+        "['Royal Swedish Opera', 'Royal Swedish Opera']_8": [
+            "['Stockholm', 'Stockholm']_5",
+            "['Sweden', 'Sweden']_4",
+            "['Swedish']_2"
+        ]
+    },
+    "['ORG']_award received": {
+        "['Red Corn Band']_16": [
+            "['Grammy Award for Best Native American Music Album']_17"
+        ]
+    },
+    "['MISC']_date of death": {
+        "['Mac Domhnaill']_6": [
+            "['1503', '1503']_2"
+        ]
+    },
+    "['ORG']_author": {
+        "['Peanuts']_15": [
+            "['Charles Schulz']_14"
+        ]
+    },
+    "['ORG']_characters": {
+        "['Peanuts']_15": [
+            "['Snoopy']_16"
+        ]
+    },
+    "['PER']_original network": {
+        "['Jason Street']_3": [
+            "['NBC']_4"
+        ]
+    },
+    "['ORG']_developer": {
+        "['Project BG&E']_10": [
+            "['Ubisoft Pictures']_12",
+            "['Ubisoft']_2"
+        ]
+    },
+    "['LOC']_followed by": {
+        "['Duchy of Prussia', 'Duchy of Prussia']_2": [
+            "['Kingdom of Prussia', 'Prussia', 'Prussia', 'Prussia', 'Prussia', 'Free State of Prussia', 'Prussia']_0",
+            "['Brandenburg-Prussia']_15"
+        ],
+        "['Brandenburg-Prussia']_15": [
+            "['Kingdom of Prussia', 'Prussia', 'Prussia', 'Prussia', 'Prussia', 'Free State of Prussia', 'Prussia']_0"
+        ],
+        "['Holy Roman Empire']_4": [
+            "['Kingdom of Prussia', 'Prussia', 'Prussia', 'Prussia', 'Prussia', 'Free State of Prussia', 'Prussia']_0",
+            "['German Empire']_21"
+        ],
+        "['Margraviate of Brandenburg', 'Margraviate of Brandenburg']_1": [
+            "['Kingdom of Prussia', 'Prussia', 'Prussia', 'Prussia', 'Prussia', 'Free State of Prussia', 'Prussia']_0"
+        ]
+    },
+    "['PER']_dissolved, abolished or demolished": {
+        "['Hohenzollern']_19": [
+            "['1918']_20"
+        ]
+    },
+    "['PER']_followed by": {
+        "['Elector Frederick III']_16": [
+            "['Kingdom of Prussia', 'Prussia', 'Prussia', 'Prussia', 'Prussia', 'Free State of Prussia', 'Prussia']_0"
+        ]
+    },
+    "['LOC', 'PER']_country": {
+        "['Grotto of St Anthony of Padua', 'St Anthony of Padua']_7": [
+            "['Belgium']_2"
+        ]
+    },
+    "['LOC', 'PER']_inception": {
+        "['Grotto of St Anthony of Padua', 'St Anthony of Padua']_7": [
+            "['12 July 1903']_9"
+        ]
+    },
+    "['LOC', 'PER']_located in the administrative territorial entity": {
+        "['Grotto of St Anthony of Padua', 'St Anthony of Padua']_7": [
+            "['Wallonia']_1",
+            "['Belgium']_2"
+        ]
+    },
+    "['ORG']_genre": {
+        "['Metallica', 'Metallica', 'Metallica', 'Metallica', 'Metallica']_2": [
+            "['country rock']_9"
+        ]
+    },
+    "['ORG']_country of citizenship": {
+        "['Chad VanGaalen']_24": [
+            "['Canada', 'Canada']_3"
+        ]
+    },
+    "['PER']_influenced by": {
+        "['Charles Bukowski', 'Bukowski', 'Bukowski', 'Bukowski', 'Bukowski', 'Bukowski']_1": [
+            "['Ernest Hemingway', 'Hemingway', 'Hemingway', 'Hemingway', 'Hemingway']_6"
+        ]
+    },
+    "['MISC', 'PER']_notable work": {
+        "['Elvis Presley', 'Elvis', 'Elvis', 'Elvis', 'Elvis']_2": [
+            "['Memories', 'Memories', 'Memories']_0",
+            "['Charro']_11"
+        ]
+    },
+    "['ORG']_platform": {
+        "['Project BG&E']_10": [
+            "['PlayStation 2']_3",
+            "['Microsoft Windows']_4",
+            "['Xbox']_5",
+            "['GameCube']_6",
+            "['PlayStation Network']_20"
+        ]
+    },
+    "['ORG']_publication date": {
+        "['Project BG&E']_10": [
+            "['2003']_1"
+        ]
+    },
+    "['LOC']_start time": {
+        "['Mount Olympus National Monument']_8": [
+            "['2 March 1909']_9"
+        ]
+    },
+    "['LOC']_date of birth": {
+        "['Pozo Rubio']_1": [
+            "['20 January 1848']_2"
+        ]
+    },
+    "['ORG']_point in time": {
+        "['Faliero Coup']_0": [
+            "['1355']_1"
+        ]
+    },
+    "['PER']_developer": {
+        "['Sonic', 'Sonic', 'Sonic']_2": [
+            "['Sonic Team']_8",
+            "['Sega', 'Sega', 'Sega', 'Sega']_1"
+        ]
+    },
+    "['TIME']_composer": {
+        "['1007']_3": [
+            "['Johann Sebastian Bach', 'Bach', 'Bach', 'Bach']_5"
+        ],
+        "['1012']_4": [
+            "['Johann Sebastian Bach', 'Bach', 'Bach', 'Bach']_5"
+        ]
+    },
+    "['MISC']_military branch": {
+        "['Irish in the British Armed Forces']_0": [
+            "['British Army', 'British Army', 'British Army']_3"
+        ]
+    },
+    "['LOC']_parent organization": {
+        "['Britain', 'British', 'British']_12": [
+            "['British Armed Forces']_2"
+        ]
+    },
+    "['LOC', 'ORG']_has part": {
+        "['Royal Swedish Opera', 'Royal Swedish Opera']_8": [
+            "['Royal Court Orchestra', 'Kungliga Hovkapellet', 'Kungliga Hovkapellet', 'Kungliga Hovkapellet']_0"
+        ]
+    },
+    "['LOC', 'ORG']_subsidiary": {
+        "['Royal Swedish Opera', 'Royal Swedish Opera']_8": [
+            "['Royal Court Orchestra', 'Kungliga Hovkapellet', 'Kungliga Hovkapellet', 'Kungliga Hovkapellet']_0"
+        ]
+    },
+    "['LOC', 'ORG']_founded by": {
+        "['Royal Swedish Opera', 'Royal Swedish Opera']_8": [
+            "['Gustav III']_21"
+        ]
+    },
+    "['PER']_publisher": {
+        "['Sonic', 'Sonic', 'Sonic']_2": [
+            "['Sega', 'Sega', 'Sega', 'Sega']_1"
+        ]
+    },
+    "['MISC']_date of birth": {
+        "['Crash the Terminator']_5": [
+            "['November 10, 1966']_1"
+        ]
+    },
+    "['MISC']_subsidiary": {
+        "['WWE', 'WWE', 'WWE', 'World Wrestling Federation / Entertainment', 'WWF / E']_4": [
+            "['NXT', 'NXT']_8",
+            "['Florida Championship Wrestling']_15",
+            "['Deep South Wrestling']_14"
+        ]
+    },
+    "['MISC']_founded by": {
+        "['iOS']_7": [
+            "['Apple Inc.']_4"
+        ]
+    },
+    "['LOC']_date of death": {
+        "['Hidalgo', 'Hidalgo']_24": [
+            "['30 July 1811']_2"
+        ]
+    },
+    "['LOC']_employer": {
+        "['Hidalgo', 'Hidalgo']_24": [
+            "['Colegio de San Nicol\u00e1s Obispo']_6"
+        ]
+    },
+    "['PER']_instance of": {
+        "['Tyche', 'Tyche']_0": [
+            "['Oceanids']_7"
+        ]
+    },
+    "['ORG']_start time": {
+        "['Second Vatican Council']_5": [
+            "['1962']_6"
+        ]
+    },
+    "['PER']_cast member": {
+        "['Asako']_11": [
+            "['Ko Joo-yeon', 'Ko Joo-yeon']_0"
+        ]
+    },
+    "['PER']_characters": {
+        "['Ortrud']_10": [
+            "['Lohengrin']_11"
+        ]
+    },
+    "['PER']_founded by": {
+        "['Cimatti']_17": [
+            "['Marco Cimatti']_5"
+        ]
+    },
+    "['PER']_location of formation": {
+        "['Cimatti']_17": [
+            "['Bologna']_6"
+        ]
+    },
+    "['LOC', 'PER']_participant of": {
+        "['Parthian', 'Parthian']_4": [
+            "['Roman\u2013Parthian War']_34"
+        ]
+    }
+}
