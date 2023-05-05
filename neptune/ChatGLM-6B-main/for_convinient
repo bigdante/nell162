@@ -1,0 +1,4 @@
+pip install -r requirements.txt --proxy http://127.0.0.1:6152
+
+ssh root@10.31.118.166 -p 35724
+ssh root@10.31.118.166 -p 39951
