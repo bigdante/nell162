@@ -1,12 +1,9 @@
-import random
-
 from tool.utils import *
 from bson import ObjectId
 import spacy
 from collections import Counter
 
 nlp = spacy.load("en_core_web_sm")
-
 
 def get_sentences():
     current_file_path = os.path.dirname(os.path.abspath(__file__))
@@ -65,7 +62,7 @@ def get_sentences():
 
 def get_entities():
     # todo: get entity by GLM
-    return "[Return] ENTITIES=" + "\"" + load_var("ALL_ENTITIES") + "\""
+    return "[Return] ENTITIES=" + "\"" + str(load_var("ALL_ENTITIES")) + "\""
 
 
 def choose_an_entity():
@@ -81,7 +78,7 @@ def get_types():
     head = load_var("HEAD")
     types = list(entity[head].keys())
     save_var("TYPES", types)
-    return "[Return] TYPES=\"" + types + "\""
+    return "[Return] TYPES=\"" + str(types) + "\""
 
 
 def choose_a_type():
@@ -99,10 +96,10 @@ def get_relations():
     relations = entity[head][type]
     save_var("RELATIONS", relations)
 
-    return "[Return] RELATIONS=\"" + relations + "\""
+    return "[Return] RELATIONS=\"" + str(relations) + "\""
 
 
-def get_a_relation():
+def choose_a_relation():
     relations = load_var("RELATIONS")
     relation = random.sample(relations, 1)[0]
     save_var("RELATION", relation)
@@ -152,7 +149,12 @@ def get_relation_alias_template():
     ]
     while True:
         alias_template = make_chat_request_with_thinking(message, make_chat_request)
-        alias_template = eval(alias_template['choices'][0]['message']['content'])
+        # alias_template = make_chat_request(message)
+        # print(alias_template)
+        try:
+            alias_template = eval(alias_template['choices'][0]['message']['content'])
+        except:
+            continue
         flag = 0
         for k, v in alias_template.items():
             if "s[head]" not in v:
@@ -162,7 +164,7 @@ def get_relation_alias_template():
         if flag:
             break
     save_var("ALIAS_TEMPLATES", alias_template)
-    return "[Return] RELATION_ALIAS_TEMPLATE=" + alias_template
+    return "[Return] RELATION_ALIAS_TEMPLATE=" + str(alias_template)
 
 
 def get_tail():
@@ -175,7 +177,7 @@ def get_tail():
     alias_templates = load_var("ALIAS_TEMPLATES")
     vote = []
     system_prompt = "Response Format: \n" \
-                    "Your respond must be a list format, for example:1['answer1','answer2',...], if unable to determine, output:['unknown']\n" \
+                    "Your respond must be a list format, for example:1['answer1','answer2',...], choose words from sentences, if unable to determine, output:['unknown'].\n" \
                     "Ensure the response can be parsed by Python eval().\n"
     for alia, template in alias_templates.items():
         message = [{"role": "system", "content": system_prompt}]
@@ -188,7 +190,7 @@ def get_tail():
     result = [answer for answer, count in answer_count.items() if count >= threshold]
     if not result:
         save_var("TAILS", ["result"])
-        return "no answer"
+        return "[Return] TAILS=\"[\"no answer\"]"
     else:
         save_var("TAILS", result)
     return "[Return] TAILS=\"" + str(result) + "\""
@@ -216,6 +218,36 @@ def search_engine():
 
 
 def verify():
+    global template
+    prompt = '''
+    For examples, given 'country of citizenship', the template is following:\n
+    {'country of citizenship': "In the sentence '{s[sentence]}', is it correct that the country of citizenship of {s[head]} is {s[tail]}? Answer :"},\n
+    given 'date of birth', the template is following:\n
+    {'date of birth': "In the sentence '{s[sentence]}', is it correct that the date of birth of {s[head]} is {s[tail]}? Answer :"},\n
+    Ensure the response can be parsed by Python eval().
+    '''
+    user_prompt = "Please give me {s[relation]} verification template.\n"
+    s = {
+        "relation": load_var("RELATION")
+    }
+    message = [{"role": "user", "content": user_prompt.format(s=s) + prompt}]
+    while True:
+        try:
+            answer = make_chat_request_with_thinking(message, make_chat_request)
+            answer = eval(answer['choices'][0]['message']['content'])
+            template = answer[load_var("RELATION")]
+            break
+        except:
+            continue
+    s = {
+        "sentence": load_var("CONTEXT"),
+        "head": load_var("HEAD"),
+        "tail": load_var("TAIL")
+    }
+    message = [{"role": "system", "content": "Your answer can only by YES or NO."},
+               {"role": "user", "content": template.format(s=s)}]
+    answer = make_chat_request_with_thinking(message, make_chat_request)
+    label = answer['choices'][0]['message']['content']
     # context_list = load_var("CONTEXT_LIST")
     # head = load_var("HEAD")
     # tails = load_var("TAILS")
@@ -224,11 +256,11 @@ def verify():
     #     label = random.sample(['true', 'false'], 1)[0]
     #     labels.append(label)
     # return f"[Return] {labels}"
-    context = load_var("CONTEXT")
-    head = load_var("HEAD")
-    tail = load_var("TAIL")
-    label = random.sample(['true', 'false'], 1)[0]
-    print(head, tail, context, label)
+    # context = load_var("CONTEXT")
+    # head = load_var("HEAD")
+    # tail = load_var("TAIL")
+    # label = random.sample(['true', 'false'], 1)[0]
+    # print(head, tail, context, label)
     return f"[Return] {label}"
 
 
@@ -243,7 +275,7 @@ if __name__ == '__main__':
     print("TYPES:", get_types())
     print("choose a type of entity:", choose_a_type())
     print("RELATIONS:", get_relations())
-    print("choose a relation:", get_a_relation())
+    print("choose a relation:", choose_a_relation())
     print("RELATIONS_ALIAS_TEMPLATE:", get_relation_alias_template())
     print("TAILS:", get_tail())
     print("SEARCH ENGINE:", search_engine())

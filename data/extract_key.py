@@ -1,7 +1,7 @@
 import json
 
 # 打开key.txt文件并逐行读取
-with open('120-1.txt', 'r') as f:
+with open('keys.txt', 'r') as f:
     lines = f.readlines()
 
 data = {}
@@ -11,5 +11,5 @@ for id,line in enumerate(lines):
     data[key] = True
 
 # 保存为json文件
-with open('120_key1.json', 'w') as f:
+with open('keys.json', 'w') as f:
     json.dump(data, f)

@@ -20,9 +20,20 @@ Fine-tuning the library models for sequence to sequence.
 
 import logging
 import os
+
+os.environ["TORCH_EXTENSIONS_DIR"] = "/zhangpai22/xll/torch_extension"
+# 设置 Ninja 的路径
+ninja_path = "/zhangpai22/envs/dragon/bin"
+# 获取当前的 PATH 环境变量
+current_path = os.environ.get("PATH", "")
+# 将 Ninja 的路径添加到 PATH 环境变量中
+os.environ["PATH"] = f"{current_path}:{ninja_path}"
+
+
 import sys
 import json
 
+import ipdb
 import numpy as np
 from datasets import load_dataset
 import jieba
@@ -35,12 +46,12 @@ from transformers import (
     AutoConfig,
     AutoModel,
     AutoTokenizer,
-    AutoTokenizer,
     DataCollatorForSeq2Seq,
     HfArgumentParser,
     Seq2SeqTrainingArguments,
     set_seed,
 )
+
 from trainer_seq2seq import Seq2SeqTrainer
 
 from arguments import ModelArguments, DataTrainingArguments
@@ -103,13 +114,13 @@ def main():
         cache_dir=model_args.cache_dir,
         use_auth_token=True if model_args.use_auth_token else None,
     )
-
     # Load pretrained model and tokenizer
+    # ipdb.set_trace()
     config = AutoConfig.from_pretrained(model_args.model_name_or_path, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_args.model_name_or_path, trust_remote_code=True)
+
     config.pre_seq_len = model_args.pre_seq_len
     config.prefix_projection = model_args.prefix_projection
-
-    tokenizer = AutoTokenizer.from_pretrained(model_args.model_name_or_path, trust_remote_code=True)
 
     if model_args.ptuning_checkpoint is not None:
         # Evaluation

@@ -2,6 +2,7 @@ LR=1e-4
 PRE_SEQ_LEN=64
 MASTER_PORT=$(shuf -n 1 -i 10000-65535)
 HOST_FILE_PATH="hostfile"
+export TORCH_EXTENSIONS_DIR=/zhangpai22/xll/torch_extension
 deepspeed --master_port $MASTER_PORT --hostfile ${HOST_FILE_PATH} main.py \
   --deepspeed deepspeed.json \
   --do_train \

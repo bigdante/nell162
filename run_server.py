@@ -167,47 +167,62 @@ def get_relation():
     return "ok"
 
 
-@app.route('/re2', methods=['POST', "GET"])
+@app.route('/re', methods=['POST', "GET"])
 def re():
     def generate():
+        i = 0
         input = "[Thought] To be a fact extractor, I need to start by retrieving sentences from Wikipedia."
         history = []
         while True:
-            # response, history_, method_return = inference(input, history)
-            # history[-1][1] += "\n[Return] " + method_return
-            # input = "what about next"
-            # print(response)
-            yield f"data: response\n"
-            # if method_return == "EXIT":
-            #     yield "data: EXIT"
-            #     break
-            # else:
-            #     yield f"data: {response} + '\n[Return] ' + {method_return}"
-            time.sleep(2)
-
-    return Response(generate(), content_type="text/event-stream")
-
-
-@app.route('/re', methods=['POST', "GET"])
-def re2():
-    def generate():
-        input = "[Thought] To be a fact extractor, I need to start by retrieving sentences from Wikipedia."
-        history = []
-        while True:
+            i += 1
+            yield f"data: ===========Thinking (^-^)==============\n\n\n\n"
+            print("yield", i)
+            print(">>>>>>>>>>>>>>>>>>>>>>>")
             response, history, method_return = inference(input, history)
+            yield f"data: {response}\n"
+            if method_return:
+                yield f"data: {method_return}\n"
+            yield f"data:   \n"
+            print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
             input = "what about next"
             if response == "[Return] EXIT":
                 yield "data: all done"
                 break
             if method_return:
-                history[-1][1] += "\n" + method_return
+                last_item = history[-1]
+                new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
+                history[-1:] = [new_last_item]
+            if i > 100:
+                break
+            time.sleep(1)
+    return Response(generate(), content_type="text/event-stream")
 
+
+@app.route('/re2', methods=['POST', "GET"])
+def re2():
+    def generate():
+        input = "[Thought] To be a fact extractor, I need to start by retrieving sentences from Wikipedia."
+        history = []
+        i = 0
+        while True:
+            i += 1
+            print(">>>>>>>>>>>>>>>>>>>>>>>")
+            response, history, method_return = inference(input, history)
             yield f"data: {response}\n"
             yield f"data: {method_return}"
             yield f"data: \n"
-
+            print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
+            input = "what about next"
+            if response == "[Return] EXIT":
+                yield "data: all done"
+                break
+            if method_return:
+                last_item = history[-1]
+                new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
+                history[-1:] = [new_last_item]
+            if i > 100:
+                break
             time.sleep(1)
-
     return Response(generate(), content_type="text/event-stream")
 
 

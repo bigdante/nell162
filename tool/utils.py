@@ -5,10 +5,7 @@ import requests
 import os
 import re
 import importlib
-from typing import Dict, Union, Optional, List
-import torch
-from torch.nn import Module
-from transformers import AutoModel, AutoConfig, AutoTokenizer
+
 from data_object import *
 import numpy as np
 import ast
@@ -25,9 +22,10 @@ import collections
 import threading
 from typing import Callable
 from concurrent.futures import ThreadPoolExecutor
+from tool.model import *
 
-ptuning_checkpoint = 'neptune/ChatGLM-6B-main/ptuning/output/adgen-chatglm-6b-pt-one_new-64-1e-2/checkpoint-45000'
-checkpoint_path = "THUDM/chatglm-6b"
+
+
 relation_list = ['country of citizenship', 'date of birth', 'place of birth', 'participant of',
                  'located in the administrative territorial entity', 'contains administrative territorial entity',
                  'participant', 'location', 'followed by', 'country', 'educated at', 'date of death', 'sibling',
@@ -47,47 +45,19 @@ relation_list = ['country of citizenship', 'date of birth', 'place of birth', 'p
                  'original language of work', 'dissolved, abolished or demolished', 'territory claimed by',
                  'characters', 'influenced by', 'official language', 'unemployment rate']
 
-
-def auto_configure_device_map(gpus: List[int]) -> Dict[str, int]:
-    num_gpus = len(gpus)
-    num_trans_layers = 28
-    per_gpu_layers = 30 / num_gpus
-    device_map = {'transformer.word_embeddings': gpus[0],
-                  'transformer.final_layernorm': gpus[0], 'lm_head': gpus[0]}
-    used = 2
-    gpu_target_index = 0
-    for i in range(num_trans_layers):
-        if used >= per_gpu_layers:
-            gpu_target_index += 1
-            used = 0
-        assert gpu_target_index < num_gpus
-        device_map[f'transformer.layers.{i}'] = gpus[gpu_target_index]
-        used += 1
-    device_map['transformer.prefix_encoder.embedding.weight'] = gpus[-1]
-    return device_map
+ori_keys = json.load(open("data/keys.json"))
+keys = [key for key, v in ori_keys.items() if v]
+unused_keys = keys.copy()
+used_keys = []
+overload_keys = []
+invalid_keys = []
+proxies = {
+    'http': '127.0.0.1:9898',
+    'https': '127.0.0.1:9898',
+}
 
 
-def load_model_on_gpus(checkpoint_path: Union[str, os.PathLike], num_gpus: int = 2, device_map: Optional[Dict[str, int]] = None, **kwargs) -> Module:
-    if num_gpus < 2 and device_map is None:
-        model = AutoModel.from_pretrained(checkpoint_path, trust_remote_code=True, **kwargs).half().cuda()
-    else:
-        from accelerate import dispatch_model
-        config = AutoConfig.from_pretrained(checkpoint_path, trust_remote_code=True)
-        config.pre_seq_len = 64
-        config.prefix_projection = False
-        model = AutoModel.from_pretrained(checkpoint_path, config=config, trust_remote_code=True, **kwargs).half()
-        prefix_state_dict = torch.load(os.path.join(ptuning_checkpoint, "pytorch_model.bin"))
-        new_prefix_state_dict = {}
-        for k, v in prefix_state_dict.items():
-            if k.startswith("transformer.prefix_encoder."):
-                new_prefix_state_dict[k[len("transformer.prefix_encoder."):]] = v
-        model.transformer.prefix_encoder.load_state_dict(new_prefix_state_dict)
-        if device_map is None:
-            device_map = auto_configure_device_map(num_gpus)
 
-        model = dispatch_model(model, device_map=device_map)
-        model.transformer.prefix_encoder.embedding.weight.data = model.transformer.prefix_encoder.embedding.weight.data.to(model.device)
-    return model
 
 
 def sort_dict_by_key(d, key):
@@ -332,34 +302,17 @@ def get_relation_alias():
     json.dump(save, open("./alias.json", "w"), indent=4)
 
 
-class ModelSingleton:
-    _instance = None
-    _model = None
-
-    @staticmethod
-    def getInstance():
-        if ModelSingleton._instance is None:
-            ModelSingleton._instance = ModelSingleton()
-        return ModelSingleton._instance
-
-    def load_model(self):
-        if self._model is None:
-            print("Loading model...")
-            # 在这里加载您的模型
-            model = load_model_on_gpus(checkpoint_path, 4, auto_configure_device_map([1, 2, 3, 4]))
-            model = model.eval()
-            self._model = model
-        return self._model
 
 
-model = ModelSingleton.getInstance().load_model()
-tokenizer = AutoTokenizer.from_pretrained(checkpoint_path, trust_remote_code=True)
+
+
 
 
 def inference(input, history):
     pattern = r'【(.*?)】'
     while True:
         response, history = model.chat(tokenizer, input, history=history)
+        print(response)
         if response.startswith("[Thought]"):
             return response, history, None
         match = re.search(pattern, response)
@@ -368,23 +321,11 @@ def inference(input, history):
             for f in get_api_functions()[0]:
                 if f in result:
                     method_return = get_api(f)
+                    print(method_return)
                     return response, history, method_return
             print("no method match")
         else:
             print("no method match")
-
-
-ori_keys = json.load(open("data/120_key1.json"))
-keys = [key for key, v in ori_keys.items() if v]
-unused_keys = keys.copy()
-used_keys = []
-overload_keys = []
-invalid_keys = []
-
-proxies = {
-    'http': '127.0.0.1:9898',
-    'https': '127.0.0.1:9898',
-}
 
 
 def get_valid_key():
