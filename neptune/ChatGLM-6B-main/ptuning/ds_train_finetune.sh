@@ -14,7 +14,7 @@ gpt_options=" \
   --history_column history \
   --overwrite_cache \
   --model_name_or_path THUDM/chatglm-6b \
-  --output_dir ./output/adgen-chatglm-6b-pt-one_2048_ms-$PRE_SEQ_LEN-$LR \
+  --output_dir ./output/adgen-chatglm-6b-pt-one_2048_tail-$PRE_SEQ_LEN-$LR \
   --overwrite_output_dir \
   --max_source_length 2048 \
   --max_target_length 128 \
@@ -22,7 +22,7 @@ gpt_options=" \
   --per_device_eval_batch_size 1 \
   --gradient_accumulation_steps 1 \
   --predict_with_generate \
-  --max_steps 120000 \
+  --max_steps 40000 \
   --logging_steps 50 \
   --save_steps 1000 \
   --learning_rate $LR \

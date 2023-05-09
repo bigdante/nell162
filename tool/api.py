@@ -4,26 +4,66 @@ import spacy
 from collections import Counter
 
 nlp = spacy.load("en_core_web_sm")
+from_wiki = True
+from_page = False
+
 
 def get_sentences():
-    current_file_path = os.path.dirname(os.path.abspath(__file__))
-    data_dir = current_file_path + '/data'
-    filename = 'wiki_sentence_id.json'
-    filepath = os.path.join(data_dir, filename)
-    if not os.path.exists(filepath):
-        os.makedirs(data_dir, exist_ok=True)
-        with open(filepath, "w") as f:
-            for id, s in enumerate(BaseSentence.objects()):
-                if len(s.text.split(" ")) < 10:
-                    continue
-                print(id, s.id)
-                f.write(json.dumps(str(s.id)) + "\n")
+    if from_wiki:
+        current_file_path = os.path.dirname(os.path.abspath(__file__))
+        data_dir = current_file_path + '/data'
+        filename = 'wiki_sentence_id.json'
+        filepath = os.path.join(data_dir, filename)
+        if not os.path.exists(filepath):
+            os.makedirs(data_dir, exist_ok=True)
+            with open(filepath, "w") as f:
+                for id, s in enumerate(BaseSentence.objects()):
+                    if len(s.text.split(" ")) < 10:
+                        continue
+                    print(id, s.id)
+                    f.write(json.dumps(str(s.id)) + "\n")
 
-    with open(filepath, 'r') as f:
-        random_ids = f.readlines()
+        with open(filepath, 'r') as f:
+            random_ids = f.readlines()
+            while True:
+                random_id = json.loads(random.sample(random_ids, 1)[0])
+                sentence = BaseSentence.objects.get(id=ObjectId(random_id))
+                if len(sentence.text.split(" ")) < 10:
+                    continue
+                entities = sentence.mentions
+                entities_names = []
+                wiki_entity = {}
+                all_entity = []
+                for e in entities:
+                    # skip pron words
+                    if nlp(e.text)[0].pos_ != "PRON":
+                        all_entity.append(e.text)
+                    else:
+                        continue
+                    # check if e is in wikipedia entities list
+                    if e.entity:
+                        entities_names.append(e.text)
+                        # entities_wiki_entity.append(e.entity)
+                        entity_type_relation_constrains = {}
+                        types = e.entity.types
+                        # if this wikipedia entity has no types, skip this one
+                        if not types:
+                            continue
+                        for type in types[0]:
+                            relations = type.asHeadConstraint
+                            entity_type_relation_constrains[type.text] = [t.text for t in relations]
+                        wiki_entity[e.text] = entity_type_relation_constrains
+                    else:
+                        continue
+                if wiki_entity:
+                    break
+        save_var("SENTENCES", sentence.text)
+        save_var("ENTITIES_as_head", wiki_entity)
+        save_var("ALL_ENTITIES", list(set(all_entity)))
+    elif from_page:
         while True:
-            random_id = json.loads(random.sample(random_ids, 1)[0])
-            sentence = BaseSentence.objects.get(id=ObjectId(random_id))
+            sentence_id = None
+            sentence = BaseSentence.objects.get(id=ObjectId(sentence_id))
             if len(sentence.text.split(" ")) < 10:
                 continue
             entities = sentence.mentions
@@ -53,9 +93,6 @@ def get_sentences():
                     continue
             if wiki_entity:
                 break
-        save_var("SENTENCES", sentence.text)
-        save_var("ENTITIES_as_head", wiki_entity)
-        save_var("ALL_ENTITIES", list(set(all_entity)))
 
     return "[Return] SENTENCES=" + "\"" + sentence.text + "\""
 
@@ -148,17 +185,25 @@ def get_relation_alias_template():
         {"role": "user", "content": user_prompt}
     ]
     while True:
-        alias_template = make_chat_request_with_thinking(message, make_chat_request)
-        # alias_template = make_chat_request(message)
+        # alias_template = make_chat_request_with_thinking(message, make_chat_request)
+        alias_template = make_chat_request(message)
         # print(alias_template)
         try:
+            print(alias_template)
             alias_template = eval(alias_template['choices'][0]['message']['content'])
         except:
+            print("try again")
             continue
+        finally:
+            for id in invalid_keys:
+                ori_keys[id] = False
+            # 将更改后的数据写回到 JSON 文件中
+            with open("data/keys.json", 'w') as file:
+                json.dump(ori_keys, file, indent=4)
         flag = 0
         for k, v in alias_template.items():
             if "s[head]" not in v:
-                print(alias_template)
+                print("try again")
                 break
             flag = 1
         if flag:
@@ -220,20 +265,20 @@ def search_engine():
 def verify():
     global template
     prompt = '''
-    For examples, given 'country of citizenship', the template is following:\n
+    For examples, given 'country of citizenship', the verification template is following:\n
     {'country of citizenship': "In the sentence '{s[sentence]}', is it correct that the country of citizenship of {s[head]} is {s[tail]}? Answer :"},\n
-    given 'date of birth', the template is following:\n
-    {'date of birth': "In the sentence '{s[sentence]}', is it correct that the date of birth of {s[head]} is {s[tail]}? Answer :"},\n
-    Ensure the response can be parsed by Python eval().
+    Your respond must be a dict format. Ensure the response can be parsed by Python eval().
     '''
     user_prompt = "Please give me {s[relation]} verification template.\n"
     s = {
         "relation": load_var("RELATION")
     }
     message = [{"role": "user", "content": user_prompt.format(s=s) + prompt}]
+
     while True:
         try:
             answer = make_chat_request_with_thinking(message, make_chat_request)
+            print(answer)
             answer = eval(answer['choices'][0]['message']['content'])
             template = answer[load_var("RELATION")]
             break

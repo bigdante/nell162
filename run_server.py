@@ -185,8 +185,9 @@ def re():
             yield f"data:   \n"
             print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
             input = "what about next"
-            if response == "[Return] EXIT":
+            if response == "[Return] EXIT" or method_return == "[Return] EXIT":
                 yield "data: all done"
+                yield f"data: \n"
                 break
             if method_return:
                 last_item = history[-1]
@@ -195,6 +196,7 @@ def re():
             if i > 100:
                 break
             time.sleep(1)
+
     return Response(generate(), content_type="text/event-stream")
 
 
@@ -213,8 +215,10 @@ def re2():
             yield f"data: \n"
             print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
             input = "what about next"
-            if response == "[Return] EXIT":
+            if response == "[Return] EXIT" or method_return == "[Return] EXIT":
                 yield "data: all done"
+                yield f"data: \n"
+                print("="*30)
                 break
             if method_return:
                 last_item = history[-1]
@@ -223,6 +227,7 @@ def re2():
             if i > 100:
                 break
             time.sleep(1)
+
     return Response(generate(), content_type="text/event-stream")
 
 

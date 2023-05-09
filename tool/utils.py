@@ -2,10 +2,8 @@ import pickle
 import sys
 import time
 import requests
-import os
 import re
 import importlib
-
 from data_object import *
 import numpy as np
 import ast
@@ -22,9 +20,8 @@ import collections
 import threading
 from typing import Callable
 from concurrent.futures import ThreadPoolExecutor
+
 from tool.model import *
-
-
 
 relation_list = ['country of citizenship', 'date of birth', 'place of birth', 'participant of',
                  'located in the administrative territorial entity', 'contains administrative territorial entity',
@@ -55,9 +52,6 @@ proxies = {
     'http': '127.0.0.1:9898',
     'https': '127.0.0.1:9898',
 }
-
-
-
 
 
 def sort_dict_by_key(d, key):
@@ -161,6 +155,7 @@ def call_es(text):
 
 def engine(text, mode="para"):
     head, tail = text
+    print(head, tail)
     headers = {'Content-Type': 'application/json'}
     url_para = 'http://166.111.7.106:9200/wikipedia_paragraph/wikipedia_paragraph/_search'
     url_sentence = 'http://166.111.7.106:9200/wikipedia_sentence/wikipedia_sentence/_search'
@@ -302,12 +297,6 @@ def get_relation_alias():
     json.dump(save, open("./alias.json", "w"), indent=4)
 
 
-
-
-
-
-
-
 def inference(input, history):
     pattern = r'【(.*?)】'
     while True:
@@ -364,6 +353,7 @@ def make_chat_request(message, max_length=1024, timeout=10, logit_bias=None, max
                     proxies=proxies,
                     # timeout=timeout
             ) as resp:
+                print("resp:", resp)
                 if resp.status_code == 200:
                     used_keys.remove(key)
                     unused_keys.append(key)
@@ -373,7 +363,13 @@ def make_chat_request(message, max_length=1024, timeout=10, logit_bias=None, max
                         invalid_keys.append(key)
                     else:
                         overload_keys.append((key, time.time()))
+                elif resp.status_code == 401:
+                    invalid_keys.append(key)
+                elif resp.status_code == 429:
+                    print(json.loads(resp.content))
+
         except requests.exceptions.RequestException as e:
+            print(e)
             used_keys.remove(key)
             unused_keys.append(key)
             timeout += 5
@@ -428,7 +424,7 @@ def load_var(var_name):
 
 def get_api_functions():
     def get_functions_from_file(file_path):
-        with open(file_path, "r") as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             file_content = f.read()
         module_node = ast.parse(file_content)
         function_nodes = [node for node in module_node.body if isinstance(node, ast.FunctionDef)]
