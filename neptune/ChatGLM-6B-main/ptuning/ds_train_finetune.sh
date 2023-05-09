@@ -7,14 +7,14 @@ export TORCH_EXTENSIONS_DIR=/zhangpai22/xll/torch_extension
 gpt_options=" \
   --deepspeed deepspeed.json \
   --do_train \
-  --train_file auto_kg/one_thought/train.json \
-  --validation_file auto_kg/one_thought/dev.json \
+  --train_file auto_kg/tail/train.json \
+  --validation_file auto_kg/tail/dev.json \
   --prompt_column prompt \
   --response_column response \
   --history_column history \
   --overwrite_cache \
   --model_name_or_path THUDM/chatglm-6b \
-  --output_dir ./output/adgen-chatglm-6b-pt-one_2048_tail-$PRE_SEQ_LEN-$LR \
+  --output_dir ./output/2048_auto_tail_vf-$PRE_SEQ_LEN-$LR \
   --overwrite_output_dir \
   --max_source_length 2048 \
   --max_target_length 128 \

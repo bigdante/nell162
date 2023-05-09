@@ -21,7 +21,7 @@ import threading
 from typing import Callable
 from concurrent.futures import ThreadPoolExecutor
 
-from tool.model import *
+# from tool.model import *
 
 relation_list = ['country of citizenship', 'date of birth', 'place of birth', 'participant of',
                  'located in the administrative territorial entity', 'contains administrative territorial entity',
@@ -155,7 +155,6 @@ def call_es(text):
 
 def engine(text, mode="para"):
     head, tail = text
-    print(head, tail)
     headers = {'Content-Type': 'application/json'}
     url_para = 'http://166.111.7.106:9200/wikipedia_paragraph/wikipedia_paragraph/_search'
     url_sentence = 'http://166.111.7.106:9200/wikipedia_sentence/wikipedia_sentence/_search'
@@ -167,7 +166,6 @@ def engine(text, mode="para"):
               auth=("nekol", "kegGER123")) as resp:
         results = resp.json()
         s_r = results['hits']['hits']
-
         return " ".join([r['_source']['text'] for r in s_r[:2]])
 
 
@@ -245,6 +243,7 @@ def get_pages(page_id):
                         continue
                 result_list.append(result)
         result_triples[str(page_id)] = result_list
+
     return result_triples
 
 
@@ -272,6 +271,7 @@ def get_entity_net(entity_ids, entity_names):
             result[entity] = {
                 "tables": tables
             }
+    json.dump(result, open("./"))
     return result
 
 
@@ -293,7 +293,6 @@ def get_relation_alias():
         save[relation] = [relation]
         for triple in BaseRelation.objects(Q(text=relation)):
             save[relation].extend(triple['alias'])
-
     json.dump(save, open("./alias.json", "w"), indent=4)
 
 
@@ -301,20 +300,77 @@ def inference(input, history):
     pattern = r'【(.*?)】'
     while True:
         response, history = model.chat(tokenizer, input, history=history)
-        print(response)
-        if response.startswith("[Thought]"):
+        print("response:", response)
+        if response.startswith("[Thought]") or response.startswith("[Return] TAIL"):
+            from ast import literal_eval
+            content = re.search(r'"([^"]*)"', response)
+            if content:
+                content_str = content.group(1)
+                response = literal_eval(content_str)
+                response = list(set(response))
+                save_var("TAILS", response)
+                return "[Return] TAILS=" + str(response), history, None
+            else:
+                pass
             return response, history, None
+
+
+        if response.startswith("[Return] ANSWER"):
+            label = True if "yes" in response else "no"
+            try:
+                relation_dict = load_var("relation_ALIA")
+                relaiton_ALIA = load_var("RELATION_ALIA_TEMPLATE")
+                key = list(relaiton_ALIA.keys())[0]
+                if label:
+                    relation_dict[key].append(load_var("TAIL"))
+                save_var("relation_ALIA", relation_dict)
+            except:
+                relaiton_ALIA = load_var("RELATION_ALIA_TEMPLATE")
+                key = list(relaiton_ALIA.keys())[0]
+                relation_dict = {}
+                relation_dict[key] = [load_var("TAIL")]
+                save_var("relation_ALIA", relation_dict)
+            return response, history, None
+
         match = re.search(pattern, response)
         if match:
             result = match.group(1)
             for f in get_api_functions()[0]:
                 if f in result:
                     method_return = get_api(f)
-                    print(method_return)
+                    print("method return: ", method_return)
                     return response, history, method_return
             print("no method match")
         else:
             print("no method match")
+
+
+def inference_test(input, history):
+    response, history = model.chat(tokenizer, input, history=history)
+    return response, history, None
+
+
+def inference2(input, history):
+    pattern = r'【(.*?)】'
+    # while True:
+    response, history = model.chat(tokenizer, input, history=history)
+    print(response)
+    if response.startswith("[T]"):
+        return response, history, None
+    match = re.search(pattern, response)
+    if match:
+        result = match.group(1)
+        if result not in ["get_sentences", "vote", "verify"]:
+            return response, history, None
+        for f in get_api_functions()[0]:
+            if f in result:
+                method_return = get_api(f)
+                print(method_return)
+                return response, history, method_return
+        print("no method match")
+    else:
+        print("no method match")
+        return response, history, None
 
 
 def get_valid_key():
@@ -353,7 +409,6 @@ def make_chat_request(message, max_length=1024, timeout=10, logit_bias=None, max
                     proxies=proxies,
                     # timeout=timeout
             ) as resp:
-                print("resp:", resp)
                 if resp.status_code == 200:
                     used_keys.remove(key)
                     unused_keys.append(key)
@@ -436,6 +491,7 @@ def get_api_functions():
     sys.path.insert(0, parent_dir)
 
     file_path = "tool/api.py"
+    # file_path = "tool/api_ori_1.py"
     functions = get_functions_from_file(file_path)
     api_module = importlib.import_module(file_path[:-3].replace("/", "."))
     function_objs = [getattr(api_module, name) for name in functions]

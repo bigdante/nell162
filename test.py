@@ -1,8 +1,3 @@
-a = 1
-b = 0
-try:
-    a/b
-except:
-    print("gg")
-finally:
-    print("hh")
+from tool.api import *
+
+get_all_relation_template()
