@@ -4,7 +4,7 @@ import torch
 from torch.nn import Module
 from transformers import AutoModel, AutoConfig, AutoTokenizer
 
-ptuning_checkpoint = 'neptune/ChatGLM-6B-main/ptuning/output/2048_auto_tail_vf-64-1e-2/checkpoint-7000'
+ptuning_checkpoint = 'neptune/ChatGLM-6B-main/ptuning/output/auto_kg-64-1e-2/checkpoint-3000'
 checkpoint_path = "THUDM/chatglm-6b"
 
 
@@ -46,7 +46,7 @@ def load_model_on_gpus(checkpoint_path: Union[str, os.PathLike], num_gpus: int =
             device_map = auto_configure_device_map(num_gpus)
 
         model = dispatch_model(model, device_map=device_map)
-        model.transformer.prefix_encoder.embedding.weight.data = model.transformer.prefix_encoder.embedding.weight.data.to(model.device)
+        model.transformer.prefix_encoder.embedding.weight.data = model.transformer.prefix_encoder.embedding.weight.data.to("cuda:7")
     return model
 
 
@@ -64,7 +64,7 @@ class ModelAndTokenizerSingleton:
     def load_model(self):
         if self._model is None:
             print("Loading model...")
-            model = load_model_on_gpus(checkpoint_path, 4, auto_configure_device_map([1, 2, 3, 4]))
+            model = load_model_on_gpus(checkpoint_path, 4, auto_configure_device_map([4, 5, 6, 7]))
             model = model.eval()
             self._model = model
         return self._model

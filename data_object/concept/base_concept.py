@@ -7,9 +7,10 @@ class BaseConcept(Document):
     """
     # values
     text = StringField(required=True)
-    hypernym = ListField(LazyReferenceField('self'))
-    hyponym = ListField(LazyReferenceField('self'))
-
+    # hypernym = ListField(LazyReferenceField('self'))
+    # hyponym = ListField(LazyReferenceField('self'))
+    hypernym = ListField(ReferenceField('self'))
+    hyponym = ListField(ReferenceField('self'))
     # allowed relations
     asHeadConstraint = ListField(ReferenceField('BaseRelation'))
     asTailConstraint = ListField(ReferenceField('BaseRelation'))  # not available at the moment

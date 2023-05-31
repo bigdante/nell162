@@ -1,10 +1,7 @@
 import json
-import random
 import requests
 import time
-from concurrent.futures import ThreadPoolExecutor
-# from datetime import datetime
-from tqdm import tqdm
+
 
 
 def make_chat_request(prompt, key, max_length=1024):
@@ -24,6 +21,23 @@ def make_chat_request(prompt, key, max_length=1024):
                            "top_p": 1.0,
                        }) as resp:
         return json.loads(resp.content)
+
+def extract_account():
+    account_password_list = []
+    with open('keys.txt', 'r') as file:
+        for line in file:
+            line = line.strip()
+            print(line)
+            if '----' in line:
+                account, password = line.split('----')[:2]
+            elif '|' in line:
+                account, password = line.split('|')[:2]
+            else:
+                continue
+            if {'account': account, 'password': password} not in account_password_list:
+                account_password_list.append({'account': account, 'password': password})
+
+    json.dump(account_password_list, open("./chatgpt_account.json", "w"), indent=4)
 
 
 if __name__ == '__main__':

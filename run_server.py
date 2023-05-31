@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request, Response
 import math
 from flask_cors import CORS
@@ -183,7 +185,27 @@ def vote_tail():
 
 @app.route('/re', methods=['POST', "GET"])
 def re():
-    os.remove("./my_vars.pkl")
+    # os.remove("./my_vars.pkl")
+    def print_tree(name, level):
+        yield '│   ' * (level - 1) + '├── ' + name + "\n"
+
+    def process_hierarchy(input, history, var_name, level):
+        new_history = history.copy()
+        yield from print_tree(f"Start {var_name} loop", level)
+        while True:
+            response, new_history, method_return = inference(input, new_history)
+            yield f"├{'─' * level} {response}\n"
+            if method_return:
+                for m in method_return.split("\n"):
+                    yield f"├{'─' * level} {m}\n"
+            if method_return:
+                last_item = new_history[-1]
+                new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
+                new_history[-1:] = [new_last_item]
+            if "[Return] " + var_name.upper() in response:
+                break
+        return new_history
+
     def generate():
         i = 0
         input = "[Thought] Retrieve sentences from Wikipedia."
@@ -191,13 +213,10 @@ def re():
         while True:
             i += 1
             yield f"===========Thinking (^-^)==============\n"
-            print("yield", i)
-            print(">>>>>>>>>>>>>>>>>>>>>>>")
             response, history, method_return = inference(input, history)
             yield f"{response}\n"
             if method_return:
                 yield f"{method_return}\n"
-            print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
             input = "next"
             if method_return == "[Return] EXIT":
                 yield "loop done"
@@ -209,171 +228,29 @@ def re():
             if method_return and "[Return] ENTITIES" in method_return:
                 head_history_ori = history.copy()
                 for head in load_var("ENTITIES_as_head"):
-                    print("start head loop")
-                    history = head_history_ori.copy()
                     save_var("HEAD", head)
-                    while True:
-                        print(">>>>>>>>>>>>>>>>>>>>>>>")
-                        response, history, method_return = inference(input, history)
-                        yield f"|--{response}\n"
-                        if method_return:
-                            yield f"|--{method_return}\n"
-                        print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
-                        if method_return:
-                            last_item = history[-1]
-                            new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
-                            history[-1:] = [new_last_item]
-                        if method_return and "[Return] TYPES" in method_return:
-                            break
+                    history = process_hierarchy(input, head_history_ori, "TYPES", 2)
                     type_history_ori = history.copy()
                     for type in load_var('TYPES'):
-                        print("start type loop")
-                        history = type_history_ori.copy()
                         save_var("TYPE", type)
-                        while True:
-                            print(">>>>>>>>>>>>>>>>>>>>>>>")
-                            response, history, method_return = inference(input, history)
-                            yield f"|----{response}\n"
-                            if method_return:
-                                yield f"|----{method_return}\n"
-                            print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
-                            if method_return:
-                                last_item = history[-1]
-                                new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
-                                history[-1:] = [new_last_item]
-                            if method_return and "[Return] RELATIONS" in method_return:
-                                break
+                        history = process_hierarchy(input, type_history_ori, "RELATIONS", 3)
                         relation_history_ori = history.copy()
-                        for relaiton in load_var("RELATIONS"):
-                            print("start relation loop")
-                            history = relation_history_ori.copy()
-                            save_var("RELATION", relaiton)
-                            while True:
-                                print(">>>>>>>>>>>>>>>>>>>>>>>")
-                                response, history, method_return = inference(input, history)
-                                yield f"|------{response}\n"
-                                if method_return:
-                                    yield f"|------{method_return}\n"
-                                print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
-                                if method_return:
-                                    last_item = history[-1]
-                                    new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
-                                    history[-1:] = [new_last_item]
-                                if method_return and "[Return] ALIA_TEMPLATES" in method_return:
-                                    break
+                        for relation in load_var("RELATIONS"):
+                            save_var("RELATION", relation)
+                            history = process_hierarchy(input, relation_history_ori, "ALIA_TEMPLATES", 4)
                             alias_history_ori = history.copy()
                             for alia in load_var("ALIAS_TEMPLATES"):
-                                print("start alia loop")
-                                history = alias_history_ori.copy()
                                 save_var("RELATION_ALIA_TEMPLATE", alia)
-                                while True:
-                                    print(">>>>>>>>>>>>>>>>>>>>>>>")
-                                    response, history, method_return = inference(input, history)
-                                    yield f"|--------{response}\n"
-                                    if method_return:
-                                        for m in method_return.split("\n"):
-                                            yield f"|--------{m}\n"
-                                    print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
-                                    if method_return:
-                                        last_item = history[-1]
-                                        new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
-                                        history[-1:] = [new_last_item]
-                                    if "[Return] TAILS" in response:
-                                        break
+                                history = process_hierarchy(input, alias_history_ori, "TAILS", 5)
                                 tails_history_ori = history.copy()
                                 for tail in load_var("TAILS"):
-                                    print("start tail loop")
-                                    history = tails_history_ori.copy()
                                     save_var("TAIL", tail)
-                                    while True:
-                                        print(">>>>>>>>>>>>>>>>>>>>>>>")
-                                        response, history, method_return = inference(input, history)
-                                        yield f"|----------{response}\n"
-                                        if method_return:
-                                            for m in method_return.split("\n"):
-                                                yield f"|----------{m}\n"
-                                        print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
-                                        if method_return:
-                                            last_item = history[-1]
-                                            new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
-                                            history[-1:] = [new_last_item]
-                                        if method_return and "[Return] EXIT" in method_return:
-                                            break
-                            yield f"majority voting result\n"
+                                    history = process_hierarchy(input, tails_history_ori, "EXIT", 6)
+                            yield f"├{'─' * 3} majority voting result\n"
                             result = vote_tail()
-                            yield f"result {result}"
+                            yield f"├{'─' * 3} result {result}\n"
                             save_var("FINAL_TAIL", result)
 
-    return Response(generate(), content_type="text/event-stream")
-
-
-@app.route('/re3', methods=['POST', "GET"])
-def re3():
-    def generate():
-        i = 0
-        input = "[T] Begin, retrieve sentences."
-        history = []
-        while True:
-            i += 1
-            yield f"data: ===========Thinking (^-^)==============\n\n\n\n"
-            print("yield", i)
-            print(">>>>>>>>>>>>>>>>>>>>>>>")
-            response, history, method_return = inference2(input, history)
-            # ^,$,&,@,#
-            response = response.replace("^", "|--").replace("$", "|----").replace("&", "|------").replace("@", "|--------").replace("#", "|----------")
-            print(response)
-            yield f"data: {response}\n"
-            if method_return:
-                yield f"data: {method_return}\n"
-            yield f"data:   \n"
-            print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
-            input = "what about next"
-            if response == "[Return] EXIT" or method_return == "[Return] EXIT":
-                yield "data: all done"
-                yield f"data: \n"
-                break
-            if method_return:
-                last_item = history[-1]
-                new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
-                history[-1:] = [new_last_item]
-            if i > 100:
-                break
-            time.sleep(1)
-
-    return Response(generate(), content_type="text/event-stream")
-
-
-@app.route('/re1', methods=['POST', "GET"])
-def re1():
-    text = request.args.get('text', '')
-    os.remove("./my_vars.pkl")
-    def generate():
-        i = 0
-        input = "[Thought] Retrieve sentences from Wikipedia."
-        history = []
-        while True:
-            i += 1
-            yield f"===========Thinking (^-^)==============\n"
-            print("yield", i)
-            print(">>>>>>>>>>>>>>>>>>>>>>>")
-            response, history, method_return = inference(input, history)
-            yield f"{response}\n"
-            if method_return:
-                # if text and method_return.startswith("[Return] SENTENCES") and text != "undefined":
-                #     method_return = "[Return] SENTENCES=" + "\"" + text + "\""
-                yield f"{method_return}\n\n"
-            print("<<<<<<<<<<<<<<<<<<<<<<<<\n")
-            input = "next"
-            if response == "[Return] EXIT" or method_return == "[Return] EXIT":
-                yield "loop done"
-                break
-            if method_return:
-                last_item = history[-1]
-                new_last_item = (last_item[0], last_item[1] + "\n" + method_return)
-                history[-1:] = [new_last_item]
-            if i > 100:
-                break
-            time.sleep(1)
     return Response(generate(), content_type="text/event-stream")
 
 

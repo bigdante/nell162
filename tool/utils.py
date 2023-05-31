@@ -1,9 +1,11 @@
+import os
 import pickle
 import sys
 import time
 import requests
 import re
 import importlib
+from tqdm import tqdm
 from data_object import *
 import numpy as np
 import ast
@@ -20,7 +22,6 @@ import collections
 import threading
 from typing import Callable
 from concurrent.futures import ThreadPoolExecutor
-
 # from tool.model import *
 
 relation_list = ['country of citizenship', 'date of birth', 'place of birth', 'participant of',
@@ -93,7 +94,6 @@ def get_params(request):
         params['inPageId'] = message['inPageId'] if "inPageId" in message.keys() else ""
     else:
         return " 'it's not a POST operation! \n"
-    # print(params)
     return params
 
 
@@ -195,6 +195,7 @@ def get_entity(query_name):
     result = sort_dict_by_key(result, 'tables')
     result_all["entity"] = result
     save_result_json(result_all, "tool/data/page_entity.json")
+
     return result_all
 
 
@@ -271,7 +272,7 @@ def get_entity_net(entity_ids, entity_names):
             result[entity] = {
                 "tables": tables
             }
-    json.dump(result, open("./"))
+    # json.dump(result, open("../data/result_entity_table.json"))
     return result
 
 
@@ -286,91 +287,85 @@ def get_latest_triple(params):
     return result
 
 
-def get_relation_alias():
-    from tqdm import tqdm
-    save = {}
-    for relation in tqdm(relation_list):
-        save[relation] = [relation]
-        for triple in BaseRelation.objects(Q(text=relation)):
-            save[relation].extend(triple['alias'])
-    json.dump(save, open("./alias.json", "w"), indent=4)
 
-
-def inference(input, history):
-    pattern = r'【(.*?)】'
-    while True:
-        response, history = model.chat(tokenizer, input, history=history)
-        print("response:", response)
-        if response.startswith("[Thought]") or response.startswith("[Return] TAIL"):
-            from ast import literal_eval
-            content = re.search(r'"([^"]*)"', response)
-            if content:
-                content_str = content.group(1)
-                response = literal_eval(content_str)
-                response = list(set(response))
-                save_var("TAILS", response)
-                return "[Return] TAILS=" + str(response), history, None
-            else:
-                pass
-            return response, history, None
-
-
-        if response.startswith("[Return] ANSWER"):
-            label = True if "yes" in response else "no"
-            try:
-                relation_dict = load_var("relation_ALIA")
-                relaiton_ALIA = load_var("RELATION_ALIA_TEMPLATE")
-                key = list(relaiton_ALIA.keys())[0]
-                if label:
-                    relation_dict[key].append(load_var("TAIL"))
-                save_var("relation_ALIA", relation_dict)
-            except:
-                relaiton_ALIA = load_var("RELATION_ALIA_TEMPLATE")
-                key = list(relaiton_ALIA.keys())[0]
-                relation_dict = {}
-                relation_dict[key] = [load_var("TAIL")]
-                save_var("relation_ALIA", relation_dict)
-            return response, history, None
-
-        match = re.search(pattern, response)
-        if match:
-            result = match.group(1)
-            for f in get_api_functions()[0]:
-                if f in result:
-                    method_return = get_api(f)
-                    print("method return: ", method_return)
-                    return response, history, method_return
-            print("no method match")
-        else:
-            print("no method match")
-
-
-def inference_test(input, history):
-    response, history = model.chat(tokenizer, input, history=history)
-    return response, history, None
-
-
-def inference2(input, history):
-    pattern = r'【(.*?)】'
-    # while True:
-    response, history = model.chat(tokenizer, input, history=history)
-    print(response)
-    if response.startswith("[T]"):
-        return response, history, None
-    match = re.search(pattern, response)
-    if match:
-        result = match.group(1)
-        if result not in ["get_sentences", "vote", "verify"]:
-            return response, history, None
-        for f in get_api_functions()[0]:
-            if f in result:
-                method_return = get_api(f)
-                print(method_return)
-                return response, history, method_return
-        print("no method match")
-    else:
-        print("no method match")
-        return response, history, None
+# def inference(input, ori_history):
+#     pattern = r'【(.*?)】'
+#     # 如果没有正确生成方法，就循环。
+#     while True:
+#         try:
+#             response, history = model.chat(tokenizer, input, history=ori_history)
+#             print("response:", response)
+#             if response.startswith("[Thought]") or "[Return] TAILS" in response:
+#                 from ast import literal_eval
+#                 content = re.search(r'"([^"]*)"', response)
+#                 if content:
+#                     content_str = content.group(1)
+#                     response = literal_eval(content_str)
+#                     response = list(set(response))
+#                     save_var("TAILS", response)
+#                     print("save done")
+#                     return "[Return] TAILS=" + str(response), history, None
+#                 else:
+#                     pass
+#                 return response, history, None
+#             if response.startswith("[Return] ANSWER"):
+#                 label = True if "yes" in response else "no"
+#                 try:
+#                     relation_dict = load_var("relation_ALIA")
+#                     relaiton_ALIA = load_var("RELATION_ALIA_TEMPLATE")
+#                     key = list(relaiton_ALIA.keys())[0]
+#                     if label:
+#                         relation_dict[key].append(load_var("TAIL"))
+#                     save_var("relation_ALIA", relation_dict)
+#                 except:
+#                     relaiton_ALIA = load_var("RELATION_ALIA_TEMPLATE")
+#                     key = list(relaiton_ALIA.keys())[0]
+#                     relation_dict = {}
+#                     relation_dict[key] = [load_var("TAIL")]
+#                     save_var("relation_ALIA", relation_dict)
+#                 return response, history, None
+#
+#             match = re.search(pattern, response)
+#             if match:
+#                 result = match.group(1)
+#                 for f in get_api_functions()[0]:
+#                     if f in result:
+#                         method_return = get_api(f)
+#                         print("method return: ", method_return)
+#                         return response, history, method_return
+#                 print("no method match")
+#             else:
+#                 print("no method match")
+#         except:
+#             continue
+#
+#
+# def inference_test(input, history):
+#     response, history = model.chat(tokenizer, input, history=history)
+#     return response, history, None
+#
+#
+# def inference2(input, history):
+#     pattern = r'【(.*?)】'
+#     # while True:
+#     response, history = model.chat(tokenizer, input, history=history)
+#     print(response)
+#     if response.startswith("[T]"):
+#         return response, history, None
+#     match = re.search(pattern, response)
+#     if match:
+#         result = match.group(1)
+#         if result not in ["get_sentences", "vote", "verify"]:
+#             return response, history, None
+#         for f in get_api_functions()[0]:
+#             if f in result:
+#                 method_return = get_api(f)
+#                 print(method_return)
+#                 return response, history, method_return
+#         print("no method match")
+#     else:
+#         print("no method match")
+#         return response, history, None
 
 
 def get_valid_key():
@@ -505,3 +500,27 @@ def get_api(api_name: str, *args, **kwargs):
         if name == api_name:
             return func(*args, **kwargs)
     print(f"No such function {api_name}")
+
+
+
+def get_all_relations():
+    relations = BaseRelation.objects()
+    relaiton_dict = {}
+    for relation in relations:
+        relaiton_dict[relation.text] = relation.alias
+    json.dump(relaiton_dict, open("./relation_alias.json", "w"), indent=4)
+
+
+def find_word_indices(sentence, word):
+    words = word.split()
+    start_index = -1
+    end_index = -1
+
+    for i in range(len(sentence)):
+        if sentence[i:i + len(words[0])] == words[0]:
+            if sentence[i:i + len(word)] == word:
+                start_index = i
+                end_index = i + len(word) - 1
+                break
+
+    return [start_index, end_index]

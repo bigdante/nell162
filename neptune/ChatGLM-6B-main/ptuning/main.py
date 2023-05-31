@@ -1,13 +1,12 @@
 import logging
 import os
-
+import multiprocessing
+os.environ.pop('http_proxy', None)
+os.environ.pop('https_proxy', None)
 os.environ["HF_HOME"] = "/zhangpai22/xll/HF_home"
 os.environ["TORCH_EXTENSIONS_DIR"] = "/zhangpai22/xll/torch_extension"
-# 设置 Ninja 的路径
 ninja_path = "/zhangpai22/envs/dragon/bin"
-# 获取当前的 PATH 环境变量
 current_path = os.environ.get("PATH", "")
-# 将 Ninja 的路径添加到 PATH 环境变量中
 os.environ["PATH"] = f"{current_path}:{ninja_path}"
 import sys
 import json
@@ -133,7 +132,6 @@ def main():
                 [(l if l != tokenizer.pad_token_id else -100) for l in label] for label in labels["input_ids"]
             ]
         model_inputs["labels"] = labels["input_ids"]
-
         return model_inputs
 
     def preprocess_function_train(examples):
@@ -186,7 +184,9 @@ def main():
         if data_args.max_train_samples is not None:
             max_train_samples = min(len(train_dataset), data_args.max_train_samples)
             train_dataset = train_dataset.select(range(max_train_samples))
-
+        num_proc = multiprocessing.cpu_count()
+        if not data_args.preprocessing_num_workers:
+            data_args.preprocessing_num_workers = num_proc
         with training_args.main_process_first(desc="train dataset map pre-processing"):
             train_dataset = train_dataset.map(
                 preprocess_function_train,
@@ -196,9 +196,7 @@ def main():
                 load_from_cache_file=not data_args.overwrite_cache,
                 desc="Running tokenizer on train dataset",
             )
-
         print_dataset_example(train_dataset[0])
-
     if training_args.do_eval:
         max_target_length = data_args.val_max_target_length
         if "validation" not in raw_datasets:
@@ -217,7 +215,6 @@ def main():
                 desc="Running tokenizer on validation dataset",
             )
         print_dataset_example(eval_dataset[0])
-
     if training_args.do_predict:
         max_target_length = data_args.val_max_target_length
         if "test" not in raw_datasets:
@@ -236,7 +233,6 @@ def main():
                 desc="Running tokenizer on prediction dataset",
             )
         print_dataset_example(predict_dataset[0])
-
     # Data collator
     label_pad_token_id = -100 if data_args.ignore_pad_token_for_loss else tokenizer.pad_token_id
     data_collator = DataCollatorForSeq2Seq(
@@ -272,7 +268,6 @@ def main():
                 score_dict[k].append(round(v["f"] * 100, 4))
             bleu_score = sentence_bleu([list(label)], list(pred), smoothing_function=SmoothingFunction().method3)
             score_dict["bleu-4"].append(round(bleu_score * 100, 4))
-
         for k, v in score_dict.items():
             score_dict[k] = float(np.mean(v))
         return score_dict

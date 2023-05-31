@@ -1,69 +1,22 @@
-# nyt29
-import json
+relation_list = ['country of citizenship', 'date of birth', 'place of birth', 'participant of',
+                 'located in the administrative territorial entity', 'contains administrative territorial entity',
+                 'participant', 'location', 'followed by', 'country', 'educated at', 'date of death', 'sibling',
+                 'head of government', 'legislative body', 'conflict', 'applies to jurisdiction', 'instance of',
+                 'performer', 'publication date', 'creator', 'author', 'composer', 'lyrics by', 'member of',
+                 'notable work', 'inception', 'part of', 'cast member', 'director', 'has part', 'production company',
+                 'owned by', 'headquarters location', 'developer', 'manufacturer', 'country of origin', 'publisher',
+                 'parent organization', 'subsidiary', 'capital of', 'capital', 'spouse', 'father', 'child', 'religion',
+                 'mother', 'located in or next to body of water', 'located on terrain feature', 'basin country',
+                 'member of political party', 'mouth of the watercourse', 'place of death', 'military branch',
+                 'work location', 'start time', 'award received', 'point in time', 'founded by', 'employer',
+                 'head of state', 'member of sports team', 'league', 'present in work', 'position held', 'chairperson',
+                 'languages spoken, written or signed', 'location of formation', 'operator', 'producer', 'record label',
+                 'follows', 'replaced by', 'replaces', 'end time', 'subclass of', 'residence', 'sister city',
+                 'original network', 'ethnic group', 'separated from', 'screenwriter', 'continent', 'platform',
+                 'product or material produced', 'genre', 'series', 'narrative location', 'parent taxon',
+                 'original language of work', 'dissolved, abolished or demolished', 'territory claimed by',
+                 'characters', 'influenced by', 'official language', 'unemployment rate']
 
-relation_list = ['country of citizenship', 'date of birth', 'place of birth', 'participant of', 'located in the administrative territorial entity',
-                 'contains administrative territorial entity', 'participant', 'location', 'followed by', 'country', 'educated at', 'date of death', 'sibling',
-                 'head of government', 'legislative body', 'conflict', 'applies to jurisdiction', 'instance of', 'performer', 'publication date', 'creator', 'author', 'composer',
-                 'lyrics by', 'member of', 'notable work', 'inception', 'part of', 'cast member', 'director', 'has part', 'production company', 'owned by', 'headquarters location',
-                 'developer', 'manufacturer', 'country of origin', 'publisher', 'parent organization', 'subsidiary', 'capital of', 'capital', 'spouse', 'father', 'child',
-                 'religion', 'mother', 'located in or next to body of water', 'located on terrain feature', 'basin country', 'member of political party',
-                 'mouth of the watercourse', 'place of death', 'military branch', 'work location', 'start time', 'award received', 'point in time', 'founded by', 'employer',
-                 'head of state', 'member of sports team', 'league', 'present in work', 'position held', 'chairperson', 'languages spoken, written or signed',
-                 'location of formation', 'operator', 'producer', 'record label', 'follows', 'replaced by', 'replaces', 'end time', 'subclass of', 'residence', 'sister city',
-                 'original network', 'ethnic group', 'separated from', 'screenwriter', 'continent', 'platform', 'product or material produced', 'genre', 'series',
-                 'narrative location', 'parent taxon', 'original language of work', 'dissolved, abolished or demolished', 'territory claimed by', 'characters', 'influenced by',
-                 'official language'
-                 ]
-
-gen_template = {
-    #
-    # 'located on terrain feature': {
-    #     'located on terrain feature': "Given the sentence: '{s[sentence]}', {s[head]} is located on what terrain feature? Choose from the provided list: {s[tail_choose]}.",
-    #     'sited on topographic feature': "Given the sentence: '{s[sentence]}', {s[head]} is sited on what topographic feature?  Choose from the provided list: {s[tail_choose]}.",
-    #     'situated on geographic feature': "Given the sentence: '{s[sentence]}', determine the geographic feature where {s[head]} is situated from the list: {s[tail_choose]}.",
-    #     'placed on landform': "Given the sentence: '{s[sentence]}', {s[head]} is placed on the landform of what? Choose from the provided list: {s[tail_choose]}.",
-    #     'positioned on landscape element': "Based on the sentence: '{s[sentence]}', {s[head]} is positioned on which landscape element? Choose from the provided list: {s[tail_choose]}.",
-    #     'set on terrain element': "Considering the sentence: '{s[sentence]}', {s[head]} is set on which terrain element? Select the appropriate option from the list: {s[tail_choose]}.",
-    #     'established on geophysical feature': "In the context of the sentence: '{s[sentence]}', {s[head]} is established on what geophysical feature? Choose from the list provided: {s[tail_choose]}.",
-    #     'resting on topographical feature': "From the sentence: '{s[sentence]}', {s[head]} is resting on what topographical feature? Select the correct option from the provided list: {s[tail_choose]}.",
-    #     'found on physical terrain feature': "Given the sentence: '{s[sentence]}', {s[head]} is found on what physical terrain feature? Choose from the provided list: {s[tail_choose]}.",
-    #     'standing on earth formation': "In the sentence: '{s[sentence]}', {s[head]} is standing on which earth formation? Select the appropriate option from the list: {s[tail_choose]}.",
-    # },
-    # 'mouth of the watercourse': {
-    #     'mouth of the watercourse': "Given the sentence: '{s[sentence]}', identify the water into which the {s[head]} drains by selecting the correct option from the provided list: {s[tail_choose]}.",
-    #     'watercourse drain': "Given the sentence: '{s[sentence]}', identify the water where the {s[head]} drains or terminates, by selecting the correct option from the provided list: {s[tail_choose]}.",
-    #     'flow out': "Given the sentence: '{s[sentence]}', determine the water where the {s[head]} flows out or ends from the provided list: {s[tail_choose]}.",
-    #     'river mouth': "Given the sentence: '{s[sentence]}', determine the water where the mouth of the {s[head]} is located from the provided list: {s[tail_choose]}.",
-    #     'flows into': "Given the sentence: '{s[sentence]}', identify the body of water where the {s[head]} flows into or ends from the provided list: {s[tail_choose]}.",
-    #     'watercourse termination': "Given the sentence: '{s[sentence]}', identify the body of water into which the {s[head]} watercourse terminates by selecting the correct option from the provided list: {s[tail_choose]}.",
-    #     'river end': "Given the sentence: '{s[sentence]}', determine the body of water where the {s[head]} river ends by choosing the correct option from the provided list: {s[tail_choose]}.",
-    #     'watercourse conclusion': "Given the sentence: '{s[sentence]}', determine the body of water where the {s[head]} watercourse concludes by choosing the correct option from the provided list: {s[tail_choose]}.",
-    #     'river merge': "Given the sentence: '{s[sentence]}', identify the body of water where the {s[head]} river merges or flows into by selecting the correct option from the provided list: {s[tail_choose]}."
-    # },
-    # 'platform': {
-    #     'platform': "Given the sentence: '{s[sentence]}', identify the platform associated with {s[head]} by selecting the correct option from the provided list: {s[tail_choose]}.",
-    #     'available on': "With reference to the sentence: '{s[sentence]}', identify on which platform {s[head]} is available by selecting the correct option from the provided list: {s[tail_choose]}.",
-    #     'operating platform': "From the sentence: '{s[sentence]}', identify the operating platform related to {s[head]} and choose the appropriate option from the list: {s[tail_choose]}.",
-    #     'published platform': "In light of the sentence: '{s[sentence]}', determine the platform on which {s[head]} is published and select the correct option from the provided list: {s[tail_choose]}.",
-    #     'developed or released for': "Given the sentence: '{s[sentence]}', identify the platform for which {s[head]} is developed or released, and select the right option from the list provided: {s[tail_choose]}.",
-    #     'compatible with': "Considering the sentence: '{s[sentence]}', determine the platform that {s[head]} is compatible with and choose the appropriate option from the list: {s[tail_choose]}.",
-    #     'intended for': "Based on the sentence: '{s[sentence]}', find out the platform that {s[head]} is intended for and select the suitable option from the available choices: {s[tail_choose]}.",
-    #     'supported by': "Using the sentence: '{s[sentence]}', determine the platform supporting {s[head]} and select the right option from the list of choices: {s[tail_choose]}."
-    # }
-    'follows': {
-        'follows': "Given the sentence: '{s[sentence]}', determine what {s[head]} follows？ Selecting the correct options from the provided list: {s[tail_choose]}.",
-        'succeeds': "Using the sentence: '{s[sentence]}', determine what {s[head]} succeeds? Selecting the correct options from the provided list: {s[tail_choose]}.",
-        'precedes': "Given the sentence: '{s[sentence]}', find out what precede {s[head]} from the provided list: {s[tail_choose]}.",
-        'predecessor': "Given the sentence: '{s[sentence]}', identify the predecessors of {s[head]} from the provided list: {s[tail_choose]}.",
-        'preceded by': "Using the sentence: '{s[sentence]}', find out what precedes {s[head]} from the provided list: {s[tail_choose]}.",
-        'previous item': "Given the sentence: '{s[sentence]}', determine the previous item of {s[head]} from the provided list: {s[tail_choose]}.",
-        'preceding': "In the context of the sentence: '{s[sentence]}', determine the item that precedes {s[head]} and select the correct option from the list provided: {s[tail_choose]}.",
-        'prior to': "With reference to the sentence: '{s[sentence]}', identify the item that comes prior to {s[head]} and choose the appropriate option from the provided list: {s[tail_choose]}.",
-        'before': "Considering the sentence: '{s[sentence]}', find out what comes before {s[head]} by selecting the correct option from the list of choices: {s[tail_choose]}."
-
-    },
-
-}
 
 save_gen_template = {
     'country of citizenship': {
@@ -989,4 +942,3 @@ save_gen_template = {
     }
 }
 
-# print(json.dumps(save_gen_template))

@@ -11,13 +11,12 @@ gpt_options=" \
   --validation_file auto_kg/tail/dev.json \
   --prompt_column prompt \
   --response_column response \
-  --history_column history \
   --overwrite_cache \
   --model_name_or_path THUDM/chatglm-6b \
-  --output_dir ./output/2048_auto_tail_vf-$PRE_SEQ_LEN-$LR \
+  --output_dir ./output/tail_vf-$PRE_SEQ_LEN-$LR \
   --overwrite_output_dir \
   --max_source_length 2048 \
-  --max_target_length 128 \
+  --max_target_length 64 \
   --per_device_train_batch_size 4 \
   --per_device_eval_batch_size 1 \
   --gradient_accumulation_steps 1 \
