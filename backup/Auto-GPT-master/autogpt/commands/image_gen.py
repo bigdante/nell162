@@ -90,7 +90,7 @@ def generate_image_with_dalle(prompt: str, filename: str) -> str:
 
     print(f"Image Generated for prompt:{prompt}")
 
-    image_data = b64decode(response["train_auto_glm_data"][0]["b64_json"])
+    image_data = b64decode(response["make_COT_traindata_redocred"][0]["b64_json"])
 
     with open(path_in_workspace(filename), mode="wb") as png:
         png.write(image_data)

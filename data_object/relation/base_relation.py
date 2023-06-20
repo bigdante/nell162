@@ -3,7 +3,7 @@ from mongoengine import *
 
 class BaseRelation(Document):
     """
-    train_auto_glm_data object for relations in KGs; only refers to wikidata properties now.
+    make_COT_traindata_redocred object for relations in KGs; only refers to wikidata properties now.
     """
     # values
     text = StringField(required=True)

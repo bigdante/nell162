@@ -29,7 +29,7 @@ def get_filtered_negatives():
         if len(data[doc['relation']]) <= 10000:
             data[doc['relation']].append(doc)
 
-    # for relation, docs in train_auto_glm_data.items():
+    # for relation, docs in make_COT_traindata_redocred.items():
     #     json.dump([json.loads(e.encode(d)) for d in docs],
     #               open(join(DATA_DIR, 'sampled_negs', relation.replace(' ', '_') + '_negs.json'), 'w'), indent=4,
     #               ensure_ascii=False)

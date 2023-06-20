@@ -63,7 +63,7 @@ class TestPromptGenerator(TestCase):
         Test if the generate_prompt_string() method generates a prompt string with all the added
         constraints, commands, resources, and evaluations.
         """
-        # Define the test train_auto_glm_data
+        # Define the test make_COT_traindata_redocred
         constraints = ["Constraint1", "Constraint2"]
         commands = [
             {
@@ -80,7 +80,7 @@ class TestPromptGenerator(TestCase):
         resources = ["Resource1", "Resource2"]
         evaluations = ["Evaluation1", "Evaluation2"]
 
-        # Add test train_auto_glm_data to the generator
+        # Add test make_COT_traindata_redocred to the generator
         for constraint in constraints:
             self.generator.add_constraint(constraint)
         for command in commands:

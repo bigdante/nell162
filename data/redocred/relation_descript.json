@@ -128,7 +128,7 @@
         "examples": "Bambi production company The Walt Disney Company; Batman Begins production company Warner Bros.; Toy Story production company Pixar"
     },
     "owned by": {
-        "description": "\"owned by\" refers to owner of the subject.",
+        "description": "\"owned by\" refers to the object that is the owner of the subject. The subject is a item and object is a person or organization or group.",
         "examples": "Choupette owned by Karl Lagerfeld; Eiffel Tower owned by Paris; Wiktionary owned by Wikimedia Foundation; Sch\\u00F6nbrunn Palace owned by Leopold I, Holy Roman Emperor"
     },
     "headquarters location": {

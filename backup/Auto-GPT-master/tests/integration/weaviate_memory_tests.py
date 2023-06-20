@@ -61,7 +61,7 @@ class TestWeaviateMemory(unittest.TestCase):
         doc = "You are a Titan name Thanos and you are looking for the Infinity Stones"
         self.memory.add(doc)
         result = self.client.query.get(self.index, ["raw_text"]).do()
-        actual = result["train_auto_glm_data"]["Get"][self.index]
+        actual = result["make_COT_traindata_redocred"]["Get"][self.index]
 
         self.assertEqual(len(actual), 1)
         self.assertEqual(actual[0]["raw_text"], doc)

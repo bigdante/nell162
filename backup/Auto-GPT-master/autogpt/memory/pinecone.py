@@ -47,7 +47,7 @@ class PineconeMemory(MemoryProviderSingleton):
         vector = create_embedding_with_ada(data)
         # no metadata here. We may wish to change that long term.
         self.index.upsert([(str(self.vec_num), vector, {"raw_text": data})])
-        _text = f"Inserting train_auto_glm_data into memory at index: {self.vec_num}:\n train_auto_glm_data: {data}"
+        _text = f"Inserting make_COT_traindata_redocred into memory at index: {self.vec_num}:\n make_COT_traindata_redocred: {data}"
         self.vec_num += 1
         return _text
 
@@ -60,9 +60,9 @@ class PineconeMemory(MemoryProviderSingleton):
 
     def get_relevant(self, data, num_relevant=5):
         """
-        Returns all the train_auto_glm_data in the memory that is relevant to the given train_auto_glm_data.
-        :param data: The train_auto_glm_data to compare to.
-        :param num_relevant: The number of relevant train_auto_glm_data to return. Defaults to 5
+        Returns all the make_COT_traindata_redocred in the memory that is relevant to the given make_COT_traindata_redocred.
+        :param data: The make_COT_traindata_redocred to compare to.
+        :param num_relevant: The number of relevant make_COT_traindata_redocred to return. Defaults to 5
         """
         query_embedding = create_embedding_with_ada(data)
         results = self.index.query(

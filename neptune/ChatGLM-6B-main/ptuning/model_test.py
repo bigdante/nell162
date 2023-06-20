@@ -51,7 +51,7 @@ while True:
 #             ori_input = ori_input + response + "\n[Return] " + method_return
 
 
-# file = open("./auto_kg/train_auto_glm_data/step/rounds_head_type_relation_alias.json")
+# file = open("./auto_kg/make_COT_traindata_redocred/step/rounds_head_type_relation_alias.json")
 # lines = file.readlines()
 # count = 0
 # max_len = 0

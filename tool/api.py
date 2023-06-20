@@ -6,7 +6,6 @@ from tqdm import tqdm
 # from tool.utils import *
 from bson import ObjectId
 import spacy
-from collections import Counter
 from data_object import *
 
 wiki_template = json.load(open("./data/wiki_relation_templates.json"))

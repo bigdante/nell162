@@ -151,11 +151,11 @@ def create_embedding_with_ada(text) -> list:
                     engine=CFG.get_azure_deployment_id_for_model(
                         "text-embedding-ada-002"
                     ),
-                )["train_auto_glm_data"][0]["embedding"]
+                )["make_COT_traindata_redocred"][0]["embedding"]
             else:
                 return openai.Embedding.create(
                     input=[text], model="text-embedding-ada-002"
-                )["train_auto_glm_data"][0]["embedding"]
+                )["make_COT_traindata_redocred"][0]["embedding"]
         except RateLimitError:
             pass
         except APIError as e:

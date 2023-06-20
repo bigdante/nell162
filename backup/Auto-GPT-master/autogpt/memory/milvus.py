@@ -40,7 +40,7 @@ class MilvusMemory(MemoryProviderSingleton):
         self.collection.load()
 
     def add(self, data) -> str:
-        """Add an embedding of train_auto_glm_data into memory.
+        """Add an embedding of make_COT_traindata_redocred into memory.
 
         Args:
             data (str): The raw text to construct embedding index.
@@ -51,15 +51,15 @@ class MilvusMemory(MemoryProviderSingleton):
         embedding = get_ada_embedding(data)
         result = self.collection.insert([[embedding], [data]])
         _text = (
-            "Inserting train_auto_glm_data into memory at primary key: "
-            f"{result.primary_keys[0]}:\n train_auto_glm_data: {data}"
+            "Inserting make_COT_traindata_redocred into memory at primary key: "
+            f"{result.primary_keys[0]}:\n make_COT_traindata_redocred: {data}"
         )
         return _text
 
     def get(self, data):
-        """Return the most relevant train_auto_glm_data in memory.
+        """Return the most relevant make_COT_traindata_redocred in memory.
         Args:
-            data: The train_auto_glm_data to compare to.
+            data: The make_COT_traindata_redocred to compare to.
         """
         return self.get_relevant(data, 1)
 
@@ -84,14 +84,14 @@ class MilvusMemory(MemoryProviderSingleton):
         return "Obliviated"
 
     def get_relevant(self, data: str, num_relevant: int = 5):
-        """Return the top-k relevant train_auto_glm_data in memory.
+        """Return the top-k relevant make_COT_traindata_redocred in memory.
         Args:
-            data: The train_auto_glm_data to compare to.
-            num_relevant (int, optional): The max number of relevant train_auto_glm_data.
+            data: The make_COT_traindata_redocred to compare to.
+            num_relevant (int, optional): The max number of relevant make_COT_traindata_redocred.
                 Defaults to 5.
 
         Returns:
-            list: The top-k relevant train_auto_glm_data.
+            list: The top-k relevant make_COT_traindata_redocred.
         """
         # search the embedding and return the most relevant text.
         embedding = get_ada_embedding(data)

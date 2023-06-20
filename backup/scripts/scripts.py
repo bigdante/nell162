@@ -3,8 +3,8 @@ import re
 
 res = dict()
 
-for file in tqdm(sorted(list(os.listdir('/home/liuxiao/train_auto_glm_data/fever/wiki-pages')))):
-    for line in open('/home/liuxiao/train_auto_glm_data/fever/wiki-pages/'+file):
+for file in tqdm(sorted(list(os.listdir('/home/liuxiao/make_COT_traindata_redocred/fever/wiki-pages')))):
+    for line in open('/home/liuxiao/make_COT_traindata_redocred/fever/wiki-pages/'+file):
             doc = json.loads(line)
             if not doc['lines']:
                 continue
@@ -16,8 +16,8 @@ for file in tqdm(sorted(list(os.listdir('/home/liuxiao/train_auto_glm_data/fever
 num = 0
 
 for filename in ['train', 'shared_task_dev']:
-    out = open('/home/liuxiao/train_auto_glm_data/fever/{}_verifiable.jsonl'.format(filename), 'w')
-    for line in tqdm(open('/home/liuxiao/train_auto_glm_data/fever/' + filename + '.jsonl')):
+    out = open('/home/liuxiao/make_COT_traindata_redocred/fever/{}_verifiable.jsonl'.format(filename), 'w')
+    for line in tqdm(open('/home/liuxiao/make_COT_traindata_redocred/fever/' + filename + '.jsonl')):
         doc = json.loads(line)
         skip = False
         if doc["verifiable"] == "VERIFIABLE":

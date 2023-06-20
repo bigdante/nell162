@@ -23,6 +23,9 @@ import threading
 from typing import Callable
 from concurrent.futures import ThreadPoolExecutor
 # from tool.model import *
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.tag import pos_tag
 
 relation_list = ['country of citizenship', 'date of birth', 'place of birth', 'participant of',
                  'located in the administrative territorial entity', 'contains administrative territorial entity',
@@ -43,7 +46,7 @@ relation_list = ['country of citizenship', 'date of birth', 'place of birth', 'p
                  'original language of work', 'dissolved, abolished or demolished', 'territory claimed by',
                  'characters', 'influenced by', 'official language', 'unemployment rate']
 
-ori_keys = json.load(open("data/keys.json"))
+ori_keys = json.load(open("data/chatgpt/keys.json"))
 keys = [key for key, v in ori_keys.items() if v]
 unused_keys = keys.copy()
 used_keys = []
@@ -53,6 +56,35 @@ proxies = {
     'http': '127.0.0.1:9898',
     'https': '127.0.0.1:9898',
 }
+
+
+def filter_pronouns(text):
+    '''
+        过滤代词
+    :param text:
+    :return:
+    '''
+    pronouns = ['PRP', 'PRP$', 'WP', 'WP$']
+    filtered_text = ""
+    sentences = sent_tokenize(text)
+    for sentence in sentences:
+        tokens = word_tokenize(sentence)
+        tagged_tokens = pos_tag(tokens)
+        filtered_tokens = [token for token, tag in tagged_tokens if tag not in pronouns]
+        filtered_text += " ".join(filtered_tokens) + " "
+    return filtered_text
+
+
+def is_pronoun(word):
+    '''
+    判断是否为代词
+    :param word:
+    :return:
+    '''
+    tagged_word = pos_tag([word])
+    if tagged_word[0][1] in ['PRP', 'PRP$', 'WP', 'WP$']:
+        return True
+    return False
 
 
 def sort_dict_by_key(d, key):
@@ -118,7 +150,7 @@ def precess_db_data(db_document, need_span=True, need_time=False):
         "up": db_document.upVote,
         "down": db_document.downVote,
         "text": db_document.evidenceText,
-        "extractor": "GLM-2B/P-tuning",
+        "extractor": db_document.is_from_abstract if db_document.is_from_abstract else "GLM-2B/P-tuning",
         "confidence": random.random(),
         "filtered": True,
         "headSpan": indexs.tolist() if need_span else "",
@@ -285,7 +317,6 @@ def get_latest_triple(params):
     for index, triple in enumerate(TripleFact.objects((Q(timestamp__gte=start) & Q(timestamp__lte=end))).limit(300)):
         result.append(precess_db_data(triple, need_time=True))
     return result
-
 
 
 # def inference(input, ori_history):
@@ -502,7 +533,6 @@ def get_api(api_name: str, *args, **kwargs):
     print(f"No such function {api_name}")
 
 
-
 def get_all_relations():
     relations = BaseRelation.objects()
     relaiton_dict = {}
@@ -524,3 +554,24 @@ def find_word_indices(sentence, word):
                 break
 
     return [start_index, end_index]
+
+def is_pronoun_phrase(phrase):
+    pronouns = ['PRP', 'PRP$', 'WP', 'WP$']
+    tagged_phrase = pos_tag(word_tokenize(phrase))
+    for _, tag in tagged_phrase:
+        if tag in pronouns:
+            return True
+    return False
+
+import ast
+
+def parse_string_to_list(string):
+    try:
+        result = ast.literal_eval(string)
+        if isinstance(result, list):
+            return result
+        else:
+            raise ValueError("The string does not represent a list.")
+    except (SyntaxError, ValueError) as e:
+        print("Error parsing the string:", e)
+        return None

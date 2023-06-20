@@ -27,7 +27,7 @@ def test_write_file() -> None:
         if os.path.exists("hello_world.txt"):
             # Clean up any existing 'hello_world.txt' file before testing.
             delete_file("hello_world.txt")
-        # Prepare input train_auto_glm_data for the test.
+        # Prepare input make_COT_traindata_redocred for the test.
         input_data = """write_file-GPT
 an AI designed to use the write_file command to write 'Hello World' into a file named "hello_world.txt" and then use the task_complete command to complete the task.
 Use the write_file command to write 'Hello World' into a file named "hello_world.txt".
@@ -38,7 +38,7 @@ y -5
 EOF"""
         command = f"{sys.executable} -m autogpt"
 
-        # Execute the script with the input train_auto_glm_data.
+        # Execute the script with the input make_COT_traindata_redocred.
         process = subprocess.Popen(
             command,
             stdin=subprocess.PIPE,

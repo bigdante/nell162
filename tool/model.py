@@ -4,7 +4,8 @@ import torch
 from torch.nn import Module
 from transformers import AutoModel, AutoConfig, AutoTokenizer
 
-ptuning_checkpoint = 'neptune/ChatGLM-6B-main/ptuning/output/auto_kg-64-1e-2/checkpoint-3000'
+ptuning_checkpoint = 'neptune/ChatGLM-6B-main/ptuning/output/2048_auto_tail_vf-64-1e-2/checkpoint-8000'
+
 checkpoint_path = "THUDM/chatglm-6b"
 
 
@@ -72,7 +73,6 @@ class ModelAndTokenizerSingleton:
     def load_tokenizer(self):
         if self._tokenizer is None:
             print("Loading tokenizer...")
-            # Load your tokenizer here
             tokenizer = AutoTokenizer.from_pretrained(checkpoint_path, trust_remote_code=True)
             self._tokenizer = tokenizer
         return self._tokenizer

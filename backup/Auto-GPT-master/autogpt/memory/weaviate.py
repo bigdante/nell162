@@ -84,7 +84,7 @@ class WeaviateMemory(MemoryProviderSingleton):
                 vector=vector,
             )
 
-        return f"Inserting train_auto_glm_data into memory at uuid: {doc_uuid}:\n train_auto_glm_data: {data}"
+        return f"Inserting make_COT_traindata_redocred into memory at uuid: {doc_uuid}:\n make_COT_traindata_redocred: {data}"
 
     def get(self, data):
         return self.get_relevant(data, 1)
@@ -109,9 +109,9 @@ class WeaviateMemory(MemoryProviderSingleton):
                 .do()
             )
 
-            if len(results["train_auto_glm_data"]["Get"][self.index]) > 0:
+            if len(results["make_COT_traindata_redocred"]["Get"][self.index]) > 0:
                 return [
-                    str(item["raw_text"]) for item in results["train_auto_glm_data"]["Get"][self.index]
+                    str(item["raw_text"]) for item in results["make_COT_traindata_redocred"]["Get"][self.index]
                 ]
             else:
                 return []
@@ -122,6 +122,6 @@ class WeaviateMemory(MemoryProviderSingleton):
 
     def get_stats(self):
         result = self.client.query.aggregate(self.index).with_meta_count().do()
-        class_data = result["train_auto_glm_data"]["Aggregate"][self.index]
+        class_data = result["make_COT_traindata_redocred"]["Aggregate"][self.index]
 
         return class_data[0]["meta"] if class_data else {}

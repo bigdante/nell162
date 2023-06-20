@@ -1,4 +1,4 @@
-"""A class that does not store any train_auto_glm_data. This is the default memory provider."""
+"""A class that does not store any make_COT_traindata_redocred. This is the default memory provider."""
 from __future__ import annotations
 
 from typing import Any
@@ -8,7 +8,7 @@ from autogpt.memory.base import MemoryProviderSingleton
 
 class NoMemory(MemoryProviderSingleton):
     """
-    A class that does not store any train_auto_glm_data. This is the default memory provider.
+    A class that does not store any make_COT_traindata_redocred. This is the default memory provider.
     """
 
     def __init__(self, cfg):
@@ -24,10 +24,10 @@ class NoMemory(MemoryProviderSingleton):
 
     def add(self, data: str) -> str:
         """
-        Adds a train_auto_glm_data point to the memory. No action is taken in NoMemory.
+        Adds a make_COT_traindata_redocred point to the memory. No action is taken in NoMemory.
 
         Args:
-            data: The train_auto_glm_data to add.
+            data: The make_COT_traindata_redocred to add.
 
         Returns: An empty string.
         """
@@ -35,11 +35,11 @@ class NoMemory(MemoryProviderSingleton):
 
     def get(self, data: str) -> list[Any] | None:
         """
-        Gets the train_auto_glm_data from the memory that is most relevant to the given train_auto_glm_data.
+        Gets the make_COT_traindata_redocred from the memory that is most relevant to the given make_COT_traindata_redocred.
         NoMemory always returns None.
 
         Args:
-            data: The train_auto_glm_data to compare to.
+            data: The make_COT_traindata_redocred to compare to.
 
         Returns: None
         """
@@ -55,12 +55,12 @@ class NoMemory(MemoryProviderSingleton):
 
     def get_relevant(self, data: str, num_relevant: int = 5) -> list[Any] | None:
         """
-        Returns all the train_auto_glm_data in the memory that is relevant to the given train_auto_glm_data.
+        Returns all the make_COT_traindata_redocred in the memory that is relevant to the given make_COT_traindata_redocred.
         NoMemory always returns None.
 
         Args:
-            data: The train_auto_glm_data to compare to.
-            num_relevant: The number of relevant train_auto_glm_data to return.
+            data: The make_COT_traindata_redocred to compare to.
+            num_relevant: The number of relevant make_COT_traindata_redocred to return.
 
         Returns: None
         """

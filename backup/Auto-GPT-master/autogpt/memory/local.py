@@ -101,12 +101,12 @@ class LocalCache(MemoryProviderSingleton):
 
     def get(self, data: str) -> list[Any] | None:
         """
-        Gets the train_auto_glm_data from the memory that is most relevant to the given train_auto_glm_data.
+        Gets the make_COT_traindata_redocred from the memory that is most relevant to the given make_COT_traindata_redocred.
 
         Args:
-            data: The train_auto_glm_data to compare to.
+            data: The make_COT_traindata_redocred to compare to.
 
-        Returns: The most relevant train_auto_glm_data.
+        Returns: The most relevant make_COT_traindata_redocred.
         """
         return self.get_relevant(data, 1)
 

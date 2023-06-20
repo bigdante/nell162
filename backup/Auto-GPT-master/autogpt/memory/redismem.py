@@ -15,7 +15,7 @@ from autogpt.logs import logger
 from autogpt.memory.base import MemoryProviderSingleton
 
 SCHEMA = [
-    TextField("train_auto_glm_data"),
+    TextField("make_COT_traindata_redocred"),
     VectorField(
         "embedding",
         "HNSW",
@@ -79,22 +79,22 @@ class RedisMemory(MemoryProviderSingleton):
 
     def add(self, data: str) -> str:
         """
-        Adds a train_auto_glm_data point to the memory.
+        Adds a make_COT_traindata_redocred point to the memory.
 
         Args:
-            data: The train_auto_glm_data to add.
+            data: The make_COT_traindata_redocred to add.
 
-        Returns: Message indicating that the train_auto_glm_data has been added.
+        Returns: Message indicating that the make_COT_traindata_redocred has been added.
         """
         if "Command Error:" in data:
             return ""
         vector = create_embedding_with_ada(data)
         vector = np.array(vector).astype(np.float32).tobytes()
-        data_dict = {b"train_auto_glm_data": data, "embedding": vector}
+        data_dict = {b"make_COT_traindata_redocred": data, "embedding": vector}
         pipe = self.redis.pipeline()
         pipe.hset(f"{self.cfg.memory_index}:{self.vec_num}", mapping=data_dict)
         _text = (
-            f"Inserting train_auto_glm_data into memory at index: {self.vec_num}:\n" f"train_auto_glm_data: {data}"
+            f"Inserting make_COT_traindata_redocred into memory at index: {self.vec_num}:\n" f"make_COT_traindata_redocred: {data}"
         )
         self.vec_num += 1
         pipe.set(f"{self.cfg.memory_index}-vec_num", self.vec_num)
@@ -103,12 +103,12 @@ class RedisMemory(MemoryProviderSingleton):
 
     def get(self, data: str) -> list[Any] | None:
         """
-        Gets the train_auto_glm_data from the memory that is most relevant to the given train_auto_glm_data.
+        Gets the make_COT_traindata_redocred from the memory that is most relevant to the given make_COT_traindata_redocred.
 
         Args:
-            data: The train_auto_glm_data to compare to.
+            data: The make_COT_traindata_redocred to compare to.
 
-        Returns: The most relevant train_auto_glm_data.
+        Returns: The most relevant make_COT_traindata_redocred.
         """
         return self.get_relevant(data, 1)
 
@@ -123,18 +123,18 @@ class RedisMemory(MemoryProviderSingleton):
 
     def get_relevant(self, data: str, num_relevant: int = 5) -> list[Any] | None:
         """
-        Returns all the train_auto_glm_data in the memory that is relevant to the given train_auto_glm_data.
+        Returns all the make_COT_traindata_redocred in the memory that is relevant to the given make_COT_traindata_redocred.
         Args:
-            data: The train_auto_glm_data to compare to.
-            num_relevant: The number of relevant train_auto_glm_data to return.
+            data: The make_COT_traindata_redocred to compare to.
+            num_relevant: The number of relevant make_COT_traindata_redocred to return.
 
-        Returns: A list of the most relevant train_auto_glm_data.
+        Returns: A list of the most relevant make_COT_traindata_redocred.
         """
         query_embedding = create_embedding_with_ada(data)
         base_query = f"*=>[KNN {num_relevant} @embedding $vector AS vector_score]"
         query = (
             Query(base_query)
-            .return_fields("train_auto_glm_data", "vector_score")
+            .return_fields("make_COT_traindata_redocred", "vector_score")
             .sort_by("vector_score")
             .dialect(2)
         )
